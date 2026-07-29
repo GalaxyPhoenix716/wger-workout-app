@@ -68,6 +68,7 @@ import 'package:wger/features/routines/screens/settings_plates_screen.dart';
 import 'package:wger/features/trophies/screens/trophy_screen.dart';
 import 'package:wger/features/weight/screens/weight_screen.dart';
 import 'package:wger/l10n/generated/app_localizations.dart';
+import 'package:wger/providers/notification_service_provider.dart';
 import 'package:wger/theme/theme.dart';
 
 void _setupLogging() {
@@ -144,8 +145,19 @@ void main() async {
         .catchError((Object e) => logger.warning('Image cache sweep failed: $e')),
   );
 
+  // Notification service
+  final notificationService = NotificationService();
+  await notificationService.init();
+
   // Application
-  runApp(const ProviderScope(child: MainApp()));
+  runApp(
+    ProviderScope(
+      overrides: [
+        notificationServiceProvider.overrideWithValue(notificationService),
+      ],
+      child: const MainApp(),
+    ),
+  );
 }
 
 class MainApp extends ConsumerWidget {

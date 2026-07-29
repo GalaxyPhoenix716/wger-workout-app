@@ -36,6 +36,10 @@ void main() {
   });
 
   group('scheduleRestTimerNotification', () {
+    setUp(() async {
+      await service.init();
+    });
+
     test('cancels any previous notification', () async {
       await service.scheduleRestTimerNotification(60);
 
@@ -82,6 +86,10 @@ void main() {
   });
 
   group('cancelRestTimerNotification', () {
+    setUp(() async {
+      await service.init();
+    });
+
     test('calls plugin.cancel with the correct id', () async {
       await service.cancelRestTimerNotification();
 

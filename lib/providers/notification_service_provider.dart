@@ -10,6 +10,7 @@ class NotificationService {
   static const _restTimerNotificationId = 1245;
 
   final FlutterLocalNotificationsPlugin _plugin;
+  bool _initialized = false;
 
   NotificationService({FlutterLocalNotificationsPlugin? plugin})
     : _plugin = plugin ?? FlutterLocalNotificationsPlugin();
@@ -38,9 +39,13 @@ class NotificationService {
       settings: settings,
       onDidReceiveNotificationResponse: _onNotificationResponse,
     );
+    _initialized = true;
   }
 
   Future<void> scheduleRestTimerNotification(int secondsFromNow) async {
+    if (!_initialized) {
+      return;
+    }
     await cancelRestTimerNotification();
 
     final scheduledDate = tz.TZDateTime.from(
@@ -76,6 +81,9 @@ class NotificationService {
   }
 
   Future<void> cancelRestTimerNotification() async {
+    if (!_initialized) {
+      return;
+    }
     await _plugin.cancel(id: _restTimerNotificationId);
   }
 

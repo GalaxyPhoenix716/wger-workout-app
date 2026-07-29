@@ -24,6 +24,7 @@ import 'package:intl/intl.dart';
 import 'package:wger/features/routines/providers/gym_state_notifier.dart';
 import 'package:wger/features/routines/widgets/gym_mode/navigation.dart';
 import 'package:wger/l10n/generated/app_localizations.dart';
+import 'package:wger/providers/notification_service_provider.dart';
 import 'package:wger/theme/theme.dart';
 
 class TimerWidget extends StatefulWidget {
@@ -101,6 +102,7 @@ class TimerCountdownWidget extends ConsumerStatefulWidget {
 class _TimerCountdownWidgetState extends ConsumerState<TimerCountdownWidget> {
   late DateTime _endTime;
   late Timer _uiTimer;
+  late NotificationService _notificationService;
 
   bool _hasNotified = false;
 
@@ -108,6 +110,9 @@ class _TimerCountdownWidgetState extends ConsumerState<TimerCountdownWidget> {
   void initState() {
     super.initState();
     _endTime = DateTime.now().add(Duration(seconds: widget._seconds));
+
+    _notificationService = ref.read(notificationServiceProvider);
+    _notificationService.scheduleRestTimerNotification(widget._seconds);
 
     _uiTimer = Timer.periodic(const Duration(seconds: 1), (_) {
       // ignore: no-empty-block, avoid-empty-setstate
@@ -119,6 +124,7 @@ class _TimerCountdownWidgetState extends ConsumerState<TimerCountdownWidget> {
 
   @override
   void dispose() {
+    _notificationService.cancelRestTimerNotification();
     _uiTimer.cancel();
     super.dispose();
   }
@@ -133,7 +139,9 @@ class _TimerCountdownWidgetState extends ConsumerState<TimerCountdownWidget> {
     //  When countdown finishes, notify ONCE, and respect settings
     if (remainingSeconds == 0 && !_hasNotified) {
       if (gymState.alertOnCountdownEnd) {
-        HapticFeedback.mediumImpact();
+        HapticFeedback.heavyImpact();
+        Future.delayed(const Duration(milliseconds: 200), () => HapticFeedback.mediumImpact());
+        Future.delayed(const Duration(milliseconds: 400), () => HapticFeedback.heavyImpact());
 
         // Not that this only works on desktop platforms
         SystemSound.play(SystemSoundType.alert);
