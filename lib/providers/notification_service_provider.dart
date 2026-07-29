@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:timezone/data/latest.dart' as tz_data;
@@ -69,15 +70,31 @@ class NotificationService {
 
     const details = NotificationDetails(android: androidDetails, iOS: iosDetails);
 
-    await _plugin.zonedSchedule(
-      id: _restTimerNotificationId,
-      title: 'Rest Timer',
-      body: 'Your rest period is over!',
-      scheduledDate: scheduledDate,
-      notificationDetails: details,
-      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-      payload: 'rest_timer',
-    );
+    try {
+      await _plugin.zonedSchedule(
+        id: _restTimerNotificationId,
+        title: 'Rest Timer',
+        body: 'Your rest period is over!',
+        scheduledDate: scheduledDate,
+        notificationDetails: details,
+        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+        payload: 'rest_timer',
+      );
+    } on PlatformException catch (e) {
+      if (e.code == 'exact_alarms_not_permitted') {
+        await _plugin.zonedSchedule(
+          id: _restTimerNotificationId,
+          title: 'Rest Timer',
+          body: 'Your rest period is over!',
+          scheduledDate: scheduledDate,
+          notificationDetails: details,
+          androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+          payload: 'rest_timer',
+        );
+      } else {
+        rethrow;
+      }
+    }
   }
 
   Future<void> cancelRestTimerNotification() async {
