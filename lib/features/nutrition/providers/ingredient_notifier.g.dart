@@ -59,7 +59,8 @@ final class AllLocalIngredientsProvider
   }
 }
 
-String _$allLocalIngredientsHash() => r'e976af45df22069a256aa2987251732461f565c3';
+String _$allLocalIngredientsHash() =>
+    r'e976af45df22069a256aa2987251732461f565c3';
 
 /// Per-id lookup for a single ingredient from the local Drift database.
 /// Riverpod caches per `id` while listeners exist and disposes otherwise,
@@ -73,7 +74,12 @@ final ingredientByIdProvider = IngredientByIdFamily._();
 /// and concurrent reads of the same id share the same future automatically.
 
 final class IngredientByIdProvider
-    extends $FunctionalProvider<AsyncValue<Ingredient?>, Ingredient?, FutureOr<Ingredient?>>
+    extends
+        $FunctionalProvider<
+          AsyncValue<Ingredient?>,
+          Ingredient?,
+          FutureOr<Ingredient?>
+        >
     with $FutureModifier<Ingredient?>, $FutureProvider<Ingredient?> {
   /// Per-id lookup for a single ingredient from the local Drift database.
   /// Riverpod caches per `id` while listeners exist and disposes otherwise,
@@ -143,7 +149,8 @@ final class IngredientByIdFamily extends $Family
   /// Riverpod caches per `id` while listeners exist and disposes otherwise,
   /// and concurrent reads of the same id share the same future automatically.
 
-  IngredientByIdProvider call(int id) => IngredientByIdProvider._(argument: id, from: this);
+  IngredientByIdProvider call(int id) =>
+      IngredientByIdProvider._(argument: id, from: this);
 
   @override
   String toString() => r'ingredientByIdProvider';
@@ -163,7 +170,12 @@ final ingredientByIdStreamProvider = IngredientByIdStreamFamily._();
 /// that id exists yet.
 
 final class IngredientByIdStreamProvider
-    extends $FunctionalProvider<AsyncValue<Ingredient?>, Ingredient?, Stream<Ingredient?>>
+    extends
+        $FunctionalProvider<
+          AsyncValue<Ingredient?>,
+          Ingredient?,
+          Stream<Ingredient?>
+        >
     with $FutureModifier<Ingredient?>, $StreamProvider<Ingredient?> {
   /// Reactive per-id watch for a single ingredient. Re-emits whenever the
   /// ingredient row, its image or any of its weight units changes locally
@@ -213,7 +225,8 @@ final class IngredientByIdStreamProvider
   }
 }
 
-String _$ingredientByIdStreamHash() => r'c98e915be80c4592803fd4d8ff70b89f79f02137';
+String _$ingredientByIdStreamHash() =>
+    r'c98e915be80c4592803fd4d8ff70b89f79f02137';
 
 /// Reactive per-id watch for a single ingredient. Re-emits whenever the
 /// ingredient row, its image or any of its weight units changes locally
@@ -291,4 +304,5 @@ final class SearchedIngredientsProvider
   }
 }
 
-String _$searchedIngredientsHash() => r'a1a40b390d806d95e6aa23a2e81eeb066d226a91';
+String _$searchedIngredientsHash() =>
+    r'a1a40b390d806d95e6aa23a2e81eeb066d226a91';

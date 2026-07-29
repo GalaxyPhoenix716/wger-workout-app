@@ -13,7 +13,12 @@ part of 'trophy_repository.dart';
 final trophyRepositoryProvider = TrophyRepositoryProvider._();
 
 final class TrophyRepositoryProvider
-    extends $FunctionalProvider<TrophyRepository, TrophyRepository, TrophyRepository>
+    extends
+        $FunctionalProvider<
+          TrophyRepository,
+          TrophyRepository,
+          TrophyRepository
+        >
     with $Provider<TrophyRepository> {
   TrophyRepositoryProvider._()
     : super(

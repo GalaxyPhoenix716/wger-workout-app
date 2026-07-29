@@ -13,7 +13,12 @@ part of 'routines_repository.dart';
 final routinesRepositoryProvider = RoutinesRepositoryProvider._();
 
 final class RoutinesRepositoryProvider
-    extends $FunctionalProvider<RoutinesRepository, RoutinesRepository, RoutinesRepository>
+    extends
+        $FunctionalProvider<
+          RoutinesRepository,
+          RoutinesRepository,
+          RoutinesRepository
+        >
     with $Provider<RoutinesRepository> {
   RoutinesRepositoryProvider._()
     : super(
@@ -49,4 +54,5 @@ final class RoutinesRepositoryProvider
   }
 }
 
-String _$routinesRepositoryHash() => r'249951c94887d0ff4882d7a88bd9dcfb25282f4e';
+String _$routinesRepositoryHash() =>
+    r'249951c94887d0ff4882d7a88bd9dcfb25282f4e';

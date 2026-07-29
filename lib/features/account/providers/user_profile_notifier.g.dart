@@ -33,7 +33,8 @@ final class UserProfileNotifierProvider
   UserProfileNotifier create() => UserProfileNotifier();
 }
 
-String _$userProfileNotifierHash() => r'897debe60867477af257a298ffb465da8fb54749';
+String _$userProfileNotifierHash() =>
+    r'897debe60867477af257a298ffb465da8fb54749';
 
 abstract class _$UserProfileNotifier extends $StreamNotifier<UserProfile?> {
   Stream<UserProfile?> build();

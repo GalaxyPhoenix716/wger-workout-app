@@ -26,7 +26,8 @@ final pastExerciseLogsProvider = PastExerciseLogsFamily._();
 /// only the newest log of each repetition/weight combination is kept.
 
 final class PastExerciseLogsProvider
-    extends $FunctionalProvider<AsyncValue<List<Log>>, List<Log>, Stream<List<Log>>>
+    extends
+        $FunctionalProvider<AsyncValue<List<Log>>, List<Log>, Stream<List<Log>>>
     with $FutureModifier<List<Log>>, $StreamProvider<List<Log>> {
   /// Streams the past logs for [exerciseId], newest first.
   ///
@@ -36,7 +37,8 @@ final class PastExerciseLogsProvider
   /// only the newest log of each repetition/weight combination is kept.
   PastExerciseLogsProvider._({
     required PastExerciseLogsFamily super.from,
-    required ({int routineId, int exerciseId, int? weeksBack, bool distinct}) super.argument,
+    required ({int routineId, int exerciseId, int? weeksBack, bool distinct})
+    super.argument,
   }) : super(
          retry: null,
          name: r'pastExerciseLogsProvider',
@@ -63,7 +65,8 @@ final class PastExerciseLogsProvider
   @override
   Stream<List<Log>> create(Ref ref) {
     final argument =
-        this.argument as ({int routineId, int exerciseId, int? weeksBack, bool distinct});
+        this.argument
+            as ({int routineId, int exerciseId, int? weeksBack, bool distinct});
     return pastExerciseLogs(
       ref,
       routineId: argument.routineId,

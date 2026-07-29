@@ -14,11 +14,15 @@ import 'package:wger/features/exercises/models/category.dart' as _i11;
 import 'package:wger/features/exercises/models/equipment.dart' as _i13;
 import 'package:wger/features/exercises/models/exercise_filters.dart' as _i10;
 import 'package:wger/features/exercises/models/exercise_submission.dart' as _i5;
-import 'package:wger/features/exercises/models/exercise_submission_images.dart' as _i6;
+import 'package:wger/features/exercises/models/exercise_submission_images.dart'
+    as _i6;
 import 'package:wger/features/exercises/models/muscle.dart' as _i14;
-import 'package:wger/features/exercises/providers/add_exercise_repository.dart' as _i3;
-import 'package:wger/features/exercises/providers/exercise_repository.dart' as _i8;
-import 'package:wger/features/exercises/providers/exercises_notifier.dart' as _i12;
+import 'package:wger/features/exercises/providers/add_exercise_repository.dart'
+    as _i3;
+import 'package:wger/features/exercises/providers/exercise_repository.dart'
+    as _i8;
+import 'package:wger/features/exercises/providers/exercises_notifier.dart'
+    as _i12;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -36,13 +40,15 @@ import 'package:wger/features/exercises/providers/exercises_notifier.dart' as _i
 // ignore_for_file: invalid_use_of_internal_member
 
 class _FakeAccount_0 extends _i1.SmartFake implements _i2.Account {
-  _FakeAccount_0(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeAccount_0(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 /// A class which mocks [AddExerciseRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockAddExerciseRepository extends _i1.Mock implements _i3.AddExerciseRepository {
+class MockAddExerciseRepository extends _i1.Mock
+    implements _i3.AddExerciseRepository {
   MockAddExerciseRepository() {
     _i1.throwOnMissingStub(this);
   }
@@ -121,7 +127,8 @@ class MockAccountRepository extends _i1.Mock implements _i7.AccountRepository {
 /// A class which mocks [ExerciseRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockExerciseRepository extends _i1.Mock implements _i8.ExerciseRepository {
+class MockExerciseRepository extends _i1.Mock
+    implements _i8.ExerciseRepository {
   MockExerciseRepository() {
     _i1.throwOnMissingStub(this);
   }

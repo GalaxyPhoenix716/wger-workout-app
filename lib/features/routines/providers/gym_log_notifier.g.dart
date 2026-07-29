@@ -12,7 +12,8 @@ part of 'gym_log_notifier.dart';
 @ProviderFor(GymLogNotifier)
 final gymLogProvider = GymLogNotifierProvider._();
 
-final class GymLogNotifierProvider extends $NotifierProvider<GymLogNotifier, Log?> {
+final class GymLogNotifierProvider
+    extends $NotifierProvider<GymLogNotifier, Log?> {
   GymLogNotifierProvider._()
     : super(
         from: null,
@@ -40,7 +41,7 @@ final class GymLogNotifierProvider extends $NotifierProvider<GymLogNotifier, Log
   }
 }
 
-String _$gymLogNotifierHash() => r'2a9eb1f27bcc5d72a893843ddfaa077a32f8ed26';
+String _$gymLogNotifierHash() => r'f19f65118fc2746149178debd2f5fcb1cdfcab3c';
 
 abstract class _$GymLogNotifier extends $Notifier<Log?> {
   Log? build();
@@ -49,7 +50,13 @@ abstract class _$GymLogNotifier extends $Notifier<Log?> {
   WhenComplete runBuild() {
     final ref = this.ref as $Ref<Log?, Log?>;
     final element =
-        ref.element as $ClassProviderElement<AnyNotifier<Log?, Log?>, Log?, Object?, Object?>;
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<Log?, Log?>,
+              Log?,
+              Object?,
+              Object?
+            >;
     return element.handleCreate(ref, build);
   }
 }

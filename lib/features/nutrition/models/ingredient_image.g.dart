@@ -46,20 +46,21 @@ IngredientImage _$IngredientImageFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$IngredientImageToJson(IngredientImage instance) => <String, dynamic>{
-  'id': instance.id,
-  'uuid': instance.uuid,
-  'ingredient_id': instance.ingredientId,
-  'image': instance.image,
-  'size': instance.size,
-  'width': instance.width,
-  'height': instance.height,
-  'created': instance.created.toIso8601String(),
-  'last_update': instance.lastUpdate.toIso8601String(),
-  'license': instance.licenseId,
-  'license_author': instance.author,
-  'license_author_url': instance.authorUrl,
-  'license_title': instance.title,
-  'license_object_url': instance.objectUrl,
-  'license_derivative_source_url': instance.derivativeSourceUrl,
-};
+Map<String, dynamic> _$IngredientImageToJson(IngredientImage instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'uuid': instance.uuid,
+      'ingredient_id': instance.ingredientId,
+      'image': instance.image,
+      'size': instance.size,
+      'width': instance.width,
+      'height': instance.height,
+      'created': instance.created.toIso8601String(),
+      'last_update': instance.lastUpdate.toIso8601String(),
+      'license': instance.licenseId,
+      'license_author': instance.author,
+      'license_author_url': instance.authorUrl,
+      'license_title': instance.title,
+      'license_object_url': instance.objectUrl,
+      'license_derivative_source_url': instance.derivativeSourceUrl,
+    };

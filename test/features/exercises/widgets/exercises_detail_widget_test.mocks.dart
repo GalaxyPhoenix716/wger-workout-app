@@ -12,8 +12,10 @@ import 'package:wger/features/exercises/models/category.dart' as _i6;
 import 'package:wger/features/exercises/models/equipment.dart' as _i8;
 import 'package:wger/features/exercises/models/exercise_filters.dart' as _i5;
 import 'package:wger/features/exercises/models/muscle.dart' as _i9;
-import 'package:wger/features/exercises/providers/exercise_repository.dart' as _i2;
-import 'package:wger/features/exercises/providers/exercises_notifier.dart' as _i7;
+import 'package:wger/features/exercises/providers/exercise_repository.dart'
+    as _i2;
+import 'package:wger/features/exercises/providers/exercises_notifier.dart'
+    as _i7;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -33,7 +35,8 @@ import 'package:wger/features/exercises/providers/exercises_notifier.dart' as _i
 /// A class which mocks [ExerciseRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockExerciseRepository extends _i1.Mock implements _i2.ExerciseRepository {
+class MockExerciseRepository extends _i1.Mock
+    implements _i2.ExerciseRepository {
   MockExerciseRepository() {
     _i1.throwOnMissingStub(this);
   }

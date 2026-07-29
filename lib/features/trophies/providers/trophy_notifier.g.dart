@@ -41,7 +41,8 @@ final class TrophyStateNotifierProvider
   }
 }
 
-String _$trophyStateNotifierHash() => r'e9518c333786def1e29b5e03d9f2bccfca31f7c3';
+String _$trophyStateNotifierHash() =>
+    r'e9518c333786def1e29b5e03d9f2bccfca31f7c3';
 
 abstract class _$TrophyStateNotifier extends $Notifier<TrophyState> {
   TrophyState build();

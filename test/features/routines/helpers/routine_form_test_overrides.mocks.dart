@@ -12,10 +12,13 @@ import 'package:wger/features/exercises/models/category.dart' as _i7;
 import 'package:wger/features/exercises/models/equipment.dart' as _i9;
 import 'package:wger/features/exercises/models/exercise_filters.dart' as _i6;
 import 'package:wger/features/exercises/models/muscle.dart' as _i10;
-import 'package:wger/features/exercises/providers/exercise_repository.dart' as _i3;
-import 'package:wger/features/exercises/providers/exercises_notifier.dart' as _i8;
+import 'package:wger/features/exercises/providers/exercise_repository.dart'
+    as _i3;
+import 'package:wger/features/exercises/providers/exercises_notifier.dart'
+    as _i8;
 import 'package:wger/features/routines/models/session.dart' as _i2;
-import 'package:wger/features/routines/providers/workout_session_repository.dart' as _i12;
+import 'package:wger/features/routines/providers/workout_session_repository.dart'
+    as _i12;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -32,7 +35,8 @@ import 'package:wger/features/routines/providers/workout_session_repository.dart
 // ignore_for_file: subtype_of_sealed_class
 // ignore_for_file: invalid_use_of_internal_member
 
-class _FakeWorkoutSession_0 extends _i1.SmartFake implements _i2.WorkoutSession {
+class _FakeWorkoutSession_0 extends _i1.SmartFake
+    implements _i2.WorkoutSession {
   _FakeWorkoutSession_0(Object parent, Invocation parentInvocation)
     : super(parent, parentInvocation);
 }
@@ -40,7 +44,8 @@ class _FakeWorkoutSession_0 extends _i1.SmartFake implements _i2.WorkoutSession 
 /// A class which mocks [ExerciseRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockExerciseRepository extends _i1.Mock implements _i3.ExerciseRepository {
+class MockExerciseRepository extends _i1.Mock
+    implements _i3.ExerciseRepository {
   MockExerciseRepository() {
     _i1.throwOnMissingStub(this);
   }
@@ -128,7 +133,8 @@ class MockExerciseRepository extends _i1.Mock implements _i3.ExerciseRepository 
 /// A class which mocks [WorkoutSessionRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockWorkoutSessionRepository extends _i1.Mock implements _i12.WorkoutSessionRepository {
+class MockWorkoutSessionRepository extends _i1.Mock
+    implements _i12.WorkoutSessionRepository {
   MockWorkoutSessionRepository() {
     _i1.throwOnMissingStub(this);
   }

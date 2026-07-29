@@ -12,7 +12,8 @@ part of 'account_notifier.dart';
 @ProviderFor(AccountNotifier)
 final accountProvider = AccountNotifierProvider._();
 
-final class AccountNotifierProvider extends $AsyncNotifierProvider<AccountNotifier, Account?> {
+final class AccountNotifierProvider
+    extends $AsyncNotifierProvider<AccountNotifier, Account?> {
   AccountNotifierProvider._()
     : super(
         from: null,

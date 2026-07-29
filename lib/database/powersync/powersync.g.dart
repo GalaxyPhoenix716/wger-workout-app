@@ -19,7 +19,9 @@ final class PowerSyncInstanceProvider
           PowerSyncDatabase,
           FutureOr<PowerSyncDatabase>
         >
-    with $FutureModifier<PowerSyncDatabase>, $FutureProvider<PowerSyncDatabase> {
+    with
+        $FutureModifier<PowerSyncDatabase>,
+        $FutureProvider<PowerSyncDatabase> {
   PowerSyncInstanceProvider._()
     : super(
         from: null,
@@ -46,4 +48,4 @@ final class PowerSyncInstanceProvider
   }
 }
 
-String _$powerSyncInstanceHash() => r'3cc3ce4ee4d65ab26f3709b7526822b0366f0eb6';
+String _$powerSyncInstanceHash() => r'd10c970f05a7c71b45420cd1f90953c2431eadc9';

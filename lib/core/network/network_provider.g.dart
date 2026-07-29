@@ -12,7 +12,8 @@ part of 'network_provider.dart';
 @ProviderFor(NetworkStatus)
 final networkStatusProvider = NetworkStatusProvider._();
 
-final class NetworkStatusProvider extends $NotifierProvider<NetworkStatus, bool> {
+final class NetworkStatusProvider
+    extends $NotifierProvider<NetworkStatus, bool> {
   NetworkStatusProvider._()
     : super(
         from: null,
@@ -40,7 +41,7 @@ final class NetworkStatusProvider extends $NotifierProvider<NetworkStatus, bool>
   }
 }
 
-String _$networkStatusHash() => r'2abc19df2e0e679222609fec1d637ae131ef4ac1';
+String _$networkStatusHash() => r'091ee41de990a1e6ff0ff3915656d41ea2d1a6e5';
 
 abstract class _$NetworkStatus extends $Notifier<bool> {
   bool build();
@@ -49,7 +50,13 @@ abstract class _$NetworkStatus extends $Notifier<bool> {
   WhenComplete runBuild() {
     final ref = this.ref as $Ref<bool, bool>;
     final element =
-        ref.element as $ClassProviderElement<AnyNotifier<bool, bool>, bool, Object?, Object?>;
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<bool, bool>,
+              bool,
+              Object?,
+              Object?
+            >;
     return element.handleCreate(ref, build);
   }
 }

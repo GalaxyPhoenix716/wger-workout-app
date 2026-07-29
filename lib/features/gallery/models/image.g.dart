@@ -16,9 +16,10 @@ GalleryImage _$GalleryImageFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$GalleryImageToJson(GalleryImage instance) => <String, dynamic>{
-  'id': instance.id,
-  'date': dateToUtcIso8601(instance.date),
-  'image': instance.imagePath,
-  'description': instance.description,
-};
+Map<String, dynamic> _$GalleryImageToJson(GalleryImage instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'date': dateToUtcIso8601(instance.date),
+      'image': instance.imagePath,
+      'description': instance.description,
+    };

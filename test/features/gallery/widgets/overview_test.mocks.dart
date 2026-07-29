@@ -26,7 +26,8 @@ import 'package:wger/features/gallery/providers/gallery_repository.dart' as _i3;
 // ignore_for_file: invalid_use_of_internal_member
 
 class _FakeGalleryImage_0 extends _i1.SmartFake implements _i2.GalleryImage {
-  _FakeGalleryImage_0(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeGalleryImage_0(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 /// A class which mocks [GalleryRepository].

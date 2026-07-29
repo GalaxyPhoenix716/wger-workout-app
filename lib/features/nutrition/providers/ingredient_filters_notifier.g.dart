@@ -13,7 +13,8 @@ part of 'ingredient_filters_notifier.dart';
 final ingredientFiltersProvider = IngredientFiltersNotifierProvider._();
 
 final class IngredientFiltersNotifierProvider
-    extends $AsyncNotifierProvider<IngredientFiltersNotifier, IngredientFilters> {
+    extends
+        $AsyncNotifierProvider<IngredientFiltersNotifier, IngredientFilters> {
   IngredientFiltersNotifierProvider._()
     : super(
         from: null,
@@ -33,14 +34,17 @@ final class IngredientFiltersNotifierProvider
   IngredientFiltersNotifier create() => IngredientFiltersNotifier();
 }
 
-String _$ingredientFiltersNotifierHash() => r'4284bd60c449665303559572457beff3ebdef865';
+String _$ingredientFiltersNotifierHash() =>
+    r'4284bd60c449665303559572457beff3ebdef865';
 
-abstract class _$IngredientFiltersNotifier extends $AsyncNotifier<IngredientFilters> {
+abstract class _$IngredientFiltersNotifier
+    extends $AsyncNotifier<IngredientFilters> {
   FutureOr<IngredientFilters> build();
   @$mustCallSuper
   @override
   WhenComplete runBuild() {
-    final ref = this.ref as $Ref<AsyncValue<IngredientFilters>, IngredientFilters>;
+    final ref =
+        this.ref as $Ref<AsyncValue<IngredientFilters>, IngredientFilters>;
     final element =
         ref.element
             as $ClassProviderElement<

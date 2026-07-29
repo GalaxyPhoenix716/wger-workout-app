@@ -28,10 +28,12 @@ import 'package:wger/core/network/secure_token_storage.dart' as _i7;
 // ignore_for_file: invalid_use_of_internal_member
 
 class _FakeResponse_0 extends _i1.SmartFake implements _i2.Response {
-  _FakeResponse_0(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeResponse_0(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
-class _FakeStreamedResponse_1 extends _i1.SmartFake implements _i2.StreamedResponse {
+class _FakeStreamedResponse_1 extends _i1.SmartFake
+    implements _i2.StreamedResponse {
   _FakeStreamedResponse_1(Object parent, Invocation parentInvocation)
     : super(parent, parentInvocation);
 }
@@ -221,7 +223,8 @@ class MockClient extends _i1.Mock implements _i2.Client {
 /// A class which mocks [SecureTokenStorage].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSecureTokenStorage extends _i1.Mock implements _i7.SecureTokenStorage {
+class MockSecureTokenStorage extends _i1.Mock
+    implements _i7.SecureTokenStorage {
   MockSecureTokenStorage() {
     _i1.throwOnMissingStub(this);
   }

@@ -9,7 +9,8 @@ import 'package:mockito/mockito.dart' as _i1;
 import 'package:wger/core/search_options.dart' as _i6;
 import 'package:wger/features/nutrition/models/ingredient.dart' as _i4;
 import 'package:wger/features/nutrition/models/ingredient_filters.dart' as _i5;
-import 'package:wger/features/nutrition/providers/ingredient_repository.dart' as _i2;
+import 'package:wger/features/nutrition/providers/ingredient_repository.dart'
+    as _i2;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -29,7 +30,8 @@ import 'package:wger/features/nutrition/providers/ingredient_repository.dart' as
 /// A class which mocks [IngredientRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockIngredientRepository extends _i1.Mock implements _i2.IngredientRepository {
+class MockIngredientRepository extends _i1.Mock
+    implements _i2.IngredientRepository {
   MockIngredientRepository() {
     _i1.throwOnMissingStub(this);
   }

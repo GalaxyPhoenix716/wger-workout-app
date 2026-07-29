@@ -26,7 +26,8 @@ import 'package:wger/core/network/secure_token_storage.dart' as _i2;
 /// A class which mocks [SecureTokenStorage].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSecureTokenStorage extends _i1.Mock implements _i2.SecureTokenStorage {
+class MockSecureTokenStorage extends _i1.Mock
+    implements _i2.SecureTokenStorage {
   MockSecureTokenStorage() {
     _i1.throwOnMissingStub(this);
   }

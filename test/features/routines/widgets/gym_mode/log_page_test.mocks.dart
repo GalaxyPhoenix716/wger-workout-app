@@ -7,7 +7,8 @@ import 'dart:async' as _i3;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:wger/features/routines/models/log.dart' as _i4;
-import 'package:wger/features/routines/providers/workout_logs_repository.dart' as _i2;
+import 'package:wger/features/routines/providers/workout_logs_repository.dart'
+    as _i2;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -27,7 +28,8 @@ import 'package:wger/features/routines/providers/workout_logs_repository.dart' a
 /// A class which mocks [WorkoutLogRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockWorkoutLogRepository extends _i1.Mock implements _i2.WorkoutLogRepository {
+class MockWorkoutLogRepository extends _i1.Mock
+    implements _i2.WorkoutLogRepository {
   MockWorkoutLogRepository() {
     _i1.throwOnMissingStub(this);
   }

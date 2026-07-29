@@ -23,7 +23,9 @@ Routine _$RoutineFromJson(Map<String, dynamic> json) {
     id: (json['id'] as num?)?.toInt(),
     created: utcIso8601ToLocalDate(json['created'] as String),
     name: json['name'] as String,
-    start: json['start'] == null ? null : DateTime.parse(json['start'] as String),
+    start: json['start'] == null
+        ? null
+        : DateTime.parse(json['start'] as String),
     end: json['end'] == null ? null : DateTime.parse(json['end'] as String),
     fitInWeek: json['fit_in_week'] as bool? ?? false,
     isTemplate: json['is_template'] as bool? ?? false,

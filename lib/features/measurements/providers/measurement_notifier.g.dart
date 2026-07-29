@@ -13,7 +13,11 @@ part of 'measurement_notifier.dart';
 final measurementProvider = MeasurementNotifierProvider._();
 
 final class MeasurementNotifierProvider
-    extends $StreamNotifierProvider<MeasurementNotifier, List<MeasurementCategory>> {
+    extends
+        $StreamNotifierProvider<
+          MeasurementNotifier,
+          List<MeasurementCategory>
+        > {
   MeasurementNotifierProvider._()
     : super(
         from: null,
@@ -33,18 +37,28 @@ final class MeasurementNotifierProvider
   MeasurementNotifier create() => MeasurementNotifier();
 }
 
-String _$measurementNotifierHash() => r'94978ed841f94d3481322dc144ef82da95cfb62c';
+String _$measurementNotifierHash() =>
+    r'94978ed841f94d3481322dc144ef82da95cfb62c';
 
-abstract class _$MeasurementNotifier extends $StreamNotifier<List<MeasurementCategory>> {
+abstract class _$MeasurementNotifier
+    extends $StreamNotifier<List<MeasurementCategory>> {
   Stream<List<MeasurementCategory>> build();
   @$mustCallSuper
   @override
   WhenComplete runBuild() {
-    final ref = this.ref as $Ref<AsyncValue<List<MeasurementCategory>>, List<MeasurementCategory>>;
+    final ref =
+        this.ref
+            as $Ref<
+              AsyncValue<List<MeasurementCategory>>,
+              List<MeasurementCategory>
+            >;
     final element =
         ref.element
             as $ClassProviderElement<
-              AnyNotifier<AsyncValue<List<MeasurementCategory>>, List<MeasurementCategory>>,
+              AnyNotifier<
+                AsyncValue<List<MeasurementCategory>>,
+                List<MeasurementCategory>
+              >,
               AsyncValue<List<MeasurementCategory>>,
               Object?,
               Object?

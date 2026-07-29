@@ -25,7 +25,8 @@ import 'package:wger/features/account/providers/account_repository.dart' as _i3;
 // ignore_for_file: invalid_use_of_internal_member
 
 class _FakeAccount_0 extends _i1.SmartFake implements _i2.Account {
-  _FakeAccount_0(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeAccount_0(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 /// A class which mocks [AccountRepository].

@@ -12,8 +12,10 @@ import 'package:wger/features/exercises/models/category.dart' as _i16;
 import 'package:wger/features/exercises/models/equipment.dart' as _i18;
 import 'package:wger/features/exercises/models/exercise_filters.dart' as _i15;
 import 'package:wger/features/exercises/models/muscle.dart' as _i19;
-import 'package:wger/features/exercises/providers/exercise_repository.dart' as _i13;
-import 'package:wger/features/exercises/providers/exercises_notifier.dart' as _i17;
+import 'package:wger/features/exercises/providers/exercise_repository.dart'
+    as _i13;
+import 'package:wger/features/exercises/providers/exercises_notifier.dart'
+    as _i17;
 import 'package:wger/features/routines/models/base_config.dart' as _i6;
 import 'package:wger/features/routines/models/day.dart' as _i3;
 import 'package:wger/features/routines/models/repetition_unit.dart' as _i11;
@@ -22,8 +24,10 @@ import 'package:wger/features/routines/models/session.dart' as _i7;
 import 'package:wger/features/routines/models/slot.dart' as _i4;
 import 'package:wger/features/routines/models/slot_entry.dart' as _i5;
 import 'package:wger/features/routines/models/weight_unit.dart' as _i10;
-import 'package:wger/features/routines/providers/routines_repository.dart' as _i8;
-import 'package:wger/features/routines/providers/workout_session_repository.dart' as _i12;
+import 'package:wger/features/routines/providers/routines_repository.dart'
+    as _i8;
+import 'package:wger/features/routines/providers/workout_session_repository.dart'
+    as _i12;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -41,26 +45,32 @@ import 'package:wger/features/routines/providers/workout_session_repository.dart
 // ignore_for_file: invalid_use_of_internal_member
 
 class _FakeRoutine_0 extends _i1.SmartFake implements _i2.Routine {
-  _FakeRoutine_0(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeRoutine_0(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeDay_1 extends _i1.SmartFake implements _i3.Day {
-  _FakeDay_1(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeDay_1(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeSlot_2 extends _i1.SmartFake implements _i4.Slot {
-  _FakeSlot_2(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeSlot_2(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeSlotEntry_3 extends _i1.SmartFake implements _i5.SlotEntry {
-  _FakeSlotEntry_3(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeSlotEntry_3(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeBaseConfig_4 extends _i1.SmartFake implements _i6.BaseConfig {
-  _FakeBaseConfig_4(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeBaseConfig_4(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
-class _FakeWorkoutSession_5 extends _i1.SmartFake implements _i7.WorkoutSession {
+class _FakeWorkoutSession_5 extends _i1.SmartFake
+    implements _i7.WorkoutSession {
   _FakeWorkoutSession_5(Object parent, Invocation parentInvocation)
     : super(parent, parentInvocation);
 }
@@ -68,7 +78,8 @@ class _FakeWorkoutSession_5 extends _i1.SmartFake implements _i7.WorkoutSession 
 /// A class which mocks [RoutinesRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockRoutinesRepository extends _i1.Mock implements _i8.RoutinesRepository {
+class MockRoutinesRepository extends _i1.Mock
+    implements _i8.RoutinesRepository {
   MockRoutinesRepository() {
     _i1.throwOnMissingStub(this);
   }
@@ -286,7 +297,8 @@ class MockRoutinesRepository extends _i1.Mock implements _i8.RoutinesRepository 
 /// A class which mocks [WorkoutSessionRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockWorkoutSessionRepository extends _i1.Mock implements _i12.WorkoutSessionRepository {
+class MockWorkoutSessionRepository extends _i1.Mock
+    implements _i12.WorkoutSessionRepository {
   MockWorkoutSessionRepository() {
     _i1.throwOnMissingStub(this);
   }
@@ -334,7 +346,8 @@ class MockWorkoutSessionRepository extends _i1.Mock implements _i12.WorkoutSessi
 /// A class which mocks [ExerciseRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockExerciseRepository extends _i1.Mock implements _i13.ExerciseRepository {
+class MockExerciseRepository extends _i1.Mock
+    implements _i13.ExerciseRepository {
   MockExerciseRepository() {
     _i1.throwOnMissingStub(this);
   }

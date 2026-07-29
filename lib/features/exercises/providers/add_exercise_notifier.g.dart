@@ -41,7 +41,8 @@ final class AddExerciseNotifierProvider
   }
 }
 
-String _$addExerciseNotifierHash() => r'e98c074c3e9a71b58e5289242b75fe503532149b';
+String _$addExerciseNotifierHash() =>
+    r'e98c074c3e9a71b58e5289242b75fe503532149b';
 
 abstract class _$AddExerciseNotifier extends $Notifier<AddExerciseState> {
   AddExerciseState build();

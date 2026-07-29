@@ -26,11 +26,13 @@ import 'package:wger/powersync/api_client.dart' as _i3;
 // ignore_for_file: invalid_use_of_internal_member
 
 class _FakeUri_0 extends _i1.SmartFake implements Uri {
-  _FakeUri_0(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeUri_0(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeResponse_1 extends _i1.SmartFake implements _i2.Response {
-  _FakeResponse_1(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeResponse_1(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 /// A class which mocks [ApiClient].

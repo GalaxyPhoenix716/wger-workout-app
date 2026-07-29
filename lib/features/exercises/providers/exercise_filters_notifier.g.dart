@@ -19,7 +19,8 @@ final exerciseListFiltersProvider = ExerciseListFiltersNotifierProvider._();
 /// search term, selected categories/equipment, and the resulting
 /// [ExerciseFilterState.filteredExercises] list.
 final class ExerciseListFiltersNotifierProvider
-    extends $NotifierProvider<ExerciseListFiltersNotifier, ExerciseFilterState> {
+    extends
+        $NotifierProvider<ExerciseListFiltersNotifier, ExerciseFilterState> {
   /// Holds the *UI-side* state for the exercises catalogue screen:
   /// search term, selected categories/equipment, and the resulting
   /// [ExerciseFilterState.filteredExercises] list.
@@ -50,13 +51,15 @@ final class ExerciseListFiltersNotifierProvider
   }
 }
 
-String _$exerciseListFiltersNotifierHash() => r'960fd73689d5e34150a7e923aa33bfdb82dd6be5';
+String _$exerciseListFiltersNotifierHash() =>
+    r'960fd73689d5e34150a7e923aa33bfdb82dd6be5';
 
 /// Holds the *UI-side* state for the exercises catalogue screen:
 /// search term, selected categories/equipment, and the resulting
 /// [ExerciseFilterState.filteredExercises] list.
 
-abstract class _$ExerciseListFiltersNotifier extends $Notifier<ExerciseFilterState> {
+abstract class _$ExerciseListFiltersNotifier
+    extends $Notifier<ExerciseFilterState> {
   ExerciseFilterState build();
   @$mustCallSuper
   @override

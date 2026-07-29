@@ -9,10 +9,12 @@ import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i4;
 import 'package:wger/core/network/base_provider.dart' as _i2;
 import 'package:wger/features/routines/models/log.dart' as _i10;
-import 'package:wger/features/routines/providers/workout_logs_repository.dart' as _i9;
+import 'package:wger/features/routines/providers/workout_logs_repository.dart'
+    as _i9;
 import 'package:wger/features/trophies/models/trophy.dart' as _i6;
 import 'package:wger/features/trophies/models/user_trophy.dart' as _i7;
-import 'package:wger/features/trophies/models/user_trophy_progression.dart' as _i8;
+import 'package:wger/features/trophies/models/user_trophy_progression.dart'
+    as _i8;
 import 'package:wger/features/trophies/providers/trophy_repository.dart' as _i3;
 
 // ignore_for_file: type=lint
@@ -30,7 +32,8 @@ import 'package:wger/features/trophies/providers/trophy_repository.dart' as _i3;
 // ignore_for_file: subtype_of_sealed_class
 // ignore_for_file: invalid_use_of_internal_member
 
-class _FakeWgerBaseProvider_0 extends _i1.SmartFake implements _i2.WgerBaseProvider {
+class _FakeWgerBaseProvider_0 extends _i1.SmartFake
+    implements _i2.WgerBaseProvider {
   _FakeWgerBaseProvider_0(Object parent, Invocation parentInvocation)
     : super(parent, parentInvocation);
 }
@@ -131,7 +134,8 @@ class MockTrophyRepository extends _i1.Mock implements _i3.TrophyRepository {
 /// A class which mocks [WorkoutLogRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockWorkoutLogRepository extends _i1.Mock implements _i9.WorkoutLogRepository {
+class MockWorkoutLogRepository extends _i1.Mock
+    implements _i9.WorkoutLogRepository {
   MockWorkoutLogRepository() {
     _i1.throwOnMissingStub(this);
   }

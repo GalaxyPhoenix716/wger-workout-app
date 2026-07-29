@@ -12,7 +12,8 @@ part of 'gym_state_notifier.dart';
 @ProviderFor(GymStateNotifier)
 final gymStateProvider = GymStateNotifierProvider._();
 
-final class GymStateNotifierProvider extends $NotifierProvider<GymStateNotifier, GymModeState> {
+final class GymStateNotifierProvider
+    extends $NotifierProvider<GymStateNotifier, GymModeState> {
   GymStateNotifierProvider._()
     : super(
         from: null,

@@ -3,7 +3,8 @@
 part of 'database.dart';
 
 // ignore_for_file: type=lint
-class $LanguageTableTable extends LanguageTable with TableInfo<$LanguageTableTable, Language> {
+class $LanguageTableTable extends LanguageTable
+    with TableInfo<$LanguageTableTable, Language> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
@@ -181,7 +182,8 @@ class LanguageTableCompanion extends UpdateCompanion<Language> {
   }
 }
 
-class $LicenseTableTable extends LicenseTable with TableInfo<$LicenseTableTable, License> {
+class $LicenseTableTable extends LicenseTable
+    with TableInfo<$LicenseTableTable, License> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
@@ -681,7 +683,8 @@ class ExerciseCategoryTableCompanion extends UpdateCompanion<ExerciseCategory> {
   }
 }
 
-class $ExerciseTableTable extends ExerciseTable with TableInfo<$ExerciseTableTable, ExerciseRow> {
+class $ExerciseTableTable extends ExerciseTable
+    with TableInfo<$ExerciseTableTable, ExerciseRow> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
@@ -939,7 +942,9 @@ class ExerciseRow extends DataClass implements Insertable<ExerciseRow> {
   }) => ExerciseRow(
     id: id ?? this.id,
     uuid: uuid ?? this.uuid,
-    variationGroup: variationGroup.present ? variationGroup.value : this.variationGroup,
+    variationGroup: variationGroup.present
+        ? variationGroup.value
+        : this.variationGroup,
     categoryId: categoryId ?? this.categoryId,
     created: created ?? this.created,
     lastUpdate: lastUpdate ?? this.lastUpdate,
@@ -948,10 +953,16 @@ class ExerciseRow extends DataClass implements Insertable<ExerciseRow> {
     return ExerciseRow(
       id: data.id.present ? data.id.value : this.id,
       uuid: data.uuid.present ? data.uuid.value : this.uuid,
-      variationGroup: data.variationGroup.present ? data.variationGroup.value : this.variationGroup,
-      categoryId: data.categoryId.present ? data.categoryId.value : this.categoryId,
+      variationGroup: data.variationGroup.present
+          ? data.variationGroup.value
+          : this.variationGroup,
+      categoryId: data.categoryId.present
+          ? data.categoryId.value
+          : this.categoryId,
       created: data.created.present ? data.created.value : this.created,
-      lastUpdate: data.lastUpdate.present ? data.lastUpdate.value : this.lastUpdate,
+      lastUpdate: data.lastUpdate.present
+          ? data.lastUpdate.value
+          : this.lastUpdate,
     );
   }
 
@@ -969,7 +980,8 @@ class ExerciseRow extends DataClass implements Insertable<ExerciseRow> {
   }
 
   @override
-  int get hashCode => Object.hash(id, uuid, variationGroup, categoryId, created, lastUpdate);
+  int get hashCode =>
+      Object.hash(id, uuid, variationGroup, categoryId, created, lastUpdate);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -1325,7 +1337,8 @@ class $ExerciseTranslationTableTable extends ExerciseTranslationTable
   }
 }
 
-class ExerciseTranslationRow extends DataClass implements Insertable<ExerciseTranslationRow> {
+class ExerciseTranslationRow extends DataClass
+    implements Insertable<ExerciseTranslationRow> {
   final int id;
   final String uuid;
   final int exerciseId;
@@ -1427,12 +1440,20 @@ class ExerciseTranslationRow extends DataClass implements Insertable<ExerciseTra
     return ExerciseTranslationRow(
       id: data.id.present ? data.id.value : this.id,
       uuid: data.uuid.present ? data.uuid.value : this.uuid,
-      exerciseId: data.exerciseId.present ? data.exerciseId.value : this.exerciseId,
-      languageId: data.languageId.present ? data.languageId.value : this.languageId,
+      exerciseId: data.exerciseId.present
+          ? data.exerciseId.value
+          : this.exerciseId,
+      languageId: data.languageId.present
+          ? data.languageId.value
+          : this.languageId,
       name: data.name.present ? data.name.value : this.name,
-      description: data.description.present ? data.description.value : this.description,
+      description: data.description.present
+          ? data.description.value
+          : this.description,
       created: data.created.present ? data.created.value : this.created,
-      lastUpdate: data.lastUpdate.present ? data.lastUpdate.value : this.lastUpdate,
+      lastUpdate: data.lastUpdate.present
+          ? data.lastUpdate.value
+          : this.lastUpdate,
     );
   }
 
@@ -1476,7 +1497,8 @@ class ExerciseTranslationRow extends DataClass implements Insertable<ExerciseTra
           other.lastUpdate == this.lastUpdate);
 }
 
-class ExerciseTranslationTableCompanion extends UpdateCompanion<ExerciseTranslationRow> {
+class ExerciseTranslationTableCompanion
+    extends UpdateCompanion<ExerciseTranslationRow> {
   final Value<int> id;
   final Value<String> uuid;
   final Value<int> exerciseId;
@@ -2039,7 +2061,8 @@ class ExerciseCommentTableCompanion extends UpdateCompanion<Comment> {
   }
 }
 
-class $MuscleTableTable extends MuscleTable with TableInfo<$MuscleTableTable, Muscle> {
+class $MuscleTableTable extends MuscleTable
+    with TableInfo<$MuscleTableTable, Muscle> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
@@ -2359,7 +2382,8 @@ class $ExerciseMuscleM2NTable extends ExerciseMuscleM2N
   }
 }
 
-class ExerciseMuscleM2NData extends DataClass implements Insertable<ExerciseMuscleM2NData> {
+class ExerciseMuscleM2NData extends DataClass
+    implements Insertable<ExerciseMuscleM2NData> {
   final int id;
   final int exerciseId;
   final int muscleId;
@@ -2415,7 +2439,9 @@ class ExerciseMuscleM2NData extends DataClass implements Insertable<ExerciseMusc
   ExerciseMuscleM2NData copyWithCompanion(ExerciseMuscleM2NCompanion data) {
     return ExerciseMuscleM2NData(
       id: data.id.present ? data.id.value : this.id,
-      exerciseId: data.exerciseId.present ? data.exerciseId.value : this.exerciseId,
+      exerciseId: data.exerciseId.present
+          ? data.exerciseId.value
+          : this.exerciseId,
       muscleId: data.muscleId.present ? data.muscleId.value : this.muscleId,
     );
   }
@@ -2441,7 +2467,8 @@ class ExerciseMuscleM2NData extends DataClass implements Insertable<ExerciseMusc
           other.muscleId == this.muscleId);
 }
 
-class ExerciseMuscleM2NCompanion extends UpdateCompanion<ExerciseMuscleM2NData> {
+class ExerciseMuscleM2NCompanion
+    extends UpdateCompanion<ExerciseMuscleM2NData> {
   final Value<int> id;
   final Value<int> exerciseId;
   final Value<int> muscleId;
@@ -2519,7 +2546,11 @@ class ExerciseMuscleM2NCompanion extends UpdateCompanion<ExerciseMuscleM2NData> 
 }
 
 class $ExerciseSecondaryMuscleM2NTable extends ExerciseSecondaryMuscleM2N
-    with TableInfo<$ExerciseSecondaryMuscleM2NTable, ExerciseSecondaryMuscleM2NData> {
+    with
+        TableInfo<
+          $ExerciseSecondaryMuscleM2NTable,
+          ExerciseSecondaryMuscleM2NData
+        > {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
@@ -2691,7 +2722,9 @@ class ExerciseSecondaryMuscleM2NData extends DataClass
   ) {
     return ExerciseSecondaryMuscleM2NData(
       id: data.id.present ? data.id.value : this.id,
-      exerciseId: data.exerciseId.present ? data.exerciseId.value : this.exerciseId,
+      exerciseId: data.exerciseId.present
+          ? data.exerciseId.value
+          : this.exerciseId,
       muscleId: data.muscleId.present ? data.muscleId.value : this.muscleId,
     );
   }
@@ -2717,7 +2750,8 @@ class ExerciseSecondaryMuscleM2NData extends DataClass
           other.muscleId == this.muscleId);
 }
 
-class ExerciseSecondaryMuscleM2NCompanion extends UpdateCompanion<ExerciseSecondaryMuscleM2NData> {
+class ExerciseSecondaryMuscleM2NCompanion
+    extends UpdateCompanion<ExerciseSecondaryMuscleM2NData> {
   final Value<int> id;
   final Value<int> exerciseId;
   final Value<int> muscleId;
@@ -2794,7 +2828,8 @@ class ExerciseSecondaryMuscleM2NCompanion extends UpdateCompanion<ExerciseSecond
   }
 }
 
-class $EquipmentTableTable extends EquipmentTable with TableInfo<$EquipmentTableTable, Equipment> {
+class $EquipmentTableTable extends EquipmentTable
+    with TableInfo<$EquipmentTableTable, Equipment> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
@@ -3049,7 +3084,8 @@ class $ExerciseEquipmentM2NTable extends ExerciseEquipmentM2N
   }
 }
 
-class ExerciseEquipmentM2NData extends DataClass implements Insertable<ExerciseEquipmentM2NData> {
+class ExerciseEquipmentM2NData extends DataClass
+    implements Insertable<ExerciseEquipmentM2NData> {
   final int id;
   final int exerciseId;
   final int equipmentId;
@@ -3110,8 +3146,12 @@ class ExerciseEquipmentM2NData extends DataClass implements Insertable<ExerciseE
   ) {
     return ExerciseEquipmentM2NData(
       id: data.id.present ? data.id.value : this.id,
-      exerciseId: data.exerciseId.present ? data.exerciseId.value : this.exerciseId,
-      equipmentId: data.equipmentId.present ? data.equipmentId.value : this.equipmentId,
+      exerciseId: data.exerciseId.present
+          ? data.exerciseId.value
+          : this.exerciseId,
+      equipmentId: data.equipmentId.present
+          ? data.equipmentId.value
+          : this.equipmentId,
     );
   }
 
@@ -3136,7 +3176,8 @@ class ExerciseEquipmentM2NData extends DataClass implements Insertable<ExerciseE
           other.equipmentId == this.equipmentId);
 }
 
-class ExerciseEquipmentM2NCompanion extends UpdateCompanion<ExerciseEquipmentM2NData> {
+class ExerciseEquipmentM2NCompanion
+    extends UpdateCompanion<ExerciseEquipmentM2NData> {
   final Value<int> id;
   final Value<int> exerciseId;
   final Value<int> equipmentId;
@@ -3287,14 +3328,14 @@ class $ExerciseImageTableTable extends ExerciseImageTable
     ),
   );
   @override
-  late final GeneratedColumnWithTypeConverter<ExerciseImageStyle, String> style =
-      GeneratedColumn<String>(
-        'style',
-        aliasedName,
-        false,
-        type: DriftSqlType.string,
-        requiredDuringInsert: true,
-      ).withConverter<ExerciseImageStyle>($ExerciseImageTableTable.$converterstyle);
+  late final GeneratedColumnWithTypeConverter<ExerciseImageStyle, String>
+  style = GeneratedColumn<String>(
+    'style',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  ).withConverter<ExerciseImageStyle>($ExerciseImageTableTable.$converterstyle);
   static const VerificationMeta _widthMeta = const VerificationMeta('width');
   @override
   late final GeneratedColumn<int> width = GeneratedColumn<int>(
@@ -3390,17 +3431,17 @@ class $ExerciseImageTableTable extends ExerciseImageTable
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
-  static const VerificationMeta _licenseDerivativeSourceUrlMeta = const VerificationMeta(
-    'licenseDerivativeSourceUrl',
-  );
+  static const VerificationMeta _licenseDerivativeSourceUrlMeta =
+      const VerificationMeta('licenseDerivativeSourceUrl');
   @override
-  late final GeneratedColumn<String> licenseDerivativeSourceUrl = GeneratedColumn<String>(
-    'license_derivative_source_url',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
+  late final GeneratedColumn<String> licenseDerivativeSourceUrl =
+      GeneratedColumn<String>(
+        'license_derivative_source_url',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: true,
+      );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -3813,7 +3854,8 @@ class ExerciseImageTableCompanion extends UpdateCompanion<ExerciseImage> {
       licenseObjectUrl: licenseObjectUrl ?? this.licenseObjectUrl,
       licenseAuthor: licenseAuthor ?? this.licenseAuthor,
       licenseAuthorUrl: licenseAuthorUrl ?? this.licenseAuthorUrl,
-      licenseDerivativeSourceUrl: licenseDerivativeSourceUrl ?? this.licenseDerivativeSourceUrl,
+      licenseDerivativeSourceUrl:
+          licenseDerivativeSourceUrl ?? this.licenseDerivativeSourceUrl,
       rowid: rowid ?? this.rowid,
     );
   }
@@ -4102,17 +4144,17 @@ class $ExerciseVideoTableTable extends ExerciseVideoTable
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
-  static const VerificationMeta _licenseDerivativeSourceUrlMeta = const VerificationMeta(
-    'licenseDerivativeSourceUrl',
-  );
+  static const VerificationMeta _licenseDerivativeSourceUrlMeta =
+      const VerificationMeta('licenseDerivativeSourceUrl');
   @override
-  late final GeneratedColumn<String> licenseDerivativeSourceUrl = GeneratedColumn<String>(
-    'license_derivative_source_url',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
+  late final GeneratedColumn<String> licenseDerivativeSourceUrl =
+      GeneratedColumn<String>(
+        'license_derivative_source_url',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: true,
+      );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -4573,7 +4615,8 @@ class ExerciseVideoTableCompanion extends UpdateCompanion<Video> {
       licenseObjectUrl: licenseObjectUrl ?? this.licenseObjectUrl,
       licenseAuthor: licenseAuthor ?? this.licenseAuthor,
       licenseAuthorUrl: licenseAuthorUrl ?? this.licenseAuthorUrl,
-      licenseDerivativeSourceUrl: licenseDerivativeSourceUrl ?? this.licenseDerivativeSourceUrl,
+      licenseDerivativeSourceUrl:
+          licenseDerivativeSourceUrl ?? this.licenseDerivativeSourceUrl,
       rowid: rowid ?? this.rowid,
     );
   }
@@ -4700,13 +4743,14 @@ class $WeightEntryTableTable extends WeightEntryTable
     requiredDuringInsert: true,
   );
   @override
-  late final GeneratedColumnWithTypeConverter<DateTime?, DateTime> date = GeneratedColumn<DateTime>(
-    'date',
-    aliasedName,
-    true,
-    type: DriftSqlType.dateTime,
-    requiredDuringInsert: false,
-  ).withConverter<DateTime?>($WeightEntryTableTable.$converterdaten);
+  late final GeneratedColumnWithTypeConverter<DateTime?, DateTime> date =
+      GeneratedColumn<DateTime>(
+        'date',
+        aliasedName,
+        true,
+        type: DriftSqlType.dateTime,
+        requiredDuringInsert: false,
+      ).withConverter<DateTime?>($WeightEntryTableTable.$converterdaten);
   @override
   List<GeneratedColumn> get $columns => [id, weight, date];
   @override
@@ -4763,10 +4807,10 @@ class $WeightEntryTableTable extends WeightEntryTable
     return $WeightEntryTableTable(attachedDatabase, alias);
   }
 
-  static TypeConverter<DateTime, DateTime> $converterdate = const UtcDateTimeConverter();
-  static TypeConverter<DateTime?, DateTime?> $converterdaten = NullAwareTypeConverter.wrap(
-    $converterdate,
-  );
+  static TypeConverter<DateTime, DateTime> $converterdate =
+      const UtcDateTimeConverter();
+  static TypeConverter<DateTime?, DateTime?> $converterdaten =
+      NullAwareTypeConverter.wrap($converterdate);
 }
 
 class WeightEntryTableCompanion extends UpdateCompanion<WeightEntry> {
@@ -4943,7 +4987,8 @@ class $MeasurementCategoryTableTable extends MeasurementCategoryTable
   }
 }
 
-class MeasurementCategoryTableCompanion extends UpdateCompanion<MeasurementCategory> {
+class MeasurementCategoryTableCompanion
+    extends UpdateCompanion<MeasurementCategory> {
   final Value<String> id;
   final Value<String> name;
   final Value<String> unit;
@@ -5050,13 +5095,14 @@ class $MeasurementEntryTableTable extends MeasurementEntryTable
     ),
   );
   @override
-  late final GeneratedColumnWithTypeConverter<DateTime, DateTime> date = GeneratedColumn<DateTime>(
-    'date',
-    aliasedName,
-    false,
-    type: DriftSqlType.dateTime,
-    requiredDuringInsert: true,
-  ).withConverter<DateTime>($MeasurementEntryTableTable.$converterdate);
+  late final GeneratedColumnWithTypeConverter<DateTime, DateTime> date =
+      GeneratedColumn<DateTime>(
+        'date',
+        aliasedName,
+        false,
+        type: DriftSqlType.dateTime,
+        requiredDuringInsert: true,
+      ).withConverter<DateTime>($MeasurementEntryTableTable.$converterdate);
   static const VerificationMeta _valueMeta = const VerificationMeta('value');
   @override
   late final GeneratedColumn<double> value = GeneratedColumn<double>(
@@ -5155,7 +5201,8 @@ class $MeasurementEntryTableTable extends MeasurementEntryTable
     return $MeasurementEntryTableTable(attachedDatabase, alias);
   }
 
-  static TypeConverter<DateTime, DateTime> $converterdate = const UtcDateTimeConverter();
+  static TypeConverter<DateTime, DateTime> $converterdate =
+      const UtcDateTimeConverter();
 }
 
 class MeasurementEntryTableCompanion extends UpdateCompanion<MeasurementEntry> {
@@ -5260,7 +5307,8 @@ class MeasurementEntryTableCompanion extends UpdateCompanion<MeasurementEntry> {
   }
 }
 
-class $RoutineTableTable extends RoutineTable with TableInfo<$RoutineTableTable, Routine> {
+class $RoutineTableTable extends RoutineTable
+    with TableInfo<$RoutineTableTable, Routine> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
@@ -5304,21 +5352,23 @@ class $RoutineTableTable extends RoutineTable with TableInfo<$RoutineTableTable,
         requiredDuringInsert: true,
       ).withConverter<DateTime>($RoutineTableTable.$convertercreated);
   @override
-  late final GeneratedColumnWithTypeConverter<DateTime, String> start = GeneratedColumn<String>(
-    'start',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  ).withConverter<DateTime>($RoutineTableTable.$converterstart);
+  late final GeneratedColumnWithTypeConverter<DateTime, String> start =
+      GeneratedColumn<String>(
+        'start',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: true,
+      ).withConverter<DateTime>($RoutineTableTable.$converterstart);
   @override
-  late final GeneratedColumnWithTypeConverter<DateTime, String> end = GeneratedColumn<String>(
-    'end',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  ).withConverter<DateTime>($RoutineTableTable.$converterend);
+  late final GeneratedColumnWithTypeConverter<DateTime, String> end =
+      GeneratedColumn<String>(
+        'end',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: true,
+      ).withConverter<DateTime>($RoutineTableTable.$converterend);
   static const VerificationMeta _isTemplateMeta = const VerificationMeta(
     'isTemplate',
   );
@@ -5492,9 +5542,12 @@ class $RoutineTableTable extends RoutineTable with TableInfo<$RoutineTableTable,
     return $RoutineTableTable(attachedDatabase, alias);
   }
 
-  static TypeConverter<DateTime, DateTime> $convertercreated = const UtcDateTimeConverter();
-  static TypeConverter<DateTime, String> $converterstart = const DateOnlyTextConverter();
-  static TypeConverter<DateTime, String> $converterend = const DateOnlyTextConverter();
+  static TypeConverter<DateTime, DateTime> $convertercreated =
+      const UtcDateTimeConverter();
+  static TypeConverter<DateTime, String> $converterstart =
+      const DateOnlyTextConverter();
+  static TypeConverter<DateTime, String> $converterend =
+      const DateOnlyTextConverter();
 }
 
 class RoutineTableCompanion extends UpdateCompanion<Routine> {
@@ -5652,7 +5705,8 @@ class RoutineTableCompanion extends UpdateCompanion<Routine> {
   }
 }
 
-class $WorkoutLogTableTable extends WorkoutLogTable with TableInfo<$WorkoutLogTableTable, Log> {
+class $WorkoutLogTableTable extends WorkoutLogTable
+    with TableInfo<$WorkoutLogTableTable, Log> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
@@ -5757,13 +5811,14 @@ class $WorkoutLogTableTable extends WorkoutLogTable with TableInfo<$WorkoutLogTa
     'repetitionsTarget',
   );
   @override
-  late final GeneratedColumn<double> repetitionsTarget = GeneratedColumn<double>(
-    'repetitions_target',
-    aliasedName,
-    true,
-    type: DriftSqlType.double,
-    requiredDuringInsert: false,
-  );
+  late final GeneratedColumn<double> repetitionsTarget =
+      GeneratedColumn<double>(
+        'repetitions_target',
+        aliasedName,
+        true,
+        type: DriftSqlType.double,
+        requiredDuringInsert: false,
+      );
   static const VerificationMeta _repetitionsUnitIdMeta = const VerificationMeta(
     'repetitionsUnitId',
   );
@@ -5807,13 +5862,14 @@ class $WorkoutLogTableTable extends WorkoutLogTable with TableInfo<$WorkoutLogTa
     requiredDuringInsert: false,
   );
   @override
-  late final GeneratedColumnWithTypeConverter<DateTime, DateTime> date = GeneratedColumn<DateTime>(
-    'date',
-    aliasedName,
-    false,
-    type: DriftSqlType.dateTime,
-    requiredDuringInsert: true,
-  ).withConverter<DateTime>($WorkoutLogTableTable.$converterdate);
+  late final GeneratedColumnWithTypeConverter<DateTime, DateTime> date =
+      GeneratedColumn<DateTime>(
+        'date',
+        aliasedName,
+        false,
+        type: DriftSqlType.dateTime,
+        requiredDuringInsert: true,
+      ).withConverter<DateTime>($WorkoutLogTableTable.$converterdate);
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -6024,7 +6080,8 @@ class $WorkoutLogTableTable extends WorkoutLogTable with TableInfo<$WorkoutLogTa
     return $WorkoutLogTableTable(attachedDatabase, alias);
   }
 
-  static TypeConverter<DateTime, DateTime> $converterdate = const UtcDateTimeConverter();
+  static TypeConverter<DateTime, DateTime> $converterdate =
+      const UtcDateTimeConverter();
 }
 
 class WorkoutLogTableCompanion extends UpdateCompanion<Log> {
@@ -6274,13 +6331,14 @@ class $WorkoutSessionTableTable extends WorkoutSessionTable
     requiredDuringInsert: false,
   );
   @override
-  late final GeneratedColumnWithTypeConverter<DateTime, String> date = GeneratedColumn<String>(
-    'date',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  ).withConverter<DateTime>($WorkoutSessionTableTable.$converterdate);
+  late final GeneratedColumnWithTypeConverter<DateTime, String> date =
+      GeneratedColumn<String>(
+        'date',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: true,
+      ).withConverter<DateTime>($WorkoutSessionTableTable.$converterdate);
   static const VerificationMeta _notesMeta = const VerificationMeta('notes');
   @override
   late final GeneratedColumn<String> notes = GeneratedColumn<String>(
@@ -6291,7 +6349,8 @@ class $WorkoutSessionTableTable extends WorkoutSessionTable
     requiredDuringInsert: false,
   );
   @override
-  late final GeneratedColumnWithTypeConverter<WorkoutImpression, String> impression =
+  late final GeneratedColumnWithTypeConverter<WorkoutImpression, String>
+  impression =
       GeneratedColumn<String>(
         'impression',
         aliasedName,
@@ -6313,13 +6372,14 @@ class $WorkoutSessionTableTable extends WorkoutSessionTable
         $WorkoutSessionTableTable.$convertertimeStartn,
       );
   @override
-  late final GeneratedColumnWithTypeConverter<TimeOfDay?, String> timeEnd = GeneratedColumn<String>(
-    'time_end',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  ).withConverter<TimeOfDay?>($WorkoutSessionTableTable.$convertertimeEndn);
+  late final GeneratedColumnWithTypeConverter<TimeOfDay?, String> timeEnd =
+      GeneratedColumn<String>(
+        'time_end',
+        aliasedName,
+        true,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+      ).withConverter<TimeOfDay?>($WorkoutSessionTableTable.$convertertimeEndn);
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -6421,17 +6481,18 @@ class $WorkoutSessionTableTable extends WorkoutSessionTable
     return $WorkoutSessionTableTable(attachedDatabase, alias);
   }
 
-  static TypeConverter<DateTime, String> $converterdate = const DateOnlyTextConverter();
+  static TypeConverter<DateTime, String> $converterdate =
+      const DateOnlyTextConverter();
   static TypeConverter<WorkoutImpression, String> $converterimpression =
       const WorkoutImpressionConverter();
-  static TypeConverter<TimeOfDay, String> $convertertimeStart = const TimeOfDayConverter();
-  static TypeConverter<TimeOfDay?, String?> $convertertimeStartn = NullAwareTypeConverter.wrap(
-    $convertertimeStart,
-  );
-  static TypeConverter<TimeOfDay, String> $convertertimeEnd = const TimeOfDayConverter();
-  static TypeConverter<TimeOfDay?, String?> $convertertimeEndn = NullAwareTypeConverter.wrap(
-    $convertertimeEnd,
-  );
+  static TypeConverter<TimeOfDay, String> $convertertimeStart =
+      const TimeOfDayConverter();
+  static TypeConverter<TimeOfDay?, String?> $convertertimeStartn =
+      NullAwareTypeConverter.wrap($convertertimeStart);
+  static TypeConverter<TimeOfDay, String> $convertertimeEnd =
+      const TimeOfDayConverter();
+  static TypeConverter<TimeOfDay?, String?> $convertertimeEndn =
+      NullAwareTypeConverter.wrap($convertertimeEnd);
 }
 
 class WorkoutSessionTableCompanion extends UpdateCompanion<WorkoutSession> {
@@ -6650,7 +6711,8 @@ class $RoutineRepetitionUnitTableTable extends RoutineRepetitionUnitTable
   }
 }
 
-class RoutineRepetitionUnitTableCompanion extends UpdateCompanion<RepetitionUnit> {
+class RoutineRepetitionUnitTableCompanion
+    extends UpdateCompanion<RepetitionUnit> {
   final Value<int> id;
   final Value<String> name;
   final Value<int> rowid;
@@ -6896,21 +6958,23 @@ class $NutritionalPlanTableTable extends NutritionalPlanTable
     requiredDuringInsert: true,
   );
   @override
-  late final GeneratedColumnWithTypeConverter<DateTime, String> startDate = GeneratedColumn<String>(
-    'start',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  ).withConverter<DateTime>($NutritionalPlanTableTable.$converterstartDate);
+  late final GeneratedColumnWithTypeConverter<DateTime, String> startDate =
+      GeneratedColumn<String>(
+        'start',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: true,
+      ).withConverter<DateTime>($NutritionalPlanTableTable.$converterstartDate);
   @override
-  late final GeneratedColumnWithTypeConverter<DateTime?, String> endDate = GeneratedColumn<String>(
-    'end',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  ).withConverter<DateTime?>($NutritionalPlanTableTable.$converterendDaten);
+  late final GeneratedColumnWithTypeConverter<DateTime?, String> endDate =
+      GeneratedColumn<String>(
+        'end',
+        aliasedName,
+        true,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+      ).withConverter<DateTime?>($NutritionalPlanTableTable.$converterendDaten);
   static const VerificationMeta _onlyLoggingMeta = const VerificationMeta(
     'onlyLogging',
   );
@@ -7173,11 +7237,12 @@ class $NutritionalPlanTableTable extends NutritionalPlanTable
     return $NutritionalPlanTableTable(attachedDatabase, alias);
   }
 
-  static TypeConverter<DateTime, String> $converterstartDate = const DateOnlyTextConverter();
-  static TypeConverter<DateTime, String> $converterendDate = const DateOnlyTextConverter();
-  static TypeConverter<DateTime?, String?> $converterendDaten = NullAwareTypeConverter.wrap(
-    $converterendDate,
-  );
+  static TypeConverter<DateTime, String> $converterstartDate =
+      const DateOnlyTextConverter();
+  static TypeConverter<DateTime, String> $converterendDate =
+      const DateOnlyTextConverter();
+  static TypeConverter<DateTime?, String?> $converterendDaten =
+      NullAwareTypeConverter.wrap($converterendDate);
 }
 
 class NutritionalPlanTableCompanion extends UpdateCompanion<NutritionalPlan> {
@@ -7498,17 +7563,17 @@ class $IngredientTableTable extends IngredientTable
     type: DriftSqlType.double,
     requiredDuringInsert: true,
   );
-  static const VerificationMeta _carbohydratesSugarMeta = const VerificationMeta(
-    'carbohydratesSugar',
-  );
+  static const VerificationMeta _carbohydratesSugarMeta =
+      const VerificationMeta('carbohydratesSugar');
   @override
-  late final GeneratedColumn<double> carbohydratesSugar = GeneratedColumn<double>(
-    'carbohydrates_sugar',
-    aliasedName,
-    true,
-    type: DriftSqlType.double,
-    requiredDuringInsert: false,
-  );
+  late final GeneratedColumn<double> carbohydratesSugar =
+      GeneratedColumn<double>(
+        'carbohydrates_sugar',
+        aliasedName,
+        true,
+        type: DriftSqlType.double,
+        requiredDuringInsert: false,
+      );
   static const VerificationMeta _proteinMeta = const VerificationMeta(
     'protein',
   );
@@ -7883,11 +7948,12 @@ class $IngredientTableTable extends IngredientTable
     return $IngredientTableTable(attachedDatabase, alias);
   }
 
-  static TypeConverter<DateTime, DateTime> $convertercreated = const UtcDateTimeConverter();
+  static TypeConverter<DateTime, DateTime> $convertercreated =
+      const UtcDateTimeConverter();
   static JsonTypeConverter2<NutriScore, String, String> $converternutriscore =
       const EnumNameConverter<NutriScore>(NutriScore.values);
-  static JsonTypeConverter2<NutriScore?, String?, String?> $converternutriscoren =
-      JsonTypeConverter2.asNullable($converternutriscore);
+  static JsonTypeConverter2<NutriScore?, String?, String?>
+  $converternutriscoren = JsonTypeConverter2.asNullable($converternutriscore);
 }
 
 class IngredientTableCompanion extends UpdateCompanion<Ingredient> {
@@ -8330,17 +8396,17 @@ class $IngredientImageTableTable extends IngredientImageTable
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
-  static const VerificationMeta _derivativeSourceUrlMeta = const VerificationMeta(
-    'derivativeSourceUrl',
-  );
+  static const VerificationMeta _derivativeSourceUrlMeta =
+      const VerificationMeta('derivativeSourceUrl');
   @override
-  late final GeneratedColumn<String> derivativeSourceUrl = GeneratedColumn<String>(
-    'license_derivative_source_url',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  );
+  late final GeneratedColumn<String> derivativeSourceUrl =
+      GeneratedColumn<String>(
+        'license_derivative_source_url',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: true,
+      );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -8563,8 +8629,10 @@ class $IngredientImageTableTable extends IngredientImageTable
     return $IngredientImageTableTable(attachedDatabase, alias);
   }
 
-  static TypeConverter<DateTime, DateTime> $convertercreated = const UtcDateTimeConverter();
-  static TypeConverter<DateTime, DateTime> $converterlastUpdate = const UtcDateTimeConverter();
+  static TypeConverter<DateTime, DateTime> $convertercreated =
+      const UtcDateTimeConverter();
+  static TypeConverter<DateTime, DateTime> $converterlastUpdate =
+      const UtcDateTimeConverter();
 }
 
 class IngredientImageTableCompanion extends UpdateCompanion<IngredientImage> {
@@ -8666,7 +8734,8 @@ class IngredientImageTableCompanion extends UpdateCompanion<IngredientImage> {
       if (authorUrl != null) 'license_author_url': authorUrl,
       if (title != null) 'license_title': title,
       if (objectUrl != null) 'license_object_url': objectUrl,
-      if (derivativeSourceUrl != null) 'license_derivative_source_url': derivativeSourceUrl,
+      if (derivativeSourceUrl != null)
+        'license_derivative_source_url': derivativeSourceUrl,
       if (rowid != null) 'rowid': rowid,
     });
   }
@@ -8941,7 +9010,8 @@ class $IngredientWeightUnitTableTable extends IngredientWeightUnitTable
   }
 }
 
-class IngredientWeightUnitTableCompanion extends UpdateCompanion<IngredientWeightUnit> {
+class IngredientWeightUnitTableCompanion
+    extends UpdateCompanion<IngredientWeightUnit> {
   final Value<int> id;
   final Value<String> uuid;
   final Value<int> ingredientId;
@@ -9080,13 +9150,14 @@ class $MealTableTable extends MealTable with TableInfo<$MealTableTable, Meal> {
     defaultValue: const Constant(1),
   );
   @override
-  late final GeneratedColumnWithTypeConverter<TimeOfDay?, String> time = GeneratedColumn<String>(
-    'time',
-    aliasedName,
-    true,
-    type: DriftSqlType.string,
-    requiredDuringInsert: false,
-  ).withConverter<TimeOfDay?>($MealTableTable.$convertertimen);
+  late final GeneratedColumnWithTypeConverter<TimeOfDay?, String> time =
+      GeneratedColumn<String>(
+        'time',
+        aliasedName,
+        true,
+        type: DriftSqlType.string,
+        requiredDuringInsert: false,
+      ).withConverter<TimeOfDay?>($MealTableTable.$convertertimen);
   static const VerificationMeta _nameMeta = const VerificationMeta('name');
   @override
   late final GeneratedColumn<String> name = GeneratedColumn<String>(
@@ -9173,10 +9244,10 @@ class $MealTableTable extends MealTable with TableInfo<$MealTableTable, Meal> {
     return $MealTableTable(attachedDatabase, alias);
   }
 
-  static TypeConverter<TimeOfDay, String> $convertertime = const TimeOfDayConverter();
-  static TypeConverter<TimeOfDay?, String?> $convertertimen = NullAwareTypeConverter.wrap(
-    $convertertime,
-  );
+  static TypeConverter<TimeOfDay, String> $convertertime =
+      const TimeOfDayConverter();
+  static TypeConverter<TimeOfDay?, String?> $convertertimen =
+      NullAwareTypeConverter.wrap($convertertime);
 }
 
 class MealTableCompanion extends UpdateCompanion<Meal> {
@@ -9278,7 +9349,8 @@ class MealTableCompanion extends UpdateCompanion<Meal> {
   }
 }
 
-class $MealItemTableTable extends MealItemTable with TableInfo<$MealItemTableTable, MealItem> {
+class $MealItemTableTable extends MealItemTable
+    with TableInfo<$MealItemTableTable, MealItem> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
@@ -9567,7 +9639,8 @@ class MealItemTableCompanion extends UpdateCompanion<MealItem> {
   }
 }
 
-class $LogItemTableTable extends LogItemTable with TableInfo<$LogItemTableTable, LogItem> {
+class $LogItemTableTable extends LogItemTable
+    with TableInfo<$LogItemTableTable, LogItem> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
@@ -9782,7 +9855,8 @@ class $LogItemTableTable extends LogItemTable with TableInfo<$LogItemTableTable,
     return $LogItemTableTable(attachedDatabase, alias);
   }
 
-  static TypeConverter<DateTime, DateTime> $converterdatetime = const UtcDateTimeConverter();
+  static TypeConverter<DateTime, DateTime> $converterdatetime =
+      const UtcDateTimeConverter();
 }
 
 class LogItemTableCompanion extends UpdateCompanion<LogItem> {
@@ -9936,13 +10010,14 @@ class $GalleryImageTableTable extends GalleryImageTable
     requiredDuringInsert: true,
   );
   @override
-  late final GeneratedColumnWithTypeConverter<DateTime, String> date = GeneratedColumn<String>(
-    'date',
-    aliasedName,
-    false,
-    type: DriftSqlType.string,
-    requiredDuringInsert: true,
-  ).withConverter<DateTime>($GalleryImageTableTable.$converterdate);
+  late final GeneratedColumnWithTypeConverter<DateTime, String> date =
+      GeneratedColumn<String>(
+        'date',
+        aliasedName,
+        false,
+        type: DriftSqlType.string,
+        requiredDuringInsert: true,
+      ).withConverter<DateTime>($GalleryImageTableTable.$converterdate);
   static const VerificationMeta _imagePathMeta = const VerificationMeta(
     'imagePath',
   );
@@ -10038,7 +10113,8 @@ class $GalleryImageTableTable extends GalleryImageTable
     return $GalleryImageTableTable(attachedDatabase, alias);
   }
 
-  static TypeConverter<DateTime, String> $converterdate = const DateOnlyTextConverter();
+  static TypeConverter<DateTime, String> $converterdate =
+      const DateOnlyTextConverter();
 }
 
 class GalleryImageTableCompanion extends UpdateCompanion<GalleryImage> {
@@ -10134,53 +10210,65 @@ class GalleryImageTableCompanion extends UpdateCompanion<GalleryImage> {
 
 abstract class _$DriftPowersyncDatabase extends GeneratedDatabase {
   _$DriftPowersyncDatabase(QueryExecutor e) : super(e);
-  $DriftPowersyncDatabaseManager get managers => $DriftPowersyncDatabaseManager(this);
+  $DriftPowersyncDatabaseManager get managers =>
+      $DriftPowersyncDatabaseManager(this);
   late final $LanguageTableTable languageTable = $LanguageTableTable(this);
   late final $LicenseTableTable licenseTable = $LicenseTableTable(this);
   late final $UserProfileTableTable userProfileTable = $UserProfileTableTable(
     this,
   );
-  late final $ExerciseCategoryTableTable exerciseCategoryTable = $ExerciseCategoryTableTable(this);
+  late final $ExerciseCategoryTableTable exerciseCategoryTable =
+      $ExerciseCategoryTableTable(this);
   late final $ExerciseTableTable exerciseTable = $ExerciseTableTable(this);
   late final $ExerciseTranslationTableTable exerciseTranslationTable =
       $ExerciseTranslationTableTable(this);
-  late final $ExerciseAliasTableTable exerciseAliasTable = $ExerciseAliasTableTable(this);
-  late final $ExerciseCommentTableTable exerciseCommentTable = $ExerciseCommentTableTable(this);
+  late final $ExerciseAliasTableTable exerciseAliasTable =
+      $ExerciseAliasTableTable(this);
+  late final $ExerciseCommentTableTable exerciseCommentTable =
+      $ExerciseCommentTableTable(this);
   late final $MuscleTableTable muscleTable = $MuscleTableTable(this);
-  late final $ExerciseMuscleM2NTable exerciseMuscleM2N = $ExerciseMuscleM2NTable(this);
+  late final $ExerciseMuscleM2NTable exerciseMuscleM2N =
+      $ExerciseMuscleM2NTable(this);
   late final $ExerciseSecondaryMuscleM2NTable exerciseSecondaryMuscleM2N =
       $ExerciseSecondaryMuscleM2NTable(this);
   late final $EquipmentTableTable equipmentTable = $EquipmentTableTable(this);
-  late final $ExerciseEquipmentM2NTable exerciseEquipmentM2N = $ExerciseEquipmentM2NTable(this);
-  late final $ExerciseImageTableTable exerciseImageTable = $ExerciseImageTableTable(this);
-  late final $ExerciseVideoTableTable exerciseVideoTable = $ExerciseVideoTableTable(this);
+  late final $ExerciseEquipmentM2NTable exerciseEquipmentM2N =
+      $ExerciseEquipmentM2NTable(this);
+  late final $ExerciseImageTableTable exerciseImageTable =
+      $ExerciseImageTableTable(this);
+  late final $ExerciseVideoTableTable exerciseVideoTable =
+      $ExerciseVideoTableTable(this);
   late final $WeightEntryTableTable weightEntryTable = $WeightEntryTableTable(
     this,
   );
   late final $MeasurementCategoryTableTable measurementCategoryTable =
       $MeasurementCategoryTableTable(this);
-  late final $MeasurementEntryTableTable measurementEntryTable = $MeasurementEntryTableTable(this);
+  late final $MeasurementEntryTableTable measurementEntryTable =
+      $MeasurementEntryTableTable(this);
   late final $RoutineTableTable routineTable = $RoutineTableTable(this);
   late final $WorkoutLogTableTable workoutLogTable = $WorkoutLogTableTable(
     this,
   );
-  late final $WorkoutSessionTableTable workoutSessionTable = $WorkoutSessionTableTable(this);
+  late final $WorkoutSessionTableTable workoutSessionTable =
+      $WorkoutSessionTableTable(this);
   late final $RoutineRepetitionUnitTableTable routineRepetitionUnitTable =
       $RoutineRepetitionUnitTableTable(this);
-  late final $RoutineWeightUnitTableTable routineWeightUnitTable = $RoutineWeightUnitTableTable(
-    this,
-  );
-  late final $NutritionalPlanTableTable nutritionalPlanTable = $NutritionalPlanTableTable(this);
+  late final $RoutineWeightUnitTableTable routineWeightUnitTable =
+      $RoutineWeightUnitTableTable(this);
+  late final $NutritionalPlanTableTable nutritionalPlanTable =
+      $NutritionalPlanTableTable(this);
   late final $IngredientTableTable ingredientTable = $IngredientTableTable(
     this,
   );
-  late final $IngredientImageTableTable ingredientImageTable = $IngredientImageTableTable(this);
+  late final $IngredientImageTableTable ingredientImageTable =
+      $IngredientImageTableTable(this);
   late final $IngredientWeightUnitTableTable ingredientWeightUnitTable =
       $IngredientWeightUnitTableTable(this);
   late final $MealTableTable mealTable = $MealTableTable(this);
   late final $MealItemTableTable mealItemTable = $MealItemTableTable(this);
   late final $LogItemTableTable logItemTable = $LogItemTableTable(this);
-  late final $GalleryImageTableTable galleryImageTable = $GalleryImageTableTable(this);
+  late final $GalleryImageTableTable galleryImageTable =
+      $GalleryImageTableTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
@@ -10219,7 +10307,8 @@ abstract class _$DriftPowersyncDatabase extends GeneratedDatabase {
     galleryImageTable,
   ];
   @override
-  DriftDatabaseOptions get options => const DriftDatabaseOptions(storeDateTimeAsText: true);
+  DriftDatabaseOptions get options =>
+      const DriftDatabaseOptions(storeDateTimeAsText: true);
 }
 
 typedef $$LanguageTableTableCreateCompanionBuilder =
@@ -10238,20 +10327,30 @@ typedef $$LanguageTableTableUpdateCompanionBuilder =
     });
 
 final class $$LanguageTableTableReferences
-    extends BaseReferences<_$DriftPowersyncDatabase, $LanguageTableTable, Language> {
+    extends
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $LanguageTableTable,
+          Language
+        > {
   $$LanguageTableTableReferences(
     super.$_db,
     super.$_table,
     super.$_typedResult,
   );
 
-  static MultiTypedResultKey<$ExerciseTranslationTableTable, List<ExerciseTranslationRow>>
-  _exerciseTranslationTableRefsTable(_$DriftPowersyncDatabase db) => MultiTypedResultKey.fromTable(
-    db.exerciseTranslationTable,
-    aliasName: 'core_language__id__exercises_translation__language_id',
-  );
+  static MultiTypedResultKey<
+    $ExerciseTranslationTableTable,
+    List<ExerciseTranslationRow>
+  >
+  _exerciseTranslationTableRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.exerciseTranslationTable,
+        aliasName: 'core_language__id__exercises_translation__language_id',
+      );
 
-  $$ExerciseTranslationTableTableProcessedTableManager get exerciseTranslationTableRefs {
+  $$ExerciseTranslationTableTableProcessedTableManager
+  get exerciseTranslationTableRefs {
     final manager = $$ExerciseTranslationTableTableTableManager(
       $_db,
       $_db.exerciseTranslationTable,
@@ -10291,26 +10390,29 @@ class $$LanguageTableTableFilterComposer
   );
 
   Expression<bool> exerciseTranslationTableRefs(
-    Expression<bool> Function($$ExerciseTranslationTableTableFilterComposer f) f,
+    Expression<bool> Function($$ExerciseTranslationTableTableFilterComposer f)
+    f,
   ) {
-    final $$ExerciseTranslationTableTableFilterComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseTranslationTable,
-      getReferencedColumn: (t) => t.languageId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseTranslationTableTableFilterComposer(
-            $db: $db,
-            $table: $db.exerciseTranslationTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseTranslationTableTableFilterComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseTranslationTable,
+          getReferencedColumn: (t) => t.languageId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseTranslationTableTableFilterComposer(
+                $db: $db,
+                $table: $db.exerciseTranslationTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 }
@@ -10349,7 +10451,8 @@ class $$LanguageTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get shortName =>
       $composableBuilder(column: $table.shortName, builder: (column) => column);
@@ -10358,26 +10461,29 @@ class $$LanguageTableTableAnnotationComposer
       $composableBuilder(column: $table.fullName, builder: (column) => column);
 
   Expression<T> exerciseTranslationTableRefs<T extends Object>(
-    Expression<T> Function($$ExerciseTranslationTableTableAnnotationComposer a) f,
+    Expression<T> Function($$ExerciseTranslationTableTableAnnotationComposer a)
+    f,
   ) {
-    final $$ExerciseTranslationTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseTranslationTable,
-      getReferencedColumn: (t) => t.languageId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseTranslationTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseTranslationTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseTranslationTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseTranslationTable,
+          getReferencedColumn: (t) => t.languageId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseTranslationTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseTranslationTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 }
@@ -10404,7 +10510,8 @@ class $$LanguageTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$LanguageTableTableFilterComposer($db: db, $table: table),
+          createFilteringComposer: () =>
+              $$LanguageTableTableFilterComposer($db: db, $table: table),
           createOrderingComposer: () =>
               $$LanguageTableTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
@@ -10459,11 +10566,12 @@ class $$LanguageTableTableTableManager
                       currentTable: table,
                       referencedTable: $$LanguageTableTableReferences
                           ._exerciseTranslationTableRefsTable(db),
-                      managerFromTypedResult: (p0) => $$LanguageTableTableReferences(
-                        db,
-                        table,
-                        p0,
-                      ).exerciseTranslationTableRefs,
+                      managerFromTypedResult: (p0) =>
+                          $$LanguageTableTableReferences(
+                            db,
+                            table,
+                            p0,
+                          ).exerciseTranslationTableRefs,
                       referencedItemsForCurrentItem: (item, referencedItems) =>
                           referencedItems.where((e) => e.languageId == item.id),
                       typedResults: items,
@@ -10576,7 +10684,8 @@ class $$LicenseTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get shortName =>
       $composableBuilder(column: $table.shortName, builder: (column) => column);
@@ -10601,7 +10710,11 @@ class $$LicenseTableTableTableManager
           $$LicenseTableTableUpdateCompanionBuilder,
           (
             License,
-            BaseReferences<_$DriftPowersyncDatabase, $LicenseTableTable, License>,
+            BaseReferences<
+              _$DriftPowersyncDatabase,
+              $LicenseTableTable,
+              License
+            >,
           ),
           License,
           PrefetchHooks Function()
@@ -10613,8 +10726,10 @@ class $$LicenseTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$LicenseTableTableFilterComposer($db: db, $table: table),
-          createOrderingComposer: () => $$LicenseTableTableOrderingComposer($db: db, $table: table),
+          createFilteringComposer: () =>
+              $$LicenseTableTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$LicenseTableTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
               $$LicenseTableTableAnnotationComposer($db: db, $table: table),
           updateCompanionCallback:
@@ -10645,8 +10760,9 @@ class $$LicenseTableTableTableManager
                 url: url,
                 rowid: rowid,
               ),
-          withReferenceMapper: (p0) =>
-              p0.map((e) => (e.readTable(table), BaseReferences(db, table, e))).toList(),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
           prefetchHooksCallback: null,
         ),
       );
@@ -10731,7 +10847,8 @@ class $$UserProfileTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get weightUnitStr => $composableBuilder(
     column: $table.weightUnitStr,
@@ -10752,7 +10869,11 @@ class $$UserProfileTableTableTableManager
           $$UserProfileTableTableUpdateCompanionBuilder,
           (
             UserProfile,
-            BaseReferences<_$DriftPowersyncDatabase, $UserProfileTableTable, UserProfile>,
+            BaseReferences<
+              _$DriftPowersyncDatabase,
+              $UserProfileTableTable,
+              UserProfile
+            >,
           ),
           UserProfile,
           PrefetchHooks Function()
@@ -10790,8 +10911,9 @@ class $$UserProfileTableTableTableManager
                 weightUnitStr: weightUnitStr,
                 rowid: rowid,
               ),
-          withReferenceMapper: (p0) =>
-              p0.map((e) => (e.readTable(table), BaseReferences(db, table, e))).toList(),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
           prefetchHooksCallback: null,
         ),
       );
@@ -10809,7 +10931,11 @@ typedef $$UserProfileTableTableProcessedTableManager =
       $$UserProfileTableTableUpdateCompanionBuilder,
       (
         UserProfile,
-        BaseReferences<_$DriftPowersyncDatabase, $UserProfileTableTable, UserProfile>,
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $UserProfileTableTable,
+          UserProfile
+        >,
       ),
       UserProfile,
       PrefetchHooks Function()
@@ -10829,19 +10955,24 @@ typedef $$ExerciseCategoryTableTableUpdateCompanionBuilder =
 
 final class $$ExerciseCategoryTableTableReferences
     extends
-        BaseReferences<_$DriftPowersyncDatabase, $ExerciseCategoryTableTable, ExerciseCategory> {
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $ExerciseCategoryTableTable,
+          ExerciseCategory
+        > {
   $$ExerciseCategoryTableTableReferences(
     super.$_db,
     super.$_table,
     super.$_typedResult,
   );
 
-  static MultiTypedResultKey<$ExerciseTableTable, List<ExerciseRow>> _exerciseTableRefsTable(
-    _$DriftPowersyncDatabase db,
-  ) => MultiTypedResultKey.fromTable(
-    db.exerciseTable,
-    aliasName: 'exercises_exercisecategory__id__exercises_exercise__category_id',
-  );
+  static MultiTypedResultKey<$ExerciseTableTable, List<ExerciseRow>>
+  _exerciseTableRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.exerciseTable,
+        aliasName:
+            'exercises_exercisecategory__id__exercises_exercise__category_id',
+      );
 
   $$ExerciseTableTableProcessedTableManager get exerciseTableRefs {
     final manager = $$ExerciseTableTableTableManager(
@@ -10893,7 +11024,8 @@ class $$ExerciseCategoryTableTableFilterComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -10929,7 +11061,8 @@ class $$ExerciseCategoryTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get name =>
       $composableBuilder(column: $table.name, builder: (column) => column);
@@ -10952,7 +11085,8 @@ class $$ExerciseCategoryTableTableAnnotationComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -10981,18 +11115,21 @@ class $$ExerciseCategoryTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$ExerciseCategoryTableTableFilterComposer(
-            $db: db,
-            $table: table,
-          ),
-          createOrderingComposer: () => $$ExerciseCategoryTableTableOrderingComposer(
-            $db: db,
-            $table: table,
-          ),
-          createComputedFieldComposer: () => $$ExerciseCategoryTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createFilteringComposer: () =>
+              $$ExerciseCategoryTableTableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
+          createOrderingComposer: () =>
+              $$ExerciseCategoryTableTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$ExerciseCategoryTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -11039,11 +11176,12 @@ class $$ExerciseCategoryTableTableTableManager
                       currentTable: table,
                       referencedTable: $$ExerciseCategoryTableTableReferences
                           ._exerciseTableRefsTable(db),
-                      managerFromTypedResult: (p0) => $$ExerciseCategoryTableTableReferences(
-                        db,
-                        table,
-                        p0,
-                      ).exerciseTableRefs,
+                      managerFromTypedResult: (p0) =>
+                          $$ExerciseCategoryTableTableReferences(
+                            db,
+                            table,
+                            p0,
+                          ).exerciseTableRefs,
                       referencedItemsForCurrentItem: (item, referencedItems) =>
                           referencedItems.where((e) => e.categoryId == item.id),
                       typedResults: items,
@@ -11092,7 +11230,12 @@ typedef $$ExerciseTableTableUpdateCompanionBuilder =
     });
 
 final class $$ExerciseTableTableReferences
-    extends BaseReferences<_$DriftPowersyncDatabase, $ExerciseTableTable, ExerciseRow> {
+    extends
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $ExerciseTableTable,
+          ExerciseRow
+        > {
   $$ExerciseTableTableReferences(
     super.$_db,
     super.$_table,
@@ -11119,13 +11262,18 @@ final class $$ExerciseTableTableReferences
     );
   }
 
-  static MultiTypedResultKey<$ExerciseTranslationTableTable, List<ExerciseTranslationRow>>
-  _exerciseTranslationTableRefsTable(_$DriftPowersyncDatabase db) => MultiTypedResultKey.fromTable(
-    db.exerciseTranslationTable,
-    aliasName: 'exercises_exercise__id__exercises_translation__exercise_id',
-  );
+  static MultiTypedResultKey<
+    $ExerciseTranslationTableTable,
+    List<ExerciseTranslationRow>
+  >
+  _exerciseTranslationTableRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.exerciseTranslationTable,
+        aliasName: 'exercises_exercise__id__exercises_translation__exercise_id',
+      );
 
-  $$ExerciseTranslationTableTableProcessedTableManager get exerciseTranslationTableRefs {
+  $$ExerciseTranslationTableTableProcessedTableManager
+  get exerciseTranslationTableRefs {
     final manager = $$ExerciseTranslationTableTableTableManager(
       $_db,
       $_db.exerciseTranslationTable,
@@ -11139,11 +11287,16 @@ final class $$ExerciseTableTableReferences
     );
   }
 
-  static MultiTypedResultKey<$ExerciseMuscleM2NTable, List<ExerciseMuscleM2NData>>
-  _exerciseMuscleM2NRefsTable(_$DriftPowersyncDatabase db) => MultiTypedResultKey.fromTable(
-    db.exerciseMuscleM2N,
-    aliasName: 'exercises_exercise__id__exercises_exercise_muscles__exercise_id',
-  );
+  static MultiTypedResultKey<
+    $ExerciseMuscleM2NTable,
+    List<ExerciseMuscleM2NData>
+  >
+  _exerciseMuscleM2NRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.exerciseMuscleM2N,
+        aliasName:
+            'exercises_exercise__id__exercises_exercise_muscles__exercise_id',
+      );
 
   $$ExerciseMuscleM2NTableProcessedTableManager get exerciseMuscleM2NRefs {
     final manager = $$ExerciseMuscleM2NTableTableManager(
@@ -11159,15 +11312,20 @@ final class $$ExerciseTableTableReferences
     );
   }
 
-  static MultiTypedResultKey<$ExerciseSecondaryMuscleM2NTable, List<ExerciseSecondaryMuscleM2NData>>
+  static MultiTypedResultKey<
+    $ExerciseSecondaryMuscleM2NTable,
+    List<ExerciseSecondaryMuscleM2NData>
+  >
   _exerciseSecondaryMuscleM2NRefsTable(
     _$DriftPowersyncDatabase db,
   ) => MultiTypedResultKey.fromTable(
     db.exerciseSecondaryMuscleM2N,
-    aliasName: 'exercises_exercise__id__exercises_exercise_muscles_secondary__exercise_id',
+    aliasName:
+        'exercises_exercise__id__exercises_exercise_muscles_secondary__exercise_id',
   );
 
-  $$ExerciseSecondaryMuscleM2NTableProcessedTableManager get exerciseSecondaryMuscleM2NRefs {
+  $$ExerciseSecondaryMuscleM2NTableProcessedTableManager
+  get exerciseSecondaryMuscleM2NRefs {
     final manager = $$ExerciseSecondaryMuscleM2NTableTableManager(
       $_db,
       $_db.exerciseSecondaryMuscleM2N,
@@ -11181,13 +11339,19 @@ final class $$ExerciseTableTableReferences
     );
   }
 
-  static MultiTypedResultKey<$ExerciseEquipmentM2NTable, List<ExerciseEquipmentM2NData>>
-  _exerciseEquipmentM2NRefsTable(_$DriftPowersyncDatabase db) => MultiTypedResultKey.fromTable(
-    db.exerciseEquipmentM2N,
-    aliasName: 'exercises_exercise__id__exercises_exercise_equipment__exercise_id',
-  );
+  static MultiTypedResultKey<
+    $ExerciseEquipmentM2NTable,
+    List<ExerciseEquipmentM2NData>
+  >
+  _exerciseEquipmentM2NRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.exerciseEquipmentM2N,
+        aliasName:
+            'exercises_exercise__id__exercises_exercise_equipment__exercise_id',
+      );
 
-  $$ExerciseEquipmentM2NTableProcessedTableManager get exerciseEquipmentM2NRefs {
+  $$ExerciseEquipmentM2NTableProcessedTableManager
+  get exerciseEquipmentM2NRefs {
     final manager = $$ExerciseEquipmentM2NTableTableManager(
       $_db,
       $_db.exerciseEquipmentM2N,
@@ -11202,10 +11366,12 @@ final class $$ExerciseTableTableReferences
   }
 
   static MultiTypedResultKey<$ExerciseImageTableTable, List<ExerciseImage>>
-  _exerciseImageTableRefsTable(_$DriftPowersyncDatabase db) => MultiTypedResultKey.fromTable(
-    db.exerciseImageTable,
-    aliasName: 'exercises_exercise__id__exercises_exerciseimage__exercise_id',
-  );
+  _exerciseImageTableRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.exerciseImageTable,
+        aliasName:
+            'exercises_exercise__id__exercises_exerciseimage__exercise_id',
+      );
 
   $$ExerciseImageTableTableProcessedTableManager get exerciseImageTableRefs {
     final manager = $$ExerciseImageTableTableTableManager(
@@ -11221,12 +11387,13 @@ final class $$ExerciseTableTableReferences
     );
   }
 
-  static MultiTypedResultKey<$ExerciseVideoTableTable, List<Video>> _exerciseVideoTableRefsTable(
-    _$DriftPowersyncDatabase db,
-  ) => MultiTypedResultKey.fromTable(
-    db.exerciseVideoTable,
-    aliasName: 'exercises_exercise__id__exercises_exercisevideo__exercise_id',
-  );
+  static MultiTypedResultKey<$ExerciseVideoTableTable, List<Video>>
+  _exerciseVideoTableRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.exerciseVideoTable,
+        aliasName:
+            'exercises_exercise__id__exercises_exercisevideo__exercise_id',
+      );
 
   $$ExerciseVideoTableTableProcessedTableManager get exerciseVideoTableRefs {
     final manager = $$ExerciseVideoTableTableTableManager(
@@ -11278,48 +11445,53 @@ class $$ExerciseTableTableFilterComposer
   );
 
   $$ExerciseCategoryTableTableFilterComposer get categoryId {
-    final $$ExerciseCategoryTableTableFilterComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.categoryId,
-      referencedTable: $db.exerciseCategoryTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseCategoryTableTableFilterComposer(
-            $db: $db,
-            $table: $db.exerciseCategoryTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseCategoryTableTableFilterComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.categoryId,
+          referencedTable: $db.exerciseCategoryTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseCategoryTableTableFilterComposer(
+                $db: $db,
+                $table: $db.exerciseCategoryTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 
   Expression<bool> exerciseTranslationTableRefs(
-    Expression<bool> Function($$ExerciseTranslationTableTableFilterComposer f) f,
+    Expression<bool> Function($$ExerciseTranslationTableTableFilterComposer f)
+    f,
   ) {
-    final $$ExerciseTranslationTableTableFilterComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseTranslationTable,
-      getReferencedColumn: (t) => t.exerciseId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseTranslationTableTableFilterComposer(
-            $db: $db,
-            $table: $db.exerciseTranslationTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseTranslationTableTableFilterComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseTranslationTable,
+          getReferencedColumn: (t) => t.exerciseId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseTranslationTableTableFilterComposer(
+                $db: $db,
+                $table: $db.exerciseTranslationTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 
@@ -11341,33 +11513,37 @@ class $$ExerciseTableTableFilterComposer
             $table: $db.exerciseMuscleM2N,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
   }
 
   Expression<bool> exerciseSecondaryMuscleM2NRefs(
-    Expression<bool> Function($$ExerciseSecondaryMuscleM2NTableFilterComposer f) f,
+    Expression<bool> Function($$ExerciseSecondaryMuscleM2NTableFilterComposer f)
+    f,
   ) {
-    final $$ExerciseSecondaryMuscleM2NTableFilterComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseSecondaryMuscleM2N,
-      getReferencedColumn: (t) => t.exerciseId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseSecondaryMuscleM2NTableFilterComposer(
-            $db: $db,
-            $table: $db.exerciseSecondaryMuscleM2N,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseSecondaryMuscleM2NTableFilterComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseSecondaryMuscleM2N,
+          getReferencedColumn: (t) => t.exerciseId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseSecondaryMuscleM2NTableFilterComposer(
+                $db: $db,
+                $table: $db.exerciseSecondaryMuscleM2N,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 
@@ -11389,7 +11565,8 @@ class $$ExerciseTableTableFilterComposer
             $table: $db.exerciseEquipmentM2N,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -11413,7 +11590,8 @@ class $$ExerciseTableTableFilterComposer
             $table: $db.exerciseImageTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -11437,7 +11615,8 @@ class $$ExerciseTableTableFilterComposer
             $table: $db.exerciseVideoTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -11479,24 +11658,26 @@ class $$ExerciseTableTableOrderingComposer
   );
 
   $$ExerciseCategoryTableTableOrderingComposer get categoryId {
-    final $$ExerciseCategoryTableTableOrderingComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.categoryId,
-      referencedTable: $db.exerciseCategoryTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseCategoryTableTableOrderingComposer(
-            $db: $db,
-            $table: $db.exerciseCategoryTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseCategoryTableTableOrderingComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.categoryId,
+          referencedTable: $db.exerciseCategoryTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseCategoryTableTableOrderingComposer(
+                $db: $db,
+                $table: $db.exerciseCategoryTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 }
@@ -11510,7 +11691,8 @@ class $$ExerciseTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get uuid =>
       $composableBuilder(column: $table.uuid, builder: (column) => column);
@@ -11529,72 +11711,79 @@ class $$ExerciseTableTableAnnotationComposer
   );
 
   $$ExerciseCategoryTableTableAnnotationComposer get categoryId {
-    final $$ExerciseCategoryTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.categoryId,
-      referencedTable: $db.exerciseCategoryTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseCategoryTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseCategoryTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseCategoryTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.categoryId,
+          referencedTable: $db.exerciseCategoryTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseCategoryTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseCategoryTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 
   Expression<T> exerciseTranslationTableRefs<T extends Object>(
-    Expression<T> Function($$ExerciseTranslationTableTableAnnotationComposer a) f,
+    Expression<T> Function($$ExerciseTranslationTableTableAnnotationComposer a)
+    f,
   ) {
-    final $$ExerciseTranslationTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseTranslationTable,
-      getReferencedColumn: (t) => t.exerciseId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseTranslationTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseTranslationTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseTranslationTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseTranslationTable,
+          getReferencedColumn: (t) => t.exerciseId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseTranslationTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseTranslationTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 
   Expression<T> exerciseMuscleM2NRefs<T extends Object>(
     Expression<T> Function($$ExerciseMuscleM2NTableAnnotationComposer a) f,
   ) {
-    final $$ExerciseMuscleM2NTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseMuscleM2N,
-      getReferencedColumn: (t) => t.exerciseId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseMuscleM2NTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseMuscleM2N,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseMuscleM2NTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseMuscleM2N,
+          getReferencedColumn: (t) => t.exerciseId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseMuscleM2NTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseMuscleM2N,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 
@@ -11604,96 +11793,104 @@ class $$ExerciseTableTableAnnotationComposer
     )
     f,
   ) {
-    final $$ExerciseSecondaryMuscleM2NTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseSecondaryMuscleM2N,
-      getReferencedColumn: (t) => t.exerciseId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseSecondaryMuscleM2NTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseSecondaryMuscleM2N,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseSecondaryMuscleM2NTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseSecondaryMuscleM2N,
+          getReferencedColumn: (t) => t.exerciseId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseSecondaryMuscleM2NTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseSecondaryMuscleM2N,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 
   Expression<T> exerciseEquipmentM2NRefs<T extends Object>(
     Expression<T> Function($$ExerciseEquipmentM2NTableAnnotationComposer a) f,
   ) {
-    final $$ExerciseEquipmentM2NTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseEquipmentM2N,
-      getReferencedColumn: (t) => t.exerciseId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseEquipmentM2NTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseEquipmentM2N,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseEquipmentM2NTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseEquipmentM2N,
+          getReferencedColumn: (t) => t.exerciseId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseEquipmentM2NTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseEquipmentM2N,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 
   Expression<T> exerciseImageTableRefs<T extends Object>(
     Expression<T> Function($$ExerciseImageTableTableAnnotationComposer a) f,
   ) {
-    final $$ExerciseImageTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseImageTable,
-      getReferencedColumn: (t) => t.exerciseId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseImageTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseImageTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseImageTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseImageTable,
+          getReferencedColumn: (t) => t.exerciseId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseImageTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseImageTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 
   Expression<T> exerciseVideoTableRefs<T extends Object>(
     Expression<T> Function($$ExerciseVideoTableTableAnnotationComposer a) f,
   ) {
-    final $$ExerciseVideoTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseVideoTable,
-      getReferencedColumn: (t) => t.exerciseId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseVideoTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseVideoTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseVideoTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseVideoTable,
+          getReferencedColumn: (t) => t.exerciseId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseVideoTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseVideoTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 }
@@ -11728,7 +11925,8 @@ class $$ExerciseTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$ExerciseTableTableFilterComposer($db: db, $table: table),
+          createFilteringComposer: () =>
+              $$ExerciseTableTableFilterComposer($db: db, $table: table),
           createOrderingComposer: () =>
               $$ExerciseTableTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
@@ -11790,9 +11988,11 @@ class $$ExerciseTableTableTableManager
                 return PrefetchHooks(
                   db: db,
                   explicitlyWatchedTables: [
-                    if (exerciseTranslationTableRefs) db.exerciseTranslationTable,
+                    if (exerciseTranslationTableRefs)
+                      db.exerciseTranslationTable,
                     if (exerciseMuscleM2NRefs) db.exerciseMuscleM2N,
-                    if (exerciseSecondaryMuscleM2NRefs) db.exerciseSecondaryMuscleM2N,
+                    if (exerciseSecondaryMuscleM2NRefs)
+                      db.exerciseSecondaryMuscleM2N,
                     if (exerciseEquipmentM2NRefs) db.exerciseEquipmentM2N,
                     if (exerciseImageTableRefs) db.exerciseImageTable,
                     if (exerciseVideoTableRefs) db.exerciseVideoTable,
@@ -11818,11 +12018,13 @@ class $$ExerciseTableTableTableManager
                               state.withJoin(
                                     currentTable: table,
                                     currentColumn: table.categoryId,
-                                    referencedTable: $$ExerciseTableTableReferences
-                                        ._categoryIdTable(db),
-                                    referencedColumn: $$ExerciseTableTableReferences
-                                        ._categoryIdTable(db)
-                                        .id,
+                                    referencedTable:
+                                        $$ExerciseTableTableReferences
+                                            ._categoryIdTable(db),
+                                    referencedColumn:
+                                        $$ExerciseTableTableReferences
+                                            ._categoryIdTable(db)
+                                            .id,
                                   )
                                   as T;
                         }
@@ -11840,13 +12042,14 @@ class $$ExerciseTableTableTableManager
                           currentTable: table,
                           referencedTable: $$ExerciseTableTableReferences
                               ._exerciseTranslationTableRefsTable(db),
-                          managerFromTypedResult: (p0) => $$ExerciseTableTableReferences(
-                            db,
-                            table,
-                            p0,
-                          ).exerciseTranslationTableRefs,
-                          referencedItemsForCurrentItem: (item, referencedItems) =>
-                              referencedItems.where(
+                          managerFromTypedResult: (p0) =>
+                              $$ExerciseTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).exerciseTranslationTableRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
                                 (e) => e.exerciseId == item.id,
                               ),
                           typedResults: items,
@@ -11860,13 +12063,14 @@ class $$ExerciseTableTableTableManager
                           currentTable: table,
                           referencedTable: $$ExerciseTableTableReferences
                               ._exerciseMuscleM2NRefsTable(db),
-                          managerFromTypedResult: (p0) => $$ExerciseTableTableReferences(
-                            db,
-                            table,
-                            p0,
-                          ).exerciseMuscleM2NRefs,
-                          referencedItemsForCurrentItem: (item, referencedItems) =>
-                              referencedItems.where(
+                          managerFromTypedResult: (p0) =>
+                              $$ExerciseTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).exerciseMuscleM2NRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
                                 (e) => e.exerciseId == item.id,
                               ),
                           typedResults: items,
@@ -11880,13 +12084,14 @@ class $$ExerciseTableTableTableManager
                           currentTable: table,
                           referencedTable: $$ExerciseTableTableReferences
                               ._exerciseSecondaryMuscleM2NRefsTable(db),
-                          managerFromTypedResult: (p0) => $$ExerciseTableTableReferences(
-                            db,
-                            table,
-                            p0,
-                          ).exerciseSecondaryMuscleM2NRefs,
-                          referencedItemsForCurrentItem: (item, referencedItems) =>
-                              referencedItems.where(
+                          managerFromTypedResult: (p0) =>
+                              $$ExerciseTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).exerciseSecondaryMuscleM2NRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
                                 (e) => e.exerciseId == item.id,
                               ),
                           typedResults: items,
@@ -11900,45 +12105,56 @@ class $$ExerciseTableTableTableManager
                           currentTable: table,
                           referencedTable: $$ExerciseTableTableReferences
                               ._exerciseEquipmentM2NRefsTable(db),
-                          managerFromTypedResult: (p0) => $$ExerciseTableTableReferences(
-                            db,
-                            table,
-                            p0,
-                          ).exerciseEquipmentM2NRefs,
-                          referencedItemsForCurrentItem: (item, referencedItems) =>
-                              referencedItems.where(
+                          managerFromTypedResult: (p0) =>
+                              $$ExerciseTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).exerciseEquipmentM2NRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
                                 (e) => e.exerciseId == item.id,
                               ),
                           typedResults: items,
                         ),
                       if (exerciseImageTableRefs)
-                        await $_getPrefetchedData<ExerciseRow, $ExerciseTableTable, ExerciseImage>(
+                        await $_getPrefetchedData<
+                          ExerciseRow,
+                          $ExerciseTableTable,
+                          ExerciseImage
+                        >(
                           currentTable: table,
                           referencedTable: $$ExerciseTableTableReferences
                               ._exerciseImageTableRefsTable(db),
-                          managerFromTypedResult: (p0) => $$ExerciseTableTableReferences(
-                            db,
-                            table,
-                            p0,
-                          ).exerciseImageTableRefs,
-                          referencedItemsForCurrentItem: (item, referencedItems) =>
-                              referencedItems.where(
+                          managerFromTypedResult: (p0) =>
+                              $$ExerciseTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).exerciseImageTableRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
                                 (e) => e.exerciseId == item.id,
                               ),
                           typedResults: items,
                         ),
                       if (exerciseVideoTableRefs)
-                        await $_getPrefetchedData<ExerciseRow, $ExerciseTableTable, Video>(
+                        await $_getPrefetchedData<
+                          ExerciseRow,
+                          $ExerciseTableTable,
+                          Video
+                        >(
                           currentTable: table,
                           referencedTable: $$ExerciseTableTableReferences
                               ._exerciseVideoTableRefsTable(db),
-                          managerFromTypedResult: (p0) => $$ExerciseTableTableReferences(
-                            db,
-                            table,
-                            p0,
-                          ).exerciseVideoTableRefs,
-                          referencedItemsForCurrentItem: (item, referencedItems) =>
-                              referencedItems.where(
+                          managerFromTypedResult: (p0) =>
+                              $$ExerciseTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).exerciseVideoTableRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
                                 (e) => e.exerciseId == item.id,
                               ),
                           typedResults: items,
@@ -12030,8 +12246,9 @@ final class $$ExerciseTranslationTableTableReferences
     );
   }
 
-  static $LanguageTableTable _languageIdTable(_$DriftPowersyncDatabase db) =>
-      db.languageTable.createAlias('exercises_translation__language_id__core_language__id');
+  static $LanguageTableTable _languageIdTable(_$DriftPowersyncDatabase db) => db
+      .languageTable
+      .createAlias('exercises_translation__language_id__core_language__id');
 
   $$LanguageTableTableProcessedTableManager get languageId {
     final $_column = $_itemColumn<int>('language_id')!;
@@ -12047,12 +12264,12 @@ final class $$ExerciseTranslationTableTableReferences
     );
   }
 
-  static MultiTypedResultKey<$ExerciseAliasTableTable, List<Alias>> _exerciseAliasTableRefsTable(
-    _$DriftPowersyncDatabase db,
-  ) => MultiTypedResultKey.fromTable(
-    db.exerciseAliasTable,
-    aliasName: 'exercises_translation__id__exercises_alias__translation_id',
-  );
+  static MultiTypedResultKey<$ExerciseAliasTableTable, List<Alias>>
+  _exerciseAliasTableRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.exerciseAliasTable,
+        aliasName: 'exercises_translation__id__exercises_alias__translation_id',
+      );
 
   $$ExerciseAliasTableTableProcessedTableManager get exerciseAliasTableRefs {
     final manager = $$ExerciseAliasTableTableTableManager(
@@ -12073,10 +12290,12 @@ final class $$ExerciseTranslationTableTableReferences
     _$DriftPowersyncDatabase db,
   ) => MultiTypedResultKey.fromTable(
     db.exerciseCommentTable,
-    aliasName: 'exercises_translation__id__exercises_exercisecomment__translation_id',
+    aliasName:
+        'exercises_translation__id__exercises_exercisecomment__translation_id',
   );
 
-  $$ExerciseCommentTableTableProcessedTableManager get exerciseCommentTableRefs {
+  $$ExerciseCommentTableTableProcessedTableManager
+  get exerciseCommentTableRefs {
     final manager = $$ExerciseCommentTableTableTableManager(
       $_db,
       $_db.exerciseCommentTable,
@@ -12146,7 +12365,8 @@ class $$ExerciseTranslationTableTableFilterComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -12168,7 +12388,8 @@ class $$ExerciseTranslationTableTableFilterComposer
             $table: $db.languageTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -12192,7 +12413,8 @@ class $$ExerciseTranslationTableTableFilterComposer
             $table: $db.exerciseAliasTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -12216,7 +12438,8 @@ class $$ExerciseTranslationTableTableFilterComposer
             $table: $db.exerciseCommentTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -12278,7 +12501,8 @@ class $$ExerciseTranslationTableTableOrderingComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -12300,7 +12524,8 @@ class $$ExerciseTranslationTableTableOrderingComposer
             $table: $db.languageTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -12316,7 +12541,8 @@ class $$ExerciseTranslationTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get uuid =>
       $composableBuilder(column: $table.uuid, builder: (column) => column);
@@ -12353,7 +12579,8 @@ class $$ExerciseTranslationTableTableAnnotationComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -12375,7 +12602,8 @@ class $$ExerciseTranslationTableTableAnnotationComposer
             $table: $db.languageTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -12384,48 +12612,52 @@ class $$ExerciseTranslationTableTableAnnotationComposer
   Expression<T> exerciseAliasTableRefs<T extends Object>(
     Expression<T> Function($$ExerciseAliasTableTableAnnotationComposer a) f,
   ) {
-    final $$ExerciseAliasTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseAliasTable,
-      getReferencedColumn: (t) => t.translationId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseAliasTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseAliasTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseAliasTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseAliasTable,
+          getReferencedColumn: (t) => t.translationId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseAliasTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseAliasTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 
   Expression<T> exerciseCommentTableRefs<T extends Object>(
     Expression<T> Function($$ExerciseCommentTableTableAnnotationComposer a) f,
   ) {
-    final $$ExerciseCommentTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseCommentTable,
-      getReferencedColumn: (t) => t.translationId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseCommentTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseCommentTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseCommentTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseCommentTable,
+          getReferencedColumn: (t) => t.translationId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseCommentTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseCommentTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 }
@@ -12457,18 +12689,21 @@ class $$ExerciseTranslationTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$ExerciseTranslationTableTableFilterComposer(
-            $db: db,
-            $table: table,
-          ),
-          createOrderingComposer: () => $$ExerciseTranslationTableTableOrderingComposer(
-            $db: db,
-            $table: table,
-          ),
-          createComputedFieldComposer: () => $$ExerciseTranslationTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createFilteringComposer: () =>
+              $$ExerciseTranslationTableTableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
+          createOrderingComposer: () =>
+              $$ExerciseTranslationTableTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$ExerciseTranslationTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -12555,11 +12790,13 @@ class $$ExerciseTranslationTableTableTableManager
                               state.withJoin(
                                     currentTable: table,
                                     currentColumn: table.exerciseId,
-                                    referencedTable: $$ExerciseTranslationTableTableReferences
-                                        ._exerciseIdTable(db),
-                                    referencedColumn: $$ExerciseTranslationTableTableReferences
-                                        ._exerciseIdTable(db)
-                                        .id,
+                                    referencedTable:
+                                        $$ExerciseTranslationTableTableReferences
+                                            ._exerciseIdTable(db),
+                                    referencedColumn:
+                                        $$ExerciseTranslationTableTableReferences
+                                            ._exerciseIdTable(db)
+                                            .id,
                                   )
                                   as T;
                         }
@@ -12568,11 +12805,13 @@ class $$ExerciseTranslationTableTableTableManager
                               state.withJoin(
                                     currentTable: table,
                                     currentColumn: table.languageId,
-                                    referencedTable: $$ExerciseTranslationTableTableReferences
-                                        ._languageIdTable(db),
-                                    referencedColumn: $$ExerciseTranslationTableTableReferences
-                                        ._languageIdTable(db)
-                                        .id,
+                                    referencedTable:
+                                        $$ExerciseTranslationTableTableReferences
+                                            ._languageIdTable(db),
+                                    referencedColumn:
+                                        $$ExerciseTranslationTableTableReferences
+                                            ._languageIdTable(db)
+                                            .id,
                                   )
                                   as T;
                         }
@@ -12588,15 +12827,17 @@ class $$ExerciseTranslationTableTableTableManager
                           Alias
                         >(
                           currentTable: table,
-                          referencedTable: $$ExerciseTranslationTableTableReferences
-                              ._exerciseAliasTableRefsTable(db),
-                          managerFromTypedResult: (p0) => $$ExerciseTranslationTableTableReferences(
-                            db,
-                            table,
-                            p0,
-                          ).exerciseAliasTableRefs,
-                          referencedItemsForCurrentItem: (item, referencedItems) =>
-                              referencedItems.where(
+                          referencedTable:
+                              $$ExerciseTranslationTableTableReferences
+                                  ._exerciseAliasTableRefsTable(db),
+                          managerFromTypedResult: (p0) =>
+                              $$ExerciseTranslationTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).exerciseAliasTableRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
                                 (e) => e.translationId == item.id,
                               ),
                           typedResults: items,
@@ -12608,15 +12849,17 @@ class $$ExerciseTranslationTableTableTableManager
                           Comment
                         >(
                           currentTable: table,
-                          referencedTable: $$ExerciseTranslationTableTableReferences
-                              ._exerciseCommentTableRefsTable(db),
-                          managerFromTypedResult: (p0) => $$ExerciseTranslationTableTableReferences(
-                            db,
-                            table,
-                            p0,
-                          ).exerciseCommentTableRefs,
-                          referencedItemsForCurrentItem: (item, referencedItems) =>
-                              referencedItems.where(
+                          referencedTable:
+                              $$ExerciseTranslationTableTableReferences
+                                  ._exerciseCommentTableRefsTable(db),
+                          managerFromTypedResult: (p0) =>
+                              $$ExerciseTranslationTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).exerciseCommentTableRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
                                 (e) => e.translationId == item.id,
                               ),
                           typedResults: items,
@@ -12666,7 +12909,12 @@ typedef $$ExerciseAliasTableTableUpdateCompanionBuilder =
     });
 
 final class $$ExerciseAliasTableTableReferences
-    extends BaseReferences<_$DriftPowersyncDatabase, $ExerciseAliasTableTable, Alias> {
+    extends
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $ExerciseAliasTableTable,
+          Alias
+        > {
   $$ExerciseAliasTableTableReferences(
     super.$_db,
     super.$_table,
@@ -12719,24 +12967,26 @@ class $$ExerciseAliasTableTableFilterComposer
   );
 
   $$ExerciseTranslationTableTableFilterComposer get translationId {
-    final $$ExerciseTranslationTableTableFilterComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.translationId,
-      referencedTable: $db.exerciseTranslationTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseTranslationTableTableFilterComposer(
-            $db: $db,
-            $table: $db.exerciseTranslationTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseTranslationTableTableFilterComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.translationId,
+          referencedTable: $db.exerciseTranslationTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseTranslationTableTableFilterComposer(
+                $db: $db,
+                $table: $db.exerciseTranslationTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 }
@@ -12766,24 +13016,26 @@ class $$ExerciseAliasTableTableOrderingComposer
   );
 
   $$ExerciseTranslationTableTableOrderingComposer get translationId {
-    final $$ExerciseTranslationTableTableOrderingComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.translationId,
-      referencedTable: $db.exerciseTranslationTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseTranslationTableTableOrderingComposer(
-            $db: $db,
-            $table: $db.exerciseTranslationTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseTranslationTableTableOrderingComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.translationId,
+          referencedTable: $db.exerciseTranslationTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseTranslationTableTableOrderingComposer(
+                $db: $db,
+                $table: $db.exerciseTranslationTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 }
@@ -12797,7 +13049,8 @@ class $$ExerciseAliasTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get uuid =>
       $composableBuilder(column: $table.uuid, builder: (column) => column);
@@ -12806,24 +13059,26 @@ class $$ExerciseAliasTableTableAnnotationComposer
       $composableBuilder(column: $table.alias, builder: (column) => column);
 
   $$ExerciseTranslationTableTableAnnotationComposer get translationId {
-    final $$ExerciseTranslationTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.translationId,
-      referencedTable: $db.exerciseTranslationTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseTranslationTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseTranslationTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseTranslationTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.translationId,
+          referencedTable: $db.exerciseTranslationTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseTranslationTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseTranslationTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 }
@@ -12854,10 +13109,11 @@ class $$ExerciseAliasTableTableTableManager
               $$ExerciseAliasTableTableFilterComposer($db: db, $table: table),
           createOrderingComposer: () =>
               $$ExerciseAliasTableTableOrderingComposer($db: db, $table: table),
-          createComputedFieldComposer: () => $$ExerciseAliasTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createComputedFieldComposer: () =>
+              $$ExerciseAliasTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -12919,11 +13175,13 @@ class $$ExerciseAliasTableTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.translationId,
-                                referencedTable: $$ExerciseAliasTableTableReferences
-                                    ._translationIdTable(db),
-                                referencedColumn: $$ExerciseAliasTableTableReferences
-                                    ._translationIdTable(db)
-                                    .id,
+                                referencedTable:
+                                    $$ExerciseAliasTableTableReferences
+                                        ._translationIdTable(db),
+                                referencedColumn:
+                                    $$ExerciseAliasTableTableReferences
+                                        ._translationIdTable(db)
+                                        .id,
                               )
                               as T;
                     }
@@ -12971,7 +13229,12 @@ typedef $$ExerciseCommentTableTableUpdateCompanionBuilder =
     });
 
 final class $$ExerciseCommentTableTableReferences
-    extends BaseReferences<_$DriftPowersyncDatabase, $ExerciseCommentTableTable, Comment> {
+    extends
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $ExerciseCommentTableTable,
+          Comment
+        > {
   $$ExerciseCommentTableTableReferences(
     super.$_db,
     super.$_table,
@@ -13024,24 +13287,26 @@ class $$ExerciseCommentTableTableFilterComposer
   );
 
   $$ExerciseTranslationTableTableFilterComposer get translationId {
-    final $$ExerciseTranslationTableTableFilterComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.translationId,
-      referencedTable: $db.exerciseTranslationTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseTranslationTableTableFilterComposer(
-            $db: $db,
-            $table: $db.exerciseTranslationTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseTranslationTableTableFilterComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.translationId,
+          referencedTable: $db.exerciseTranslationTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseTranslationTableTableFilterComposer(
+                $db: $db,
+                $table: $db.exerciseTranslationTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 }
@@ -13071,24 +13336,26 @@ class $$ExerciseCommentTableTableOrderingComposer
   );
 
   $$ExerciseTranslationTableTableOrderingComposer get translationId {
-    final $$ExerciseTranslationTableTableOrderingComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.translationId,
-      referencedTable: $db.exerciseTranslationTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseTranslationTableTableOrderingComposer(
-            $db: $db,
-            $table: $db.exerciseTranslationTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseTranslationTableTableOrderingComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.translationId,
+          referencedTable: $db.exerciseTranslationTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseTranslationTableTableOrderingComposer(
+                $db: $db,
+                $table: $db.exerciseTranslationTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 }
@@ -13102,7 +13369,8 @@ class $$ExerciseCommentTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get uuid =>
       $composableBuilder(column: $table.uuid, builder: (column) => column);
@@ -13111,24 +13379,26 @@ class $$ExerciseCommentTableTableAnnotationComposer
       $composableBuilder(column: $table.comment, builder: (column) => column);
 
   $$ExerciseTranslationTableTableAnnotationComposer get translationId {
-    final $$ExerciseTranslationTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.translationId,
-      referencedTable: $db.exerciseTranslationTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseTranslationTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseTranslationTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseTranslationTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.translationId,
+          referencedTable: $db.exerciseTranslationTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseTranslationTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseTranslationTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 }
@@ -13157,14 +13427,16 @@ class $$ExerciseCommentTableTableTableManager
           table: table,
           createFilteringComposer: () =>
               $$ExerciseCommentTableTableFilterComposer($db: db, $table: table),
-          createOrderingComposer: () => $$ExerciseCommentTableTableOrderingComposer(
-            $db: db,
-            $table: table,
-          ),
-          createComputedFieldComposer: () => $$ExerciseCommentTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createOrderingComposer: () =>
+              $$ExerciseCommentTableTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$ExerciseCommentTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -13226,11 +13498,13 @@ class $$ExerciseCommentTableTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.translationId,
-                                referencedTable: $$ExerciseCommentTableTableReferences
-                                    ._translationIdTable(db),
-                                referencedColumn: $$ExerciseCommentTableTableReferences
-                                    ._translationIdTable(db)
-                                    .id,
+                                referencedTable:
+                                    $$ExerciseCommentTableTableReferences
+                                        ._translationIdTable(db),
+                                referencedColumn:
+                                    $$ExerciseCommentTableTableReferences
+                                        ._translationIdTable(db)
+                                        .id,
                               )
                               as T;
                     }
@@ -13278,14 +13552,20 @@ typedef $$MuscleTableTableUpdateCompanionBuilder =
     });
 
 final class $$MuscleTableTableReferences
-    extends BaseReferences<_$DriftPowersyncDatabase, $MuscleTableTable, Muscle> {
+    extends
+        BaseReferences<_$DriftPowersyncDatabase, $MuscleTableTable, Muscle> {
   $$MuscleTableTableReferences(super.$_db, super.$_table, super.$_typedResult);
 
-  static MultiTypedResultKey<$ExerciseMuscleM2NTable, List<ExerciseMuscleM2NData>>
-  _exerciseMuscleM2NRefsTable(_$DriftPowersyncDatabase db) => MultiTypedResultKey.fromTable(
-    db.exerciseMuscleM2N,
-    aliasName: 'exercises_muscle__id__exercises_exercise_muscles__muscle_id',
-  );
+  static MultiTypedResultKey<
+    $ExerciseMuscleM2NTable,
+    List<ExerciseMuscleM2NData>
+  >
+  _exerciseMuscleM2NRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.exerciseMuscleM2N,
+        aliasName:
+            'exercises_muscle__id__exercises_exercise_muscles__muscle_id',
+      );
 
   $$ExerciseMuscleM2NTableProcessedTableManager get exerciseMuscleM2NRefs {
     final manager = $$ExerciseMuscleM2NTableTableManager(
@@ -13301,15 +13581,20 @@ final class $$MuscleTableTableReferences
     );
   }
 
-  static MultiTypedResultKey<$ExerciseSecondaryMuscleM2NTable, List<ExerciseSecondaryMuscleM2NData>>
+  static MultiTypedResultKey<
+    $ExerciseSecondaryMuscleM2NTable,
+    List<ExerciseSecondaryMuscleM2NData>
+  >
   _exerciseSecondaryMuscleM2NRefsTable(
     _$DriftPowersyncDatabase db,
   ) => MultiTypedResultKey.fromTable(
     db.exerciseSecondaryMuscleM2N,
-    aliasName: 'exercises_muscle__id__exercises_exercise_muscles_secondary__muscle_id',
+    aliasName:
+        'exercises_muscle__id__exercises_exercise_muscles_secondary__muscle_id',
   );
 
-  $$ExerciseSecondaryMuscleM2NTableProcessedTableManager get exerciseSecondaryMuscleM2NRefs {
+  $$ExerciseSecondaryMuscleM2NTableProcessedTableManager
+  get exerciseSecondaryMuscleM2NRefs {
     final manager = $$ExerciseSecondaryMuscleM2NTableTableManager(
       $_db,
       $_db.exerciseSecondaryMuscleM2N,
@@ -13371,33 +13656,37 @@ class $$MuscleTableTableFilterComposer
             $table: $db.exerciseMuscleM2N,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
   }
 
   Expression<bool> exerciseSecondaryMuscleM2NRefs(
-    Expression<bool> Function($$ExerciseSecondaryMuscleM2NTableFilterComposer f) f,
+    Expression<bool> Function($$ExerciseSecondaryMuscleM2NTableFilterComposer f)
+    f,
   ) {
-    final $$ExerciseSecondaryMuscleM2NTableFilterComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseSecondaryMuscleM2N,
-      getReferencedColumn: (t) => t.muscleId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseSecondaryMuscleM2NTableFilterComposer(
-            $db: $db,
-            $table: $db.exerciseSecondaryMuscleM2N,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseSecondaryMuscleM2NTableFilterComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseSecondaryMuscleM2N,
+          getReferencedColumn: (t) => t.muscleId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseSecondaryMuscleM2NTableFilterComposer(
+                $db: $db,
+                $table: $db.exerciseSecondaryMuscleM2N,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 }
@@ -13441,7 +13730,8 @@ class $$MuscleTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get name =>
       $composableBuilder(column: $table.name, builder: (column) => column);
@@ -13455,24 +13745,26 @@ class $$MuscleTableTableAnnotationComposer
   Expression<T> exerciseMuscleM2NRefs<T extends Object>(
     Expression<T> Function($$ExerciseMuscleM2NTableAnnotationComposer a) f,
   ) {
-    final $$ExerciseMuscleM2NTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseMuscleM2N,
-      getReferencedColumn: (t) => t.muscleId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseMuscleM2NTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseMuscleM2N,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseMuscleM2NTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseMuscleM2N,
+          getReferencedColumn: (t) => t.muscleId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseMuscleM2NTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseMuscleM2N,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 
@@ -13482,24 +13774,26 @@ class $$MuscleTableTableAnnotationComposer
     )
     f,
   ) {
-    final $$ExerciseSecondaryMuscleM2NTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseSecondaryMuscleM2N,
-      getReferencedColumn: (t) => t.muscleId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseSecondaryMuscleM2NTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseSecondaryMuscleM2N,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseSecondaryMuscleM2NTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseSecondaryMuscleM2N,
+          getReferencedColumn: (t) => t.muscleId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseSecondaryMuscleM2NTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseSecondaryMuscleM2N,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 }
@@ -13529,8 +13823,10 @@ class $$MuscleTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$MuscleTableTableFilterComposer($db: db, $table: table),
-          createOrderingComposer: () => $$MuscleTableTableOrderingComposer($db: db, $table: table),
+          createFilteringComposer: () =>
+              $$MuscleTableTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$MuscleTableTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
               $$MuscleTableTableAnnotationComposer($db: db, $table: table),
           updateCompanionCallback:
@@ -13578,24 +13874,29 @@ class $$MuscleTableTableTableManager
                   db: db,
                   explicitlyWatchedTables: [
                     if (exerciseMuscleM2NRefs) db.exerciseMuscleM2N,
-                    if (exerciseSecondaryMuscleM2NRefs) db.exerciseSecondaryMuscleM2N,
+                    if (exerciseSecondaryMuscleM2NRefs)
+                      db.exerciseSecondaryMuscleM2N,
                   ],
                   addJoins: null,
                   getPrefetchedDataCallback: (items) async {
                     return [
                       if (exerciseMuscleM2NRefs)
-                        await $_getPrefetchedData<Muscle, $MuscleTableTable, ExerciseMuscleM2NData>(
+                        await $_getPrefetchedData<
+                          Muscle,
+                          $MuscleTableTable,
+                          ExerciseMuscleM2NData
+                        >(
                           currentTable: table,
-                          referencedTable: $$MuscleTableTableReferences._exerciseMuscleM2NRefsTable(
-                            db,
-                          ),
-                          managerFromTypedResult: (p0) => $$MuscleTableTableReferences(
-                            db,
-                            table,
-                            p0,
-                          ).exerciseMuscleM2NRefs,
-                          referencedItemsForCurrentItem: (item, referencedItems) =>
-                              referencedItems.where(
+                          referencedTable: $$MuscleTableTableReferences
+                              ._exerciseMuscleM2NRefsTable(db),
+                          managerFromTypedResult: (p0) =>
+                              $$MuscleTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).exerciseMuscleM2NRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
                                 (e) => e.muscleId == item.id,
                               ),
                           typedResults: items,
@@ -13609,13 +13910,14 @@ class $$MuscleTableTableTableManager
                           currentTable: table,
                           referencedTable: $$MuscleTableTableReferences
                               ._exerciseSecondaryMuscleM2NRefsTable(db),
-                          managerFromTypedResult: (p0) => $$MuscleTableTableReferences(
-                            db,
-                            table,
-                            p0,
-                          ).exerciseSecondaryMuscleM2NRefs,
-                          referencedItemsForCurrentItem: (item, referencedItems) =>
-                              referencedItems.where(
+                          managerFromTypedResult: (p0) =>
+                              $$MuscleTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).exerciseSecondaryMuscleM2NRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
                                 (e) => e.muscleId == item.id,
                               ),
                           typedResults: items,
@@ -13662,7 +13964,11 @@ typedef $$ExerciseMuscleM2NTableUpdateCompanionBuilder =
 
 final class $$ExerciseMuscleM2NTableReferences
     extends
-        BaseReferences<_$DriftPowersyncDatabase, $ExerciseMuscleM2NTable, ExerciseMuscleM2NData> {
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $ExerciseMuscleM2NTable,
+          ExerciseMuscleM2NData
+        > {
   $$ExerciseMuscleM2NTableReferences(
     super.$_db,
     super.$_table,
@@ -13738,7 +14044,8 @@ class $$ExerciseMuscleM2NTableFilterComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -13760,7 +14067,8 @@ class $$ExerciseMuscleM2NTableFilterComposer
             $table: $db.muscleTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -13797,7 +14105,8 @@ class $$ExerciseMuscleM2NTableOrderingComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -13819,7 +14128,8 @@ class $$ExerciseMuscleM2NTableOrderingComposer
             $table: $db.muscleTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -13835,7 +14145,8 @@ class $$ExerciseMuscleM2NTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   $$ExerciseTableTableAnnotationComposer get exerciseId {
     final $$ExerciseTableTableAnnotationComposer composer = $composerBuilder(
@@ -13853,7 +14164,8 @@ class $$ExerciseMuscleM2NTableAnnotationComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -13875,7 +14187,8 @@ class $$ExerciseMuscleM2NTableAnnotationComposer
             $table: $db.muscleTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -13908,10 +14221,11 @@ class $$ExerciseMuscleM2NTableTableManager
               $$ExerciseMuscleM2NTableFilterComposer($db: db, $table: table),
           createOrderingComposer: () =>
               $$ExerciseMuscleM2NTableOrderingComposer($db: db, $table: table),
-          createComputedFieldComposer: () => $$ExerciseMuscleM2NTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createComputedFieldComposer: () =>
+              $$ExerciseMuscleM2NTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -13969,11 +14283,13 @@ class $$ExerciseMuscleM2NTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.exerciseId,
-                                referencedTable: $$ExerciseMuscleM2NTableReferences
-                                    ._exerciseIdTable(db),
-                                referencedColumn: $$ExerciseMuscleM2NTableReferences
-                                    ._exerciseIdTable(db)
-                                    .id,
+                                referencedTable:
+                                    $$ExerciseMuscleM2NTableReferences
+                                        ._exerciseIdTable(db),
+                                referencedColumn:
+                                    $$ExerciseMuscleM2NTableReferences
+                                        ._exerciseIdTable(db)
+                                        .id,
                               )
                               as T;
                     }
@@ -13982,12 +14298,13 @@ class $$ExerciseMuscleM2NTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.muscleId,
-                                referencedTable: $$ExerciseMuscleM2NTableReferences._muscleIdTable(
-                                  db,
-                                ),
-                                referencedColumn: $$ExerciseMuscleM2NTableReferences
-                                    ._muscleIdTable(db)
-                                    .id,
+                                referencedTable:
+                                    $$ExerciseMuscleM2NTableReferences
+                                        ._muscleIdTable(db),
+                                referencedColumn:
+                                    $$ExerciseMuscleM2NTableReferences
+                                        ._muscleIdTable(db)
+                                        .id,
                               )
                               as T;
                     }
@@ -14086,7 +14403,8 @@ final class $$ExerciseSecondaryMuscleM2NTableReferences
 }
 
 class $$ExerciseSecondaryMuscleM2NTableFilterComposer
-    extends Composer<_$DriftPowersyncDatabase, $ExerciseSecondaryMuscleM2NTable> {
+    extends
+        Composer<_$DriftPowersyncDatabase, $ExerciseSecondaryMuscleM2NTable> {
   $$ExerciseSecondaryMuscleM2NTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -14115,7 +14433,8 @@ class $$ExerciseSecondaryMuscleM2NTableFilterComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -14137,7 +14456,8 @@ class $$ExerciseSecondaryMuscleM2NTableFilterComposer
             $table: $db.muscleTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -14145,7 +14465,8 @@ class $$ExerciseSecondaryMuscleM2NTableFilterComposer
 }
 
 class $$ExerciseSecondaryMuscleM2NTableOrderingComposer
-    extends Composer<_$DriftPowersyncDatabase, $ExerciseSecondaryMuscleM2NTable> {
+    extends
+        Composer<_$DriftPowersyncDatabase, $ExerciseSecondaryMuscleM2NTable> {
   $$ExerciseSecondaryMuscleM2NTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -14174,7 +14495,8 @@ class $$ExerciseSecondaryMuscleM2NTableOrderingComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -14196,7 +14518,8 @@ class $$ExerciseSecondaryMuscleM2NTableOrderingComposer
             $table: $db.muscleTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -14204,7 +14527,8 @@ class $$ExerciseSecondaryMuscleM2NTableOrderingComposer
 }
 
 class $$ExerciseSecondaryMuscleM2NTableAnnotationComposer
-    extends Composer<_$DriftPowersyncDatabase, $ExerciseSecondaryMuscleM2NTable> {
+    extends
+        Composer<_$DriftPowersyncDatabase, $ExerciseSecondaryMuscleM2NTable> {
   $$ExerciseSecondaryMuscleM2NTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -14212,7 +14536,8 @@ class $$ExerciseSecondaryMuscleM2NTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   $$ExerciseTableTableAnnotationComposer get exerciseId {
     final $$ExerciseTableTableAnnotationComposer composer = $composerBuilder(
@@ -14230,7 +14555,8 @@ class $$ExerciseSecondaryMuscleM2NTableAnnotationComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -14252,7 +14578,8 @@ class $$ExerciseSecondaryMuscleM2NTableAnnotationComposer
             $table: $db.muscleTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -14284,18 +14611,21 @@ class $$ExerciseSecondaryMuscleM2NTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$ExerciseSecondaryMuscleM2NTableFilterComposer(
-            $db: db,
-            $table: table,
-          ),
-          createOrderingComposer: () => $$ExerciseSecondaryMuscleM2NTableOrderingComposer(
-            $db: db,
-            $table: table,
-          ),
-          createComputedFieldComposer: () => $$ExerciseSecondaryMuscleM2NTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createFilteringComposer: () =>
+              $$ExerciseSecondaryMuscleM2NTableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
+          createOrderingComposer: () =>
+              $$ExerciseSecondaryMuscleM2NTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$ExerciseSecondaryMuscleM2NTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -14353,11 +14683,13 @@ class $$ExerciseSecondaryMuscleM2NTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.exerciseId,
-                                referencedTable: $$ExerciseSecondaryMuscleM2NTableReferences
-                                    ._exerciseIdTable(db),
-                                referencedColumn: $$ExerciseSecondaryMuscleM2NTableReferences
-                                    ._exerciseIdTable(db)
-                                    .id,
+                                referencedTable:
+                                    $$ExerciseSecondaryMuscleM2NTableReferences
+                                        ._exerciseIdTable(db),
+                                referencedColumn:
+                                    $$ExerciseSecondaryMuscleM2NTableReferences
+                                        ._exerciseIdTable(db)
+                                        .id,
                               )
                               as T;
                     }
@@ -14366,11 +14698,13 @@ class $$ExerciseSecondaryMuscleM2NTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.muscleId,
-                                referencedTable: $$ExerciseSecondaryMuscleM2NTableReferences
-                                    ._muscleIdTable(db),
-                                referencedColumn: $$ExerciseSecondaryMuscleM2NTableReferences
-                                    ._muscleIdTable(db)
-                                    .id,
+                                referencedTable:
+                                    $$ExerciseSecondaryMuscleM2NTableReferences
+                                        ._muscleIdTable(db),
+                                referencedColumn:
+                                    $$ExerciseSecondaryMuscleM2NTableReferences
+                                        ._muscleIdTable(db)
+                                        .id,
                               )
                               as T;
                     }
@@ -14417,22 +14751,32 @@ typedef $$EquipmentTableTableUpdateCompanionBuilder =
     });
 
 final class $$EquipmentTableTableReferences
-    extends BaseReferences<_$DriftPowersyncDatabase, $EquipmentTableTable, Equipment> {
+    extends
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $EquipmentTableTable,
+          Equipment
+        > {
   $$EquipmentTableTableReferences(
     super.$_db,
     super.$_table,
     super.$_typedResult,
   );
 
-  static MultiTypedResultKey<$ExerciseEquipmentM2NTable, List<ExerciseEquipmentM2NData>>
+  static MultiTypedResultKey<
+    $ExerciseEquipmentM2NTable,
+    List<ExerciseEquipmentM2NData>
+  >
   _exerciseEquipmentM2NRefsTable(
     _$DriftPowersyncDatabase db,
   ) => MultiTypedResultKey.fromTable(
     db.exerciseEquipmentM2N,
-    aliasName: 'exercises_equipment__id__exercises_exercise_equipment__equipment_id',
+    aliasName:
+        'exercises_equipment__id__exercises_exercise_equipment__equipment_id',
   );
 
-  $$ExerciseEquipmentM2NTableProcessedTableManager get exerciseEquipmentM2NRefs {
+  $$ExerciseEquipmentM2NTableProcessedTableManager
+  get exerciseEquipmentM2NRefs {
     final manager = $$ExerciseEquipmentM2NTableTableManager(
       $_db,
       $_db.exerciseEquipmentM2N,
@@ -14484,7 +14828,8 @@ class $$EquipmentTableTableFilterComposer
             $table: $db.exerciseEquipmentM2N,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -14520,7 +14865,8 @@ class $$EquipmentTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get name =>
       $composableBuilder(column: $table.name, builder: (column) => column);
@@ -14528,24 +14874,26 @@ class $$EquipmentTableTableAnnotationComposer
   Expression<T> exerciseEquipmentM2NRefs<T extends Object>(
     Expression<T> Function($$ExerciseEquipmentM2NTableAnnotationComposer a) f,
   ) {
-    final $$ExerciseEquipmentM2NTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.exerciseEquipmentM2N,
-      getReferencedColumn: (t) => t.equipmentId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$ExerciseEquipmentM2NTableAnnotationComposer(
-            $db: $db,
-            $table: $db.exerciseEquipmentM2N,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$ExerciseEquipmentM2NTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.exerciseEquipmentM2N,
+          getReferencedColumn: (t) => t.equipmentId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$ExerciseEquipmentM2NTableAnnotationComposer(
+                $db: $db,
+                $table: $db.exerciseEquipmentM2N,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 }
@@ -14620,11 +14968,12 @@ class $$EquipmentTableTableTableManager
                       currentTable: table,
                       referencedTable: $$EquipmentTableTableReferences
                           ._exerciseEquipmentM2NRefsTable(db),
-                      managerFromTypedResult: (p0) => $$EquipmentTableTableReferences(
-                        db,
-                        table,
-                        p0,
-                      ).exerciseEquipmentM2NRefs,
+                      managerFromTypedResult: (p0) =>
+                          $$EquipmentTableTableReferences(
+                            db,
+                            table,
+                            p0,
+                          ).exerciseEquipmentM2NRefs,
                       referencedItemsForCurrentItem: (item, referencedItems) =>
                           referencedItems.where(
                             (e) => e.equipmentId == item.id,
@@ -14750,7 +15099,8 @@ class $$ExerciseEquipmentM2NTableFilterComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -14772,7 +15122,8 @@ class $$ExerciseEquipmentM2NTableFilterComposer
             $table: $db.equipmentTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -14809,7 +15160,8 @@ class $$ExerciseEquipmentM2NTableOrderingComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -14831,7 +15183,8 @@ class $$ExerciseEquipmentM2NTableOrderingComposer
             $table: $db.equipmentTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -14847,7 +15200,8 @@ class $$ExerciseEquipmentM2NTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   $$ExerciseTableTableAnnotationComposer get exerciseId {
     final $$ExerciseTableTableAnnotationComposer composer = $composerBuilder(
@@ -14865,7 +15219,8 @@ class $$ExerciseEquipmentM2NTableAnnotationComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -14887,7 +15242,8 @@ class $$ExerciseEquipmentM2NTableAnnotationComposer
             $table: $db.equipmentTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -14918,14 +15274,16 @@ class $$ExerciseEquipmentM2NTableTableManager
           table: table,
           createFilteringComposer: () =>
               $$ExerciseEquipmentM2NTableFilterComposer($db: db, $table: table),
-          createOrderingComposer: () => $$ExerciseEquipmentM2NTableOrderingComposer(
-            $db: db,
-            $table: table,
-          ),
-          createComputedFieldComposer: () => $$ExerciseEquipmentM2NTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createOrderingComposer: () =>
+              $$ExerciseEquipmentM2NTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$ExerciseEquipmentM2NTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -14983,11 +15341,13 @@ class $$ExerciseEquipmentM2NTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.exerciseId,
-                                referencedTable: $$ExerciseEquipmentM2NTableReferences
-                                    ._exerciseIdTable(db),
-                                referencedColumn: $$ExerciseEquipmentM2NTableReferences
-                                    ._exerciseIdTable(db)
-                                    .id,
+                                referencedTable:
+                                    $$ExerciseEquipmentM2NTableReferences
+                                        ._exerciseIdTable(db),
+                                referencedColumn:
+                                    $$ExerciseEquipmentM2NTableReferences
+                                        ._exerciseIdTable(db)
+                                        .id,
                               )
                               as T;
                     }
@@ -14996,11 +15356,13 @@ class $$ExerciseEquipmentM2NTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.equipmentId,
-                                referencedTable: $$ExerciseEquipmentM2NTableReferences
-                                    ._equipmentIdTable(db),
-                                referencedColumn: $$ExerciseEquipmentM2NTableReferences
-                                    ._equipmentIdTable(db)
-                                    .id,
+                                referencedTable:
+                                    $$ExerciseEquipmentM2NTableReferences
+                                        ._equipmentIdTable(db),
+                                referencedColumn:
+                                    $$ExerciseEquipmentM2NTableReferences
+                                        ._equipmentIdTable(db)
+                                        .id,
                               )
                               as T;
                     }
@@ -15074,7 +15436,12 @@ typedef $$ExerciseImageTableTableUpdateCompanionBuilder =
     });
 
 final class $$ExerciseImageTableTableReferences
-    extends BaseReferences<_$DriftPowersyncDatabase, $ExerciseImageTableTable, ExerciseImage> {
+    extends
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $ExerciseImageTableTable,
+          ExerciseImage
+        > {
   $$ExerciseImageTableTableReferences(
     super.$_db,
     super.$_table,
@@ -15135,11 +15502,11 @@ class $$ExerciseImageTableTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<ExerciseImageStyle, ExerciseImageStyle, String> get style =>
-      $composableBuilder(
-        column: $table.style,
-        builder: (column) => ColumnWithTypeConverterFilters(column),
-      );
+  ColumnWithTypeConverterFilters<ExerciseImageStyle, ExerciseImageStyle, String>
+  get style => $composableBuilder(
+    column: $table.style,
+    builder: (column) => ColumnWithTypeConverterFilters(column),
+  );
 
   ColumnFilters<int> get width => $composableBuilder(
     column: $table.width,
@@ -15207,7 +15574,8 @@ class $$ExerciseImageTableTableFilterComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -15319,7 +15687,8 @@ class $$ExerciseImageTableTableOrderingComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -15335,7 +15704,8 @@ class $$ExerciseImageTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get uuid =>
       $composableBuilder(column: $table.uuid, builder: (column) => column);
@@ -15412,7 +15782,8 @@ class $$ExerciseImageTableTableAnnotationComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -15445,10 +15816,11 @@ class $$ExerciseImageTableTableTableManager
               $$ExerciseImageTableTableFilterComposer($db: db, $table: table),
           createOrderingComposer: () =>
               $$ExerciseImageTableTableOrderingComposer($db: db, $table: table),
-          createComputedFieldComposer: () => $$ExerciseImageTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createComputedFieldComposer: () =>
+              $$ExerciseImageTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -15562,11 +15934,13 @@ class $$ExerciseImageTableTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.exerciseId,
-                                referencedTable: $$ExerciseImageTableTableReferences
-                                    ._exerciseIdTable(db),
-                                referencedColumn: $$ExerciseImageTableTableReferences
-                                    ._exerciseIdTable(db)
-                                    .id,
+                                referencedTable:
+                                    $$ExerciseImageTableTableReferences
+                                        ._exerciseIdTable(db),
+                                referencedColumn:
+                                    $$ExerciseImageTableTableReferences
+                                        ._exerciseIdTable(db)
+                                        .id,
                               )
                               as T;
                     }
@@ -15644,7 +16018,12 @@ typedef $$ExerciseVideoTableTableUpdateCompanionBuilder =
     });
 
 final class $$ExerciseVideoTableTableReferences
-    extends BaseReferences<_$DriftPowersyncDatabase, $ExerciseVideoTableTable, Video> {
+    extends
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $ExerciseVideoTableTable,
+          Video
+        > {
   $$ExerciseVideoTableTableReferences(
     super.$_db,
     super.$_table,
@@ -15786,7 +16165,8 @@ class $$ExerciseVideoTableTableFilterComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -15908,7 +16288,8 @@ class $$ExerciseVideoTableTableOrderingComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -15924,7 +16305,8 @@ class $$ExerciseVideoTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get uuid =>
       $composableBuilder(column: $table.uuid, builder: (column) => column);
@@ -16005,7 +16387,8 @@ class $$ExerciseVideoTableTableAnnotationComposer
             $table: $db.exerciseTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -16038,10 +16421,11 @@ class $$ExerciseVideoTableTableTableManager
               $$ExerciseVideoTableTableFilterComposer($db: db, $table: table),
           createOrderingComposer: () =>
               $$ExerciseVideoTableTableOrderingComposer($db: db, $table: table),
-          createComputedFieldComposer: () => $$ExerciseVideoTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createComputedFieldComposer: () =>
+              $$ExerciseVideoTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -16163,11 +16547,13 @@ class $$ExerciseVideoTableTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.exerciseId,
-                                referencedTable: $$ExerciseVideoTableTableReferences
-                                    ._exerciseIdTable(db),
-                                referencedColumn: $$ExerciseVideoTableTableReferences
-                                    ._exerciseIdTable(db)
-                                    .id,
+                                referencedTable:
+                                    $$ExerciseVideoTableTableReferences
+                                        ._exerciseIdTable(db),
+                                referencedColumn:
+                                    $$ExerciseVideoTableTableReferences
+                                        ._exerciseIdTable(db)
+                                        .id,
                               )
                               as T;
                     }
@@ -16231,10 +16617,11 @@ class $$WeightEntryTableTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<DateTime?, DateTime, DateTime> get date => $composableBuilder(
-    column: $table.date,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<DateTime?, DateTime, DateTime> get date =>
+      $composableBuilder(
+        column: $table.date,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 }
 
 class $$WeightEntryTableTableOrderingComposer
@@ -16294,7 +16681,11 @@ class $$WeightEntryTableTableTableManager
           $$WeightEntryTableTableUpdateCompanionBuilder,
           (
             WeightEntry,
-            BaseReferences<_$DriftPowersyncDatabase, $WeightEntryTableTable, WeightEntry>,
+            BaseReferences<
+              _$DriftPowersyncDatabase,
+              $WeightEntryTableTable,
+              WeightEntry
+            >,
           ),
           WeightEntry,
           PrefetchHooks Function()
@@ -16336,8 +16727,9 @@ class $$WeightEntryTableTableTableManager
                 date: date,
                 rowid: rowid,
               ),
-          withReferenceMapper: (p0) =>
-              p0.map((e) => (e.readTable(table), BaseReferences(db, table, e))).toList(),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
           prefetchHooksCallback: null,
         ),
       );
@@ -16355,7 +16747,11 @@ typedef $$WeightEntryTableTableProcessedTableManager =
       $$WeightEntryTableTableUpdateCompanionBuilder,
       (
         WeightEntry,
-        BaseReferences<_$DriftPowersyncDatabase, $WeightEntryTableTable, WeightEntry>,
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $WeightEntryTableTable,
+          WeightEntry
+        >,
       ),
       WeightEntry,
       PrefetchHooks Function()
@@ -16388,13 +16784,19 @@ final class $$MeasurementCategoryTableTableReferences
     super.$_typedResult,
   );
 
-  static MultiTypedResultKey<$MeasurementEntryTableTable, List<MeasurementEntry>>
-  _measurementEntryTableRefsTable(_$DriftPowersyncDatabase db) => MultiTypedResultKey.fromTable(
-    db.measurementEntryTable,
-    aliasName: 'measurements_category__id__measurements_measurement__category_id',
-  );
+  static MultiTypedResultKey<
+    $MeasurementEntryTableTable,
+    List<MeasurementEntry>
+  >
+  _measurementEntryTableRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.measurementEntryTable,
+        aliasName:
+            'measurements_category__id__measurements_measurement__category_id',
+      );
 
-  $$MeasurementEntryTableTableProcessedTableManager get measurementEntryTableRefs {
+  $$MeasurementEntryTableTableProcessedTableManager
+  get measurementEntryTableRefs {
     final manager = $$MeasurementEntryTableTableTableManager(
       $_db,
       $_db.measurementEntryTable,
@@ -16436,24 +16838,26 @@ class $$MeasurementCategoryTableTableFilterComposer
   Expression<bool> measurementEntryTableRefs(
     Expression<bool> Function($$MeasurementEntryTableTableFilterComposer f) f,
   ) {
-    final $$MeasurementEntryTableTableFilterComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.measurementEntryTable,
-      getReferencedColumn: (t) => t.categoryId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$MeasurementEntryTableTableFilterComposer(
-            $db: $db,
-            $table: $db.measurementEntryTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$MeasurementEntryTableTableFilterComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.measurementEntryTable,
+          getReferencedColumn: (t) => t.categoryId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$MeasurementEntryTableTableFilterComposer(
+                $db: $db,
+                $table: $db.measurementEntryTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 }
@@ -16504,24 +16908,26 @@ class $$MeasurementCategoryTableTableAnnotationComposer
   Expression<T> measurementEntryTableRefs<T extends Object>(
     Expression<T> Function($$MeasurementEntryTableTableAnnotationComposer a) f,
   ) {
-    final $$MeasurementEntryTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.measurementEntryTable,
-      getReferencedColumn: (t) => t.categoryId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$MeasurementEntryTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.measurementEntryTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$MeasurementEntryTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.measurementEntryTable,
+          getReferencedColumn: (t) => t.categoryId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$MeasurementEntryTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.measurementEntryTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 }
@@ -16548,18 +16954,21 @@ class $$MeasurementCategoryTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$MeasurementCategoryTableTableFilterComposer(
-            $db: db,
-            $table: table,
-          ),
-          createOrderingComposer: () => $$MeasurementCategoryTableTableOrderingComposer(
-            $db: db,
-            $table: table,
-          ),
-          createComputedFieldComposer: () => $$MeasurementCategoryTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createFilteringComposer: () =>
+              $$MeasurementCategoryTableTableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
+          createOrderingComposer: () =>
+              $$MeasurementCategoryTableTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$MeasurementCategoryTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<String> id = const Value.absent(),
@@ -16610,11 +17019,12 @@ class $$MeasurementCategoryTableTableTableManager
                       currentTable: table,
                       referencedTable: $$MeasurementCategoryTableTableReferences
                           ._measurementEntryTableRefsTable(db),
-                      managerFromTypedResult: (p0) => $$MeasurementCategoryTableTableReferences(
-                        db,
-                        table,
-                        p0,
-                      ).measurementEntryTableRefs,
+                      managerFromTypedResult: (p0) =>
+                          $$MeasurementCategoryTableTableReferences(
+                            db,
+                            table,
+                            p0,
+                          ).measurementEntryTableRefs,
                       referencedItemsForCurrentItem: (item, referencedItems) =>
                           referencedItems.where((e) => e.categoryId == item.id),
                       typedResults: items,
@@ -16662,7 +17072,11 @@ typedef $$MeasurementEntryTableTableUpdateCompanionBuilder =
 
 final class $$MeasurementEntryTableTableReferences
     extends
-        BaseReferences<_$DriftPowersyncDatabase, $MeasurementEntryTableTable, MeasurementEntry> {
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $MeasurementEntryTableTable,
+          MeasurementEntry
+        > {
   $$MeasurementEntryTableTableReferences(
     super.$_db,
     super.$_table,
@@ -16704,10 +17118,11 @@ class $$MeasurementEntryTableTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<DateTime, DateTime, DateTime> get date => $composableBuilder(
-    column: $table.date,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<DateTime, DateTime, DateTime> get date =>
+      $composableBuilder(
+        column: $table.date,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 
   ColumnFilters<double> get value => $composableBuilder(
     column: $table.value,
@@ -16720,24 +17135,26 @@ class $$MeasurementEntryTableTableFilterComposer
   );
 
   $$MeasurementCategoryTableTableFilterComposer get categoryId {
-    final $$MeasurementCategoryTableTableFilterComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.categoryId,
-      referencedTable: $db.measurementCategoryTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$MeasurementCategoryTableTableFilterComposer(
-            $db: $db,
-            $table: $db.measurementCategoryTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$MeasurementCategoryTableTableFilterComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.categoryId,
+          referencedTable: $db.measurementCategoryTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$MeasurementCategoryTableTableFilterComposer(
+                $db: $db,
+                $table: $db.measurementCategoryTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 }
@@ -16772,24 +17189,26 @@ class $$MeasurementEntryTableTableOrderingComposer
   );
 
   $$MeasurementCategoryTableTableOrderingComposer get categoryId {
-    final $$MeasurementCategoryTableTableOrderingComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.categoryId,
-      referencedTable: $db.measurementCategoryTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$MeasurementCategoryTableTableOrderingComposer(
-            $db: $db,
-            $table: $db.measurementCategoryTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$MeasurementCategoryTableTableOrderingComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.categoryId,
+          referencedTable: $db.measurementCategoryTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$MeasurementCategoryTableTableOrderingComposer(
+                $db: $db,
+                $table: $db.measurementCategoryTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 }
@@ -16816,24 +17235,26 @@ class $$MeasurementEntryTableTableAnnotationComposer
       $composableBuilder(column: $table.notes, builder: (column) => column);
 
   $$MeasurementCategoryTableTableAnnotationComposer get categoryId {
-    final $$MeasurementCategoryTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.categoryId,
-      referencedTable: $db.measurementCategoryTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$MeasurementCategoryTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.measurementCategoryTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$MeasurementCategoryTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.categoryId,
+          referencedTable: $db.measurementCategoryTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$MeasurementCategoryTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.measurementCategoryTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 }
@@ -16860,18 +17281,21 @@ class $$MeasurementEntryTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$MeasurementEntryTableTableFilterComposer(
-            $db: db,
-            $table: table,
-          ),
-          createOrderingComposer: () => $$MeasurementEntryTableTableOrderingComposer(
-            $db: db,
-            $table: table,
-          ),
-          createComputedFieldComposer: () => $$MeasurementEntryTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createFilteringComposer: () =>
+              $$MeasurementEntryTableTableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
+          createOrderingComposer: () =>
+              $$MeasurementEntryTableTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$MeasurementEntryTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<String> id = const Value.absent(),
@@ -16937,11 +17361,13 @@ class $$MeasurementEntryTableTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.categoryId,
-                                referencedTable: $$MeasurementEntryTableTableReferences
-                                    ._categoryIdTable(db),
-                                referencedColumn: $$MeasurementEntryTableTableReferences
-                                    ._categoryIdTable(db)
-                                    .id,
+                                referencedTable:
+                                    $$MeasurementEntryTableTableReferences
+                                        ._categoryIdTable(db),
+                                referencedColumn:
+                                    $$MeasurementEntryTableTableReferences
+                                        ._categoryIdTable(db)
+                                        .id,
                               )
                               as T;
                     }
@@ -17022,20 +17448,23 @@ class $$RoutineTableTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<DateTime, DateTime, DateTime> get created => $composableBuilder(
-    column: $table.created,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<DateTime, DateTime, DateTime> get created =>
+      $composableBuilder(
+        column: $table.created,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 
-  ColumnWithTypeConverterFilters<DateTime, DateTime, String> get start => $composableBuilder(
-    column: $table.start,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<DateTime, DateTime, String> get start =>
+      $composableBuilder(
+        column: $table.start,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 
-  ColumnWithTypeConverterFilters<DateTime, DateTime, String> get end => $composableBuilder(
-    column: $table.end,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<DateTime, DateTime, String> get end =>
+      $composableBuilder(
+        column: $table.end,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 
   ColumnFilters<bool> get isTemplate => $composableBuilder(
     column: $table.isTemplate,
@@ -17117,7 +17546,8 @@ class $$RoutineTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get name =>
       $composableBuilder(column: $table.name, builder: (column) => column);
@@ -17161,7 +17591,11 @@ class $$RoutineTableTableTableManager
           $$RoutineTableTableUpdateCompanionBuilder,
           (
             Routine,
-            BaseReferences<_$DriftPowersyncDatabase, $RoutineTableTable, Routine>,
+            BaseReferences<
+              _$DriftPowersyncDatabase,
+              $RoutineTableTable,
+              Routine
+            >,
           ),
           Routine,
           PrefetchHooks Function()
@@ -17173,8 +17607,10 @@ class $$RoutineTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$RoutineTableTableFilterComposer($db: db, $table: table),
-          createOrderingComposer: () => $$RoutineTableTableOrderingComposer($db: db, $table: table),
+          createFilteringComposer: () =>
+              $$RoutineTableTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$RoutineTableTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
               $$RoutineTableTableAnnotationComposer($db: db, $table: table),
           updateCompanionCallback:
@@ -17225,8 +17661,9 @@ class $$RoutineTableTableTableManager
                 fitInWeek: fitInWeek,
                 rowid: rowid,
               ),
-          withReferenceMapper: (p0) =>
-              p0.map((e) => (e.readTable(table), BaseReferences(db, table, e))).toList(),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
           prefetchHooksCallback: null,
         ),
       );
@@ -17367,10 +17804,11 @@ class $$WorkoutLogTableTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<DateTime, DateTime, DateTime> get date => $composableBuilder(
-    column: $table.date,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<DateTime, DateTime, DateTime> get date =>
+      $composableBuilder(
+        column: $table.date,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 }
 
 class $$WorkoutLogTableTableOrderingComposer
@@ -17540,7 +17978,11 @@ class $$WorkoutLogTableTableTableManager
           $$WorkoutLogTableTableUpdateCompanionBuilder,
           (
             Log,
-            BaseReferences<_$DriftPowersyncDatabase, $WorkoutLogTableTable, Log>,
+            BaseReferences<
+              _$DriftPowersyncDatabase,
+              $WorkoutLogTableTable,
+              Log
+            >,
           ),
           Log,
           PrefetchHooks Function()
@@ -17630,8 +18072,9 @@ class $$WorkoutLogTableTableTableManager
                 date: date,
                 rowid: rowid,
               ),
-          withReferenceMapper: (p0) =>
-              p0.map((e) => (e.readTable(table), BaseReferences(db, table, e))).toList(),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
           prefetchHooksCallback: null,
         ),
       );
@@ -17703,31 +18146,34 @@ class $$WorkoutSessionTableTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<DateTime, DateTime, String> get date => $composableBuilder(
-    column: $table.date,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<DateTime, DateTime, String> get date =>
+      $composableBuilder(
+        column: $table.date,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 
   ColumnFilters<String> get notes => $composableBuilder(
     column: $table.notes,
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<WorkoutImpression, WorkoutImpression, String> get impression =>
+  ColumnWithTypeConverterFilters<WorkoutImpression, WorkoutImpression, String>
+  get impression => $composableBuilder(
+    column: $table.impression,
+    builder: (column) => ColumnWithTypeConverterFilters(column),
+  );
+
+  ColumnWithTypeConverterFilters<TimeOfDay?, TimeOfDay, String> get timeStart =>
       $composableBuilder(
-        column: $table.impression,
+        column: $table.timeStart,
         builder: (column) => ColumnWithTypeConverterFilters(column),
       );
 
-  ColumnWithTypeConverterFilters<TimeOfDay?, TimeOfDay, String> get timeStart => $composableBuilder(
-    column: $table.timeStart,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
-
-  ColumnWithTypeConverterFilters<TimeOfDay?, TimeOfDay, String> get timeEnd => $composableBuilder(
-    column: $table.timeEnd,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<TimeOfDay?, TimeOfDay, String> get timeEnd =>
+      $composableBuilder(
+        column: $table.timeEnd,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 }
 
 class $$WorkoutSessionTableTableOrderingComposer
@@ -17804,10 +18250,11 @@ class $$WorkoutSessionTableTableAnnotationComposer
   GeneratedColumn<String> get notes =>
       $composableBuilder(column: $table.notes, builder: (column) => column);
 
-  GeneratedColumnWithTypeConverter<WorkoutImpression, String> get impression => $composableBuilder(
-    column: $table.impression,
-    builder: (column) => column,
-  );
+  GeneratedColumnWithTypeConverter<WorkoutImpression, String> get impression =>
+      $composableBuilder(
+        column: $table.impression,
+        builder: (column) => column,
+      );
 
   GeneratedColumnWithTypeConverter<TimeOfDay?, String> get timeStart =>
       $composableBuilder(column: $table.timeStart, builder: (column) => column);
@@ -17829,7 +18276,11 @@ class $$WorkoutSessionTableTableTableManager
           $$WorkoutSessionTableTableUpdateCompanionBuilder,
           (
             WorkoutSession,
-            BaseReferences<_$DriftPowersyncDatabase, $WorkoutSessionTableTable, WorkoutSession>,
+            BaseReferences<
+              _$DriftPowersyncDatabase,
+              $WorkoutSessionTableTable,
+              WorkoutSession
+            >,
           ),
           WorkoutSession,
           PrefetchHooks Function()
@@ -17843,14 +18294,16 @@ class $$WorkoutSessionTableTableTableManager
           table: table,
           createFilteringComposer: () =>
               $$WorkoutSessionTableTableFilterComposer($db: db, $table: table),
-          createOrderingComposer: () => $$WorkoutSessionTableTableOrderingComposer(
-            $db: db,
-            $table: table,
-          ),
-          createComputedFieldComposer: () => $$WorkoutSessionTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createOrderingComposer: () =>
+              $$WorkoutSessionTableTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$WorkoutSessionTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<String> id = const Value.absent(),
@@ -17895,8 +18348,9 @@ class $$WorkoutSessionTableTableTableManager
                 timeEnd: timeEnd,
                 rowid: rowid,
               ),
-          withReferenceMapper: (p0) =>
-              p0.map((e) => (e.readTable(table), BaseReferences(db, table, e))).toList(),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
           prefetchHooksCallback: null,
         ),
       );
@@ -17914,7 +18368,11 @@ typedef $$WorkoutSessionTableTableProcessedTableManager =
       $$WorkoutSessionTableTableUpdateCompanionBuilder,
       (
         WorkoutSession,
-        BaseReferences<_$DriftPowersyncDatabase, $WorkoutSessionTableTable, WorkoutSession>,
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $WorkoutSessionTableTable,
+          WorkoutSession
+        >,
       ),
       WorkoutSession,
       PrefetchHooks Function()
@@ -17933,7 +18391,8 @@ typedef $$RoutineRepetitionUnitTableTableUpdateCompanionBuilder =
     });
 
 class $$RoutineRepetitionUnitTableTableFilterComposer
-    extends Composer<_$DriftPowersyncDatabase, $RoutineRepetitionUnitTableTable> {
+    extends
+        Composer<_$DriftPowersyncDatabase, $RoutineRepetitionUnitTableTable> {
   $$RoutineRepetitionUnitTableTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -17953,7 +18412,8 @@ class $$RoutineRepetitionUnitTableTableFilterComposer
 }
 
 class $$RoutineRepetitionUnitTableTableOrderingComposer
-    extends Composer<_$DriftPowersyncDatabase, $RoutineRepetitionUnitTableTable> {
+    extends
+        Composer<_$DriftPowersyncDatabase, $RoutineRepetitionUnitTableTable> {
   $$RoutineRepetitionUnitTableTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -17973,7 +18433,8 @@ class $$RoutineRepetitionUnitTableTableOrderingComposer
 }
 
 class $$RoutineRepetitionUnitTableTableAnnotationComposer
-    extends Composer<_$DriftPowersyncDatabase, $RoutineRepetitionUnitTableTable> {
+    extends
+        Composer<_$DriftPowersyncDatabase, $RoutineRepetitionUnitTableTable> {
   $$RoutineRepetitionUnitTableTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -17981,7 +18442,8 @@ class $$RoutineRepetitionUnitTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get name =>
       $composableBuilder(column: $table.name, builder: (column) => column);
@@ -18016,18 +18478,21 @@ class $$RoutineRepetitionUnitTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$RoutineRepetitionUnitTableTableFilterComposer(
-            $db: db,
-            $table: table,
-          ),
-          createOrderingComposer: () => $$RoutineRepetitionUnitTableTableOrderingComposer(
-            $db: db,
-            $table: table,
-          ),
-          createComputedFieldComposer: () => $$RoutineRepetitionUnitTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createFilteringComposer: () =>
+              $$RoutineRepetitionUnitTableTableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
+          createOrderingComposer: () =>
+              $$RoutineRepetitionUnitTableTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$RoutineRepetitionUnitTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -18048,8 +18513,9 @@ class $$RoutineRepetitionUnitTableTableTableManager
                 name: name,
                 rowid: rowid,
               ),
-          withReferenceMapper: (p0) =>
-              p0.map((e) => (e.readTable(table), BaseReferences(db, table, e))).toList(),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
           prefetchHooksCallback: null,
         ),
       );
@@ -18067,7 +18533,11 @@ typedef $$RoutineRepetitionUnitTableTableProcessedTableManager =
       $$RoutineRepetitionUnitTableTableUpdateCompanionBuilder,
       (
         RepetitionUnit,
-        BaseReferences<_$DriftPowersyncDatabase, $RoutineRepetitionUnitTableTable, RepetitionUnit>,
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $RoutineRepetitionUnitTableTable,
+          RepetitionUnit
+        >,
       ),
       RepetitionUnit,
       PrefetchHooks Function()
@@ -18134,7 +18604,8 @@ class $$RoutineWeightUnitTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get name =>
       $composableBuilder(column: $table.name, builder: (column) => column);
@@ -18153,7 +18624,11 @@ class $$RoutineWeightUnitTableTableTableManager
           $$RoutineWeightUnitTableTableUpdateCompanionBuilder,
           (
             WeightUnit,
-            BaseReferences<_$DriftPowersyncDatabase, $RoutineWeightUnitTableTable, WeightUnit>,
+            BaseReferences<
+              _$DriftPowersyncDatabase,
+              $RoutineWeightUnitTableTable,
+              WeightUnit
+            >,
           ),
           WeightUnit,
           PrefetchHooks Function()
@@ -18165,18 +18640,21 @@ class $$RoutineWeightUnitTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$RoutineWeightUnitTableTableFilterComposer(
-            $db: db,
-            $table: table,
-          ),
-          createOrderingComposer: () => $$RoutineWeightUnitTableTableOrderingComposer(
-            $db: db,
-            $table: table,
-          ),
-          createComputedFieldComposer: () => $$RoutineWeightUnitTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createFilteringComposer: () =>
+              $$RoutineWeightUnitTableTableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
+          createOrderingComposer: () =>
+              $$RoutineWeightUnitTableTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$RoutineWeightUnitTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -18197,8 +18675,9 @@ class $$RoutineWeightUnitTableTableTableManager
                 name: name,
                 rowid: rowid,
               ),
-          withReferenceMapper: (p0) =>
-              p0.map((e) => (e.readTable(table), BaseReferences(db, table, e))).toList(),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
           prefetchHooksCallback: null,
         ),
       );
@@ -18216,7 +18695,11 @@ typedef $$RoutineWeightUnitTableTableProcessedTableManager =
       $$RoutineWeightUnitTableTableUpdateCompanionBuilder,
       (
         WeightUnit,
-        BaseReferences<_$DriftPowersyncDatabase, $RoutineWeightUnitTableTable, WeightUnit>,
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $RoutineWeightUnitTableTable,
+          WeightUnit
+        >,
       ),
       WeightUnit,
       PrefetchHooks Function()
@@ -18255,7 +18738,12 @@ typedef $$NutritionalPlanTableTableUpdateCompanionBuilder =
     });
 
 final class $$NutritionalPlanTableTableReferences
-    extends BaseReferences<_$DriftPowersyncDatabase, $NutritionalPlanTableTable, NutritionalPlan> {
+    extends
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $NutritionalPlanTableTable,
+          NutritionalPlan
+        > {
   $$NutritionalPlanTableTableReferences(
     super.$_db,
     super.$_table,
@@ -18281,12 +18769,12 @@ final class $$NutritionalPlanTableTableReferences
     );
   }
 
-  static MultiTypedResultKey<$LogItemTableTable, List<LogItem>> _logItemTableRefsTable(
-    _$DriftPowersyncDatabase db,
-  ) => MultiTypedResultKey.fromTable(
-    db.logItemTable,
-    aliasName: 'nutrition_nutritionplan__id__nutrition_logitem__plan_id',
-  );
+  static MultiTypedResultKey<$LogItemTableTable, List<LogItem>>
+  _logItemTableRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.logItemTable,
+        aliasName: 'nutrition_nutritionplan__id__nutrition_logitem__plan_id',
+      );
 
   $$LogItemTableTableProcessedTableManager get logItemTableRefs {
     final manager = $$LogItemTableTableTableManager(
@@ -18325,15 +18813,17 @@ class $$NutritionalPlanTableTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<DateTime, DateTime, String> get startDate => $composableBuilder(
-    column: $table.startDate,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<DateTime, DateTime, String> get startDate =>
+      $composableBuilder(
+        column: $table.startDate,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 
-  ColumnWithTypeConverterFilters<DateTime?, DateTime, String> get endDate => $composableBuilder(
-    column: $table.endDate,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<DateTime?, DateTime, String> get endDate =>
+      $composableBuilder(
+        column: $table.endDate,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 
   ColumnFilters<bool> get onlyLogging => $composableBuilder(
     column: $table.onlyLogging,
@@ -18388,7 +18878,8 @@ class $$NutritionalPlanTableTableFilterComposer
             $table: $db.mealTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -18412,7 +18903,8 @@ class $$NutritionalPlanTableTableFilterComposer
             $table: $db.logItemTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -18566,7 +19058,8 @@ class $$NutritionalPlanTableTableAnnotationComposer
             $table: $db.mealTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -18590,7 +19083,8 @@ class $$NutritionalPlanTableTableAnnotationComposer
             $table: $db.logItemTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -18621,14 +19115,16 @@ class $$NutritionalPlanTableTableTableManager
           table: table,
           createFilteringComposer: () =>
               $$NutritionalPlanTableTableFilterComposer($db: db, $table: table),
-          createOrderingComposer: () => $$NutritionalPlanTableTableOrderingComposer(
-            $db: db,
-            $table: table,
-          ),
-          createComputedFieldComposer: () => $$NutritionalPlanTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createOrderingComposer: () =>
+              $$NutritionalPlanTableTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$NutritionalPlanTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<String> id = const Value.absent(),
@@ -18697,54 +19193,63 @@ class $$NutritionalPlanTableTableTableManager
                 ),
               )
               .toList(),
-          prefetchHooksCallback: ({mealTableRefs = false, logItemTableRefs = false}) {
-            return PrefetchHooks(
-              db: db,
-              explicitlyWatchedTables: [
-                if (mealTableRefs) db.mealTable,
-                if (logItemTableRefs) db.logItemTable,
-              ],
-              addJoins: null,
-              getPrefetchedDataCallback: (items) async {
-                return [
-                  if (mealTableRefs)
-                    await $_getPrefetchedData<NutritionalPlan, $NutritionalPlanTableTable, Meal>(
-                      currentTable: table,
-                      referencedTable: $$NutritionalPlanTableTableReferences._mealTableRefsTable(
-                        db,
-                      ),
-                      managerFromTypedResult: (p0) => $$NutritionalPlanTableTableReferences(
-                        db,
-                        table,
-                        p0,
-                      ).mealTableRefs,
-                      referencedItemsForCurrentItem: (item, referencedItems) =>
-                          referencedItems.where(
-                            (e) => e.planId == item.id,
-                          ),
-                      typedResults: items,
-                    ),
-                  if (logItemTableRefs)
-                    await $_getPrefetchedData<NutritionalPlan, $NutritionalPlanTableTable, LogItem>(
-                      currentTable: table,
-                      referencedTable: $$NutritionalPlanTableTableReferences._logItemTableRefsTable(
-                        db,
-                      ),
-                      managerFromTypedResult: (p0) => $$NutritionalPlanTableTableReferences(
-                        db,
-                        table,
-                        p0,
-                      ).logItemTableRefs,
-                      referencedItemsForCurrentItem: (item, referencedItems) =>
-                          referencedItems.where(
-                            (e) => e.planId == item.id,
-                          ),
-                      typedResults: items,
-                    ),
-                ];
+          prefetchHooksCallback:
+              ({mealTableRefs = false, logItemTableRefs = false}) {
+                return PrefetchHooks(
+                  db: db,
+                  explicitlyWatchedTables: [
+                    if (mealTableRefs) db.mealTable,
+                    if (logItemTableRefs) db.logItemTable,
+                  ],
+                  addJoins: null,
+                  getPrefetchedDataCallback: (items) async {
+                    return [
+                      if (mealTableRefs)
+                        await $_getPrefetchedData<
+                          NutritionalPlan,
+                          $NutritionalPlanTableTable,
+                          Meal
+                        >(
+                          currentTable: table,
+                          referencedTable: $$NutritionalPlanTableTableReferences
+                              ._mealTableRefsTable(db),
+                          managerFromTypedResult: (p0) =>
+                              $$NutritionalPlanTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).mealTableRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
+                                (e) => e.planId == item.id,
+                              ),
+                          typedResults: items,
+                        ),
+                      if (logItemTableRefs)
+                        await $_getPrefetchedData<
+                          NutritionalPlan,
+                          $NutritionalPlanTableTable,
+                          LogItem
+                        >(
+                          currentTable: table,
+                          referencedTable: $$NutritionalPlanTableTableReferences
+                              ._logItemTableRefsTable(db),
+                          managerFromTypedResult: (p0) =>
+                              $$NutritionalPlanTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).logItemTableRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
+                                (e) => e.planId == item.id,
+                              ),
+                          typedResults: items,
+                        ),
+                    ];
+                  },
+                );
               },
-            );
-          },
         ),
       );
 }
@@ -18817,7 +19322,12 @@ typedef $$IngredientTableTableUpdateCompanionBuilder =
     });
 
 final class $$IngredientTableTableReferences
-    extends BaseReferences<_$DriftPowersyncDatabase, $IngredientTableTable, Ingredient> {
+    extends
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $IngredientTableTable,
+          Ingredient
+        > {
   $$IngredientTableTableReferences(
     super.$_db,
     super.$_table,
@@ -18825,12 +19335,14 @@ final class $$IngredientTableTableReferences
   );
 
   static MultiTypedResultKey<$IngredientImageTableTable, List<IngredientImage>>
-  _ingredientImageTableRefsTable(_$DriftPowersyncDatabase db) => MultiTypedResultKey.fromTable(
-    db.ingredientImageTable,
-    aliasName: 'nutrition_ingredient__id__nutrition_image__ingredient_id',
-  );
+  _ingredientImageTableRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.ingredientImageTable,
+        aliasName: 'nutrition_ingredient__id__nutrition_image__ingredient_id',
+      );
 
-  $$IngredientImageTableTableProcessedTableManager get ingredientImageTableRefs {
+  $$IngredientImageTableTableProcessedTableManager
+  get ingredientImageTableRefs {
     final manager = $$IngredientImageTableTableTableManager(
       $_db,
       $_db.ingredientImageTable,
@@ -18844,15 +19356,20 @@ final class $$IngredientTableTableReferences
     );
   }
 
-  static MultiTypedResultKey<$IngredientWeightUnitTableTable, List<IngredientWeightUnit>>
+  static MultiTypedResultKey<
+    $IngredientWeightUnitTableTable,
+    List<IngredientWeightUnit>
+  >
   _ingredientWeightUnitTableRefsTable(
     _$DriftPowersyncDatabase db,
   ) => MultiTypedResultKey.fromTable(
     db.ingredientWeightUnitTable,
-    aliasName: 'nutrition_ingredient__id__nutrition_ingredientweightunit__ingredient_id',
+    aliasName:
+        'nutrition_ingredient__id__nutrition_ingredientweightunit__ingredient_id',
   );
 
-  $$IngredientWeightUnitTableTableProcessedTableManager get ingredientWeightUnitTableRefs {
+  $$IngredientWeightUnitTableTableProcessedTableManager
+  get ingredientWeightUnitTableRefs {
     final manager = $$IngredientWeightUnitTableTableTableManager(
       $_db,
       $_db.ingredientWeightUnitTable,
@@ -18866,12 +19383,13 @@ final class $$IngredientTableTableReferences
     );
   }
 
-  static MultiTypedResultKey<$MealItemTableTable, List<MealItem>> _mealItemTableRefsTable(
-    _$DriftPowersyncDatabase db,
-  ) => MultiTypedResultKey.fromTable(
-    db.mealItemTable,
-    aliasName: 'nutrition_ingredient__id__nutrition_mealitem__ingredient_id',
-  );
+  static MultiTypedResultKey<$MealItemTableTable, List<MealItem>>
+  _mealItemTableRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.mealItemTable,
+        aliasName:
+            'nutrition_ingredient__id__nutrition_mealitem__ingredient_id',
+      );
 
   $$MealItemTableTableProcessedTableManager get mealItemTableRefs {
     final manager = $$MealItemTableTableTableManager(
@@ -18885,12 +19403,12 @@ final class $$IngredientTableTableReferences
     );
   }
 
-  static MultiTypedResultKey<$LogItemTableTable, List<LogItem>> _logItemTableRefsTable(
-    _$DriftPowersyncDatabase db,
-  ) => MultiTypedResultKey.fromTable(
-    db.logItemTable,
-    aliasName: 'nutrition_ingredient__id__nutrition_logitem__ingredient_id',
-  );
+  static MultiTypedResultKey<$LogItemTableTable, List<LogItem>>
+  _logItemTableRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.logItemTable,
+        aliasName: 'nutrition_ingredient__id__nutrition_logitem__ingredient_id',
+      );
 
   $$LogItemTableTableProcessedTableManager get logItemTableRefs {
     final manager = $$LogItemTableTableTableManager(
@@ -18964,10 +19482,11 @@ class $$IngredientTableTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<DateTime, DateTime, DateTime> get created => $composableBuilder(
-    column: $table.created,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<DateTime, DateTime, DateTime> get created =>
+      $composableBuilder(
+        column: $table.created,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 
   ColumnFilters<int> get energy => $composableBuilder(
     column: $table.energy,
@@ -19019,11 +19538,11 @@ class $$IngredientTableTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<NutriScore?, NutriScore, String> get nutriscore =>
-      $composableBuilder(
-        column: $table.nutriscore,
-        builder: (column) => ColumnWithTypeConverterFilters(column),
-      );
+  ColumnWithTypeConverterFilters<NutriScore?, NutriScore, String>
+  get nutriscore => $composableBuilder(
+    column: $table.nutriscore,
+    builder: (column) => ColumnWithTypeConverterFilters(column),
+  );
 
   Expression<bool> ingredientImageTableRefs(
     Expression<bool> Function($$IngredientImageTableTableFilterComposer f) f,
@@ -19043,33 +19562,37 @@ class $$IngredientTableTableFilterComposer
             $table: $db.ingredientImageTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
   }
 
   Expression<bool> ingredientWeightUnitTableRefs(
-    Expression<bool> Function($$IngredientWeightUnitTableTableFilterComposer f) f,
+    Expression<bool> Function($$IngredientWeightUnitTableTableFilterComposer f)
+    f,
   ) {
-    final $$IngredientWeightUnitTableTableFilterComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.ingredientWeightUnitTable,
-      getReferencedColumn: (t) => t.ingredientId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$IngredientWeightUnitTableTableFilterComposer(
-            $db: $db,
-            $table: $db.ingredientWeightUnitTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$IngredientWeightUnitTableTableFilterComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.ingredientWeightUnitTable,
+          getReferencedColumn: (t) => t.ingredientId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$IngredientWeightUnitTableTableFilterComposer(
+                $db: $db,
+                $table: $db.ingredientWeightUnitTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 
@@ -19091,7 +19614,8 @@ class $$IngredientTableTableFilterComposer
             $table: $db.mealItemTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -19115,7 +19639,8 @@ class $$IngredientTableTableFilterComposer
             $table: $db.logItemTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -19251,7 +19776,8 @@ class $$IngredientTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get uuid =>
       $composableBuilder(column: $table.uuid, builder: (column) => column);
@@ -19327,56 +19853,62 @@ class $$IngredientTableTableAnnotationComposer
     builder: (column) => column,
   );
 
-  GeneratedColumnWithTypeConverter<NutriScore?, String> get nutriscore => $composableBuilder(
-    column: $table.nutriscore,
-    builder: (column) => column,
-  );
+  GeneratedColumnWithTypeConverter<NutriScore?, String> get nutriscore =>
+      $composableBuilder(
+        column: $table.nutriscore,
+        builder: (column) => column,
+      );
 
   Expression<T> ingredientImageTableRefs<T extends Object>(
     Expression<T> Function($$IngredientImageTableTableAnnotationComposer a) f,
   ) {
-    final $$IngredientImageTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.ingredientImageTable,
-      getReferencedColumn: (t) => t.ingredientId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$IngredientImageTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.ingredientImageTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$IngredientImageTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.ingredientImageTable,
+          getReferencedColumn: (t) => t.ingredientId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$IngredientImageTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.ingredientImageTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 
   Expression<T> ingredientWeightUnitTableRefs<T extends Object>(
-    Expression<T> Function($$IngredientWeightUnitTableTableAnnotationComposer a) f,
+    Expression<T> Function($$IngredientWeightUnitTableTableAnnotationComposer a)
+    f,
   ) {
-    final $$IngredientWeightUnitTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.id,
-      referencedTable: $db.ingredientWeightUnitTable,
-      getReferencedColumn: (t) => t.ingredientId,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$IngredientWeightUnitTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.ingredientWeightUnitTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$IngredientWeightUnitTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.id,
+          referencedTable: $db.ingredientWeightUnitTable,
+          getReferencedColumn: (t) => t.ingredientId,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$IngredientWeightUnitTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.ingredientWeightUnitTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return f(composer);
   }
 
@@ -19398,7 +19930,8 @@ class $$IngredientTableTableAnnotationComposer
             $table: $db.mealItemTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -19422,7 +19955,8 @@ class $$IngredientTableTableAnnotationComposer
             $table: $db.logItemTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -19581,7 +20115,8 @@ class $$IngredientTableTableTableManager
                   db: db,
                   explicitlyWatchedTables: [
                     if (ingredientImageTableRefs) db.ingredientImageTable,
-                    if (ingredientWeightUnitTableRefs) db.ingredientWeightUnitTable,
+                    if (ingredientWeightUnitTableRefs)
+                      db.ingredientWeightUnitTable,
                     if (mealItemTableRefs) db.mealItemTable,
                     if (logItemTableRefs) db.logItemTable,
                   ],
@@ -19597,13 +20132,14 @@ class $$IngredientTableTableTableManager
                           currentTable: table,
                           referencedTable: $$IngredientTableTableReferences
                               ._ingredientImageTableRefsTable(db),
-                          managerFromTypedResult: (p0) => $$IngredientTableTableReferences(
-                            db,
-                            table,
-                            p0,
-                          ).ingredientImageTableRefs,
-                          referencedItemsForCurrentItem: (item, referencedItems) =>
-                              referencedItems.where(
+                          managerFromTypedResult: (p0) =>
+                              $$IngredientTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).ingredientImageTableRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
                                 (e) => e.ingredientId == item.id,
                               ),
                           typedResults: items,
@@ -19617,47 +20153,56 @@ class $$IngredientTableTableTableManager
                           currentTable: table,
                           referencedTable: $$IngredientTableTableReferences
                               ._ingredientWeightUnitTableRefsTable(db),
-                          managerFromTypedResult: (p0) => $$IngredientTableTableReferences(
-                            db,
-                            table,
-                            p0,
-                          ).ingredientWeightUnitTableRefs,
-                          referencedItemsForCurrentItem: (item, referencedItems) =>
-                              referencedItems.where(
+                          managerFromTypedResult: (p0) =>
+                              $$IngredientTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).ingredientWeightUnitTableRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
                                 (e) => e.ingredientId == item.id,
                               ),
                           typedResults: items,
                         ),
                       if (mealItemTableRefs)
-                        await $_getPrefetchedData<Ingredient, $IngredientTableTable, MealItem>(
+                        await $_getPrefetchedData<
+                          Ingredient,
+                          $IngredientTableTable,
+                          MealItem
+                        >(
                           currentTable: table,
-                          referencedTable: $$IngredientTableTableReferences._mealItemTableRefsTable(
-                            db,
-                          ),
-                          managerFromTypedResult: (p0) => $$IngredientTableTableReferences(
-                            db,
-                            table,
-                            p0,
-                          ).mealItemTableRefs,
-                          referencedItemsForCurrentItem: (item, referencedItems) =>
-                              referencedItems.where(
+                          referencedTable: $$IngredientTableTableReferences
+                              ._mealItemTableRefsTable(db),
+                          managerFromTypedResult: (p0) =>
+                              $$IngredientTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).mealItemTableRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
                                 (e) => e.ingredientId == item.id,
                               ),
                           typedResults: items,
                         ),
                       if (logItemTableRefs)
-                        await $_getPrefetchedData<Ingredient, $IngredientTableTable, LogItem>(
+                        await $_getPrefetchedData<
+                          Ingredient,
+                          $IngredientTableTable,
+                          LogItem
+                        >(
                           currentTable: table,
-                          referencedTable: $$IngredientTableTableReferences._logItemTableRefsTable(
-                            db,
-                          ),
-                          managerFromTypedResult: (p0) => $$IngredientTableTableReferences(
-                            db,
-                            table,
-                            p0,
-                          ).logItemTableRefs,
-                          referencedItemsForCurrentItem: (item, referencedItems) =>
-                              referencedItems.where(
+                          referencedTable: $$IngredientTableTableReferences
+                              ._logItemTableRefsTable(db),
+                          managerFromTypedResult: (p0) =>
+                              $$IngredientTableTableReferences(
+                                db,
+                                table,
+                                p0,
+                              ).logItemTableRefs,
+                          referencedItemsForCurrentItem:
+                              (item, referencedItems) => referencedItems.where(
                                 (e) => e.ingredientId == item.id,
                               ),
                           typedResults: items,
@@ -19729,7 +20274,12 @@ typedef $$IngredientImageTableTableUpdateCompanionBuilder =
     });
 
 final class $$IngredientImageTableTableReferences
-    extends BaseReferences<_$DriftPowersyncDatabase, $IngredientImageTableTable, IngredientImage> {
+    extends
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $IngredientImageTableTable,
+          IngredientImage
+        > {
   $$IngredientImageTableTableReferences(
     super.$_db,
     super.$_table,
@@ -19796,15 +20346,17 @@ class $$IngredientImageTableTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<DateTime, DateTime, DateTime> get created => $composableBuilder(
-    column: $table.created,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<DateTime, DateTime, DateTime> get created =>
+      $composableBuilder(
+        column: $table.created,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 
-  ColumnWithTypeConverterFilters<DateTime, DateTime, DateTime> get lastUpdate => $composableBuilder(
-    column: $table.lastUpdate,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<DateTime, DateTime, DateTime> get lastUpdate =>
+      $composableBuilder(
+        column: $table.lastUpdate,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 
   ColumnFilters<int> get licenseId => $composableBuilder(
     column: $table.licenseId,
@@ -19852,7 +20404,8 @@ class $$IngredientImageTableTableFilterComposer
             $table: $db.ingredientTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -19954,7 +20507,8 @@ class $$IngredientImageTableTableOrderingComposer
             $table: $db.ingredientTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -19970,7 +20524,8 @@ class $$IngredientImageTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get uuid =>
       $composableBuilder(column: $table.uuid, builder: (column) => column);
@@ -19990,10 +20545,11 @@ class $$IngredientImageTableTableAnnotationComposer
   GeneratedColumnWithTypeConverter<DateTime, DateTime> get created =>
       $composableBuilder(column: $table.created, builder: (column) => column);
 
-  GeneratedColumnWithTypeConverter<DateTime, DateTime> get lastUpdate => $composableBuilder(
-    column: $table.lastUpdate,
-    builder: (column) => column,
-  );
+  GeneratedColumnWithTypeConverter<DateTime, DateTime> get lastUpdate =>
+      $composableBuilder(
+        column: $table.lastUpdate,
+        builder: (column) => column,
+      );
 
   GeneratedColumn<int> get licenseId =>
       $composableBuilder(column: $table.licenseId, builder: (column) => column);
@@ -20031,7 +20587,8 @@ class $$IngredientImageTableTableAnnotationComposer
             $table: $db.ingredientTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -20062,14 +20619,16 @@ class $$IngredientImageTableTableTableManager
           table: table,
           createFilteringComposer: () =>
               $$IngredientImageTableTableFilterComposer($db: db, $table: table),
-          createOrderingComposer: () => $$IngredientImageTableTableOrderingComposer(
-            $db: db,
-            $table: table,
-          ),
-          createComputedFieldComposer: () => $$IngredientImageTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createOrderingComposer: () =>
+              $$IngredientImageTableTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$IngredientImageTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -20175,11 +20734,13 @@ class $$IngredientImageTableTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.ingredientId,
-                                referencedTable: $$IngredientImageTableTableReferences
-                                    ._ingredientIdTable(db),
-                                referencedColumn: $$IngredientImageTableTableReferences
-                                    ._ingredientIdTable(db)
-                                    .id,
+                                referencedTable:
+                                    $$IngredientImageTableTableReferences
+                                        ._ingredientIdTable(db),
+                                referencedColumn:
+                                    $$IngredientImageTableTableReferences
+                                        ._ingredientIdTable(db)
+                                        .id,
                               )
                               as T;
                     }
@@ -20263,7 +20824,8 @@ final class $$IngredientWeightUnitTableTableReferences
 }
 
 class $$IngredientWeightUnitTableTableFilterComposer
-    extends Composer<_$DriftPowersyncDatabase, $IngredientWeightUnitTableTable> {
+    extends
+        Composer<_$DriftPowersyncDatabase, $IngredientWeightUnitTableTable> {
   $$IngredientWeightUnitTableTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -20307,7 +20869,8 @@ class $$IngredientWeightUnitTableTableFilterComposer
             $table: $db.ingredientTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -20315,7 +20878,8 @@ class $$IngredientWeightUnitTableTableFilterComposer
 }
 
 class $$IngredientWeightUnitTableTableOrderingComposer
-    extends Composer<_$DriftPowersyncDatabase, $IngredientWeightUnitTableTable> {
+    extends
+        Composer<_$DriftPowersyncDatabase, $IngredientWeightUnitTableTable> {
   $$IngredientWeightUnitTableTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -20359,7 +20923,8 @@ class $$IngredientWeightUnitTableTableOrderingComposer
             $table: $db.ingredientTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -20367,7 +20932,8 @@ class $$IngredientWeightUnitTableTableOrderingComposer
 }
 
 class $$IngredientWeightUnitTableTableAnnotationComposer
-    extends Composer<_$DriftPowersyncDatabase, $IngredientWeightUnitTableTable> {
+    extends
+        Composer<_$DriftPowersyncDatabase, $IngredientWeightUnitTableTable> {
   $$IngredientWeightUnitTableTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -20375,7 +20941,8 @@ class $$IngredientWeightUnitTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumn<String> get uuid =>
       $composableBuilder(column: $table.uuid, builder: (column) => column);
@@ -20402,7 +20969,8 @@ class $$IngredientWeightUnitTableTableAnnotationComposer
             $table: $db.ingredientTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -20431,18 +20999,21 @@ class $$IngredientWeightUnitTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$IngredientWeightUnitTableTableFilterComposer(
-            $db: db,
-            $table: table,
-          ),
-          createOrderingComposer: () => $$IngredientWeightUnitTableTableOrderingComposer(
-            $db: db,
-            $table: table,
-          ),
-          createComputedFieldComposer: () => $$IngredientWeightUnitTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createFilteringComposer: () =>
+              $$IngredientWeightUnitTableTableFilterComposer(
+                $db: db,
+                $table: table,
+              ),
+          createOrderingComposer: () =>
+              $$IngredientWeightUnitTableTableOrderingComposer(
+                $db: db,
+                $table: table,
+              ),
+          createComputedFieldComposer: () =>
+              $$IngredientWeightUnitTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -20508,11 +21079,13 @@ class $$IngredientWeightUnitTableTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.ingredientId,
-                                referencedTable: $$IngredientWeightUnitTableTableReferences
-                                    ._ingredientIdTable(db),
-                                referencedColumn: $$IngredientWeightUnitTableTableReferences
-                                    ._ingredientIdTable(db)
-                                    .id,
+                                referencedTable:
+                                    $$IngredientWeightUnitTableTableReferences
+                                        ._ingredientIdTable(db),
+                                referencedColumn:
+                                    $$IngredientWeightUnitTableTableReferences
+                                        ._ingredientIdTable(db)
+                                        .id,
                               )
                               as T;
                     }
@@ -20584,12 +21157,12 @@ final class $$MealTableTableReferences
     );
   }
 
-  static MultiTypedResultKey<$MealItemTableTable, List<MealItem>> _mealItemTableRefsTable(
-    _$DriftPowersyncDatabase db,
-  ) => MultiTypedResultKey.fromTable(
-    db.mealItemTable,
-    aliasName: 'nutrition_meal__id__nutrition_mealitem__meal_id',
-  );
+  static MultiTypedResultKey<$MealItemTableTable, List<MealItem>>
+  _mealItemTableRefsTable(_$DriftPowersyncDatabase db) =>
+      MultiTypedResultKey.fromTable(
+        db.mealItemTable,
+        aliasName: 'nutrition_meal__id__nutrition_mealitem__meal_id',
+      );
 
   $$MealItemTableTableProcessedTableManager get mealItemTableRefs {
     final manager = $$MealItemTableTableTableManager(
@@ -20604,7 +21177,8 @@ final class $$MealTableTableReferences
   }
 }
 
-class $$MealTableTableFilterComposer extends Composer<_$DriftPowersyncDatabase, $MealTableTable> {
+class $$MealTableTableFilterComposer
+    extends Composer<_$DriftPowersyncDatabase, $MealTableTable> {
   $$MealTableTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -20622,10 +21196,11 @@ class $$MealTableTableFilterComposer extends Composer<_$DriftPowersyncDatabase, 
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<TimeOfDay?, TimeOfDay, String> get time => $composableBuilder(
-    column: $table.time,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<TimeOfDay?, TimeOfDay, String> get time =>
+      $composableBuilder(
+        column: $table.time,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 
   ColumnFilters<String> get name => $composableBuilder(
     column: $table.name,
@@ -20648,7 +21223,8 @@ class $$MealTableTableFilterComposer extends Composer<_$DriftPowersyncDatabase, 
             $table: $db.nutritionalPlanTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -20672,14 +21248,16 @@ class $$MealTableTableFilterComposer extends Composer<_$DriftPowersyncDatabase, 
             $table: $db.mealItemTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
   }
 }
 
-class $$MealTableTableOrderingComposer extends Composer<_$DriftPowersyncDatabase, $MealTableTable> {
+class $$MealTableTableOrderingComposer
+    extends Composer<_$DriftPowersyncDatabase, $MealTableTable> {
   $$MealTableTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -20708,24 +21286,26 @@ class $$MealTableTableOrderingComposer extends Composer<_$DriftPowersyncDatabase
   );
 
   $$NutritionalPlanTableTableOrderingComposer get planId {
-    final $$NutritionalPlanTableTableOrderingComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.planId,
-      referencedTable: $db.nutritionalPlanTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$NutritionalPlanTableTableOrderingComposer(
-            $db: $db,
-            $table: $db.nutritionalPlanTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$NutritionalPlanTableTableOrderingComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.planId,
+          referencedTable: $db.nutritionalPlanTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$NutritionalPlanTableTableOrderingComposer(
+                $db: $db,
+                $table: $db.nutritionalPlanTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 }
@@ -20752,24 +21332,26 @@ class $$MealTableTableAnnotationComposer
       $composableBuilder(column: $table.name, builder: (column) => column);
 
   $$NutritionalPlanTableTableAnnotationComposer get planId {
-    final $$NutritionalPlanTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.planId,
-      referencedTable: $db.nutritionalPlanTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$NutritionalPlanTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.nutritionalPlanTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$NutritionalPlanTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.planId,
+          referencedTable: $db.nutritionalPlanTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$NutritionalPlanTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.nutritionalPlanTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 
@@ -20791,7 +21373,8 @@ class $$MealTableTableAnnotationComposer
             $table: $db.mealItemTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return f(composer);
@@ -20820,8 +21403,10 @@ class $$MealTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$MealTableTableFilterComposer($db: db, $table: table),
-          createOrderingComposer: () => $$MealTableTableOrderingComposer($db: db, $table: table),
+          createFilteringComposer: () =>
+              $$MealTableTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$MealTableTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
               $$MealTableTableAnnotationComposer($db: db, $table: table),
           updateCompanionCallback:
@@ -20891,8 +21476,11 @@ class $$MealTableTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.planId,
-                                referencedTable: $$MealTableTableReferences._planIdTable(db),
-                                referencedColumn: $$MealTableTableReferences._planIdTable(db).id,
+                                referencedTable: $$MealTableTableReferences
+                                    ._planIdTable(db),
+                                referencedColumn: $$MealTableTableReferences
+                                    ._planIdTable(db)
+                                    .id,
                               )
                               as T;
                     }
@@ -20904,12 +21492,14 @@ class $$MealTableTableTableManager
                   if (mealItemTableRefs)
                     await $_getPrefetchedData<Meal, $MealTableTable, MealItem>(
                       currentTable: table,
-                      referencedTable: $$MealTableTableReferences._mealItemTableRefsTable(db),
-                      managerFromTypedResult: (p0) => $$MealTableTableReferences(
-                        db,
-                        table,
-                        p0,
-                      ).mealItemTableRefs,
+                      referencedTable: $$MealTableTableReferences
+                          ._mealItemTableRefsTable(db),
+                      managerFromTypedResult: (p0) =>
+                          $$MealTableTableReferences(
+                            db,
+                            table,
+                            p0,
+                          ).mealItemTableRefs,
                       referencedItemsForCurrentItem: (item, referencedItems) =>
                           referencedItems.where((e) => e.mealId == item.id),
                       typedResults: items,
@@ -20958,15 +21548,21 @@ typedef $$MealItemTableTableUpdateCompanionBuilder =
     });
 
 final class $$MealItemTableTableReferences
-    extends BaseReferences<_$DriftPowersyncDatabase, $MealItemTableTable, MealItem> {
+    extends
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $MealItemTableTable,
+          MealItem
+        > {
   $$MealItemTableTableReferences(
     super.$_db,
     super.$_table,
     super.$_typedResult,
   );
 
-  static $MealTableTable _mealIdTable(_$DriftPowersyncDatabase db) =>
-      db.mealTable.createAlias('nutrition_mealitem__meal_id__nutrition_meal__id');
+  static $MealTableTable _mealIdTable(_$DriftPowersyncDatabase db) => db
+      .mealTable
+      .createAlias('nutrition_mealitem__meal_id__nutrition_meal__id');
 
   $$MealTableTableProcessedTableManager get mealId {
     final $_column = $_itemColumn<String>('meal_id')!;
@@ -21048,7 +21644,8 @@ class $$MealItemTableTableFilterComposer
             $table: $db.mealTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -21070,7 +21667,8 @@ class $$MealItemTableTableFilterComposer
             $table: $db.ingredientTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -21122,7 +21720,8 @@ class $$MealItemTableTableOrderingComposer
             $table: $db.mealTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -21144,7 +21743,8 @@ class $$MealItemTableTableOrderingComposer
             $table: $db.ingredientTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -21190,7 +21790,8 @@ class $$MealItemTableTableAnnotationComposer
             $table: $db.mealTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -21212,7 +21813,8 @@ class $$MealItemTableTableAnnotationComposer
             $table: $db.ingredientTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -21241,7 +21843,8 @@ class $$MealItemTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$MealItemTableTableFilterComposer($db: db, $table: table),
+          createFilteringComposer: () =>
+              $$MealItemTableTableFilterComposer($db: db, $table: table),
           createOrderingComposer: () =>
               $$MealItemTableTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
@@ -21315,7 +21918,8 @@ class $$MealItemTableTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.mealId,
-                                referencedTable: $$MealItemTableTableReferences._mealIdTable(db),
+                                referencedTable: $$MealItemTableTableReferences
+                                    ._mealIdTable(db),
                                 referencedColumn: $$MealItemTableTableReferences
                                     ._mealIdTable(db)
                                     .id,
@@ -21327,9 +21931,8 @@ class $$MealItemTableTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.ingredientId,
-                                referencedTable: $$MealItemTableTableReferences._ingredientIdTable(
-                                  db,
-                                ),
+                                referencedTable: $$MealItemTableTableReferences
+                                    ._ingredientIdTable(db),
                                 referencedColumn: $$MealItemTableTableReferences
                                     ._ingredientIdTable(db)
                                     .id,
@@ -21388,7 +21991,8 @@ typedef $$LogItemTableTableUpdateCompanionBuilder =
     });
 
 final class $$LogItemTableTableReferences
-    extends BaseReferences<_$DriftPowersyncDatabase, $LogItemTableTable, LogItem> {
+    extends
+        BaseReferences<_$DriftPowersyncDatabase, $LogItemTableTable, LogItem> {
   $$LogItemTableTableReferences(super.$_db, super.$_table, super.$_typedResult);
 
   static $NutritionalPlanTableTable _planIdTable(_$DriftPowersyncDatabase db) =>
@@ -21455,10 +22059,11 @@ class $$LogItemTableTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<DateTime, DateTime, DateTime> get datetime => $composableBuilder(
-    column: $table.datetime,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<DateTime, DateTime, DateTime> get datetime =>
+      $composableBuilder(
+        column: $table.datetime,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 
   ColumnFilters<double> get amount => $composableBuilder(
     column: $table.amount,
@@ -21486,7 +22091,8 @@ class $$LogItemTableTableFilterComposer
             $table: $db.nutritionalPlanTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -21508,7 +22114,8 @@ class $$LogItemTableTableFilterComposer
             $table: $db.ingredientTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -21555,24 +22162,26 @@ class $$LogItemTableTableOrderingComposer
   );
 
   $$NutritionalPlanTableTableOrderingComposer get planId {
-    final $$NutritionalPlanTableTableOrderingComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.planId,
-      referencedTable: $db.nutritionalPlanTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$NutritionalPlanTableTableOrderingComposer(
-            $db: $db,
-            $table: $db.nutritionalPlanTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$NutritionalPlanTableTableOrderingComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.planId,
+          referencedTable: $db.nutritionalPlanTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$NutritionalPlanTableTableOrderingComposer(
+                $db: $db,
+                $table: $db.nutritionalPlanTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 
@@ -21592,7 +22201,8 @@ class $$LogItemTableTableOrderingComposer
             $table: $db.ingredientTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -21629,24 +22239,26 @@ class $$LogItemTableTableAnnotationComposer
       $composableBuilder(column: $table.comment, builder: (column) => column);
 
   $$NutritionalPlanTableTableAnnotationComposer get planId {
-    final $$NutritionalPlanTableTableAnnotationComposer composer = $composerBuilder(
-      composer: this,
-      getCurrentColumn: (t) => t.planId,
-      referencedTable: $db.nutritionalPlanTable,
-      getReferencedColumn: (t) => t.id,
-      builder:
-          (
-            joinBuilder, {
-            $addJoinBuilderToRootComposer,
-            $removeJoinBuilderFromRootComposer,
-          }) => $$NutritionalPlanTableTableAnnotationComposer(
-            $db: $db,
-            $table: $db.nutritionalPlanTable,
-            $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
-            joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
-          ),
-    );
+    final $$NutritionalPlanTableTableAnnotationComposer composer =
+        $composerBuilder(
+          composer: this,
+          getCurrentColumn: (t) => t.planId,
+          referencedTable: $db.nutritionalPlanTable,
+          getReferencedColumn: (t) => t.id,
+          builder:
+              (
+                joinBuilder, {
+                $addJoinBuilderToRootComposer,
+                $removeJoinBuilderFromRootComposer,
+              }) => $$NutritionalPlanTableTableAnnotationComposer(
+                $db: $db,
+                $table: $db.nutritionalPlanTable,
+                $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
+                joinBuilder: joinBuilder,
+                $removeJoinBuilderFromRootComposer:
+                    $removeJoinBuilderFromRootComposer,
+              ),
+        );
     return composer;
   }
 
@@ -21666,7 +22278,8 @@ class $$LogItemTableTableAnnotationComposer
             $table: $db.ingredientTable,
             $addJoinBuilderToRootComposer: $addJoinBuilderToRootComposer,
             joinBuilder: joinBuilder,
-            $removeJoinBuilderFromRootComposer: $removeJoinBuilderFromRootComposer,
+            $removeJoinBuilderFromRootComposer:
+                $removeJoinBuilderFromRootComposer,
           ),
     );
     return composer;
@@ -21695,8 +22308,10 @@ class $$LogItemTableTableTableManager
         TableManagerState(
           db: db,
           table: table,
-          createFilteringComposer: () => $$LogItemTableTableFilterComposer($db: db, $table: table),
-          createOrderingComposer: () => $$LogItemTableTableOrderingComposer($db: db, $table: table),
+          createFilteringComposer: () =>
+              $$LogItemTableTableFilterComposer($db: db, $table: table),
+          createOrderingComposer: () =>
+              $$LogItemTableTableOrderingComposer($db: db, $table: table),
           createComputedFieldComposer: () =>
               $$LogItemTableTableAnnotationComposer($db: db, $table: table),
           updateCompanionCallback:
@@ -21776,8 +22391,11 @@ class $$LogItemTableTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.planId,
-                                referencedTable: $$LogItemTableTableReferences._planIdTable(db),
-                                referencedColumn: $$LogItemTableTableReferences._planIdTable(db).id,
+                                referencedTable: $$LogItemTableTableReferences
+                                    ._planIdTable(db),
+                                referencedColumn: $$LogItemTableTableReferences
+                                    ._planIdTable(db)
+                                    .id,
                               )
                               as T;
                     }
@@ -21786,9 +22404,8 @@ class $$LogItemTableTableTableManager
                           state.withJoin(
                                 currentTable: table,
                                 currentColumn: table.ingredientId,
-                                referencedTable: $$LogItemTableTableReferences._ingredientIdTable(
-                                  db,
-                                ),
+                                referencedTable: $$LogItemTableTableReferences
+                                    ._ingredientIdTable(db),
                                 referencedColumn: $$LogItemTableTableReferences
                                     ._ingredientIdTable(db)
                                     .id,
@@ -21852,10 +22469,11 @@ class $$GalleryImageTableTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
-  ColumnWithTypeConverterFilters<DateTime, DateTime, String> get date => $composableBuilder(
-    column: $table.date,
-    builder: (column) => ColumnWithTypeConverterFilters(column),
-  );
+  ColumnWithTypeConverterFilters<DateTime, DateTime, String> get date =>
+      $composableBuilder(
+        column: $table.date,
+        builder: (column) => ColumnWithTypeConverterFilters(column),
+      );
 
   ColumnFilters<String> get imagePath => $composableBuilder(
     column: $table.imagePath,
@@ -21907,7 +22525,8 @@ class $$GalleryImageTableTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
-  GeneratedColumn<int> get id => $composableBuilder(column: $table.id, builder: (column) => column);
+  GeneratedColumn<int> get id =>
+      $composableBuilder(column: $table.id, builder: (column) => column);
 
   GeneratedColumnWithTypeConverter<DateTime, String> get date =>
       $composableBuilder(column: $table.date, builder: (column) => column);
@@ -21934,7 +22553,11 @@ class $$GalleryImageTableTableTableManager
           $$GalleryImageTableTableUpdateCompanionBuilder,
           (
             GalleryImage,
-            BaseReferences<_$DriftPowersyncDatabase, $GalleryImageTableTable, GalleryImage>,
+            BaseReferences<
+              _$DriftPowersyncDatabase,
+              $GalleryImageTableTable,
+              GalleryImage
+            >,
           ),
           GalleryImage,
           PrefetchHooks Function()
@@ -21950,10 +22573,11 @@ class $$GalleryImageTableTableTableManager
               $$GalleryImageTableTableFilterComposer($db: db, $table: table),
           createOrderingComposer: () =>
               $$GalleryImageTableTableOrderingComposer($db: db, $table: table),
-          createComputedFieldComposer: () => $$GalleryImageTableTableAnnotationComposer(
-            $db: db,
-            $table: table,
-          ),
+          createComputedFieldComposer: () =>
+              $$GalleryImageTableTableAnnotationComposer(
+                $db: db,
+                $table: table,
+              ),
           updateCompanionCallback:
               ({
                 Value<int> id = const Value.absent(),
@@ -21982,8 +22606,9 @@ class $$GalleryImageTableTableTableManager
                 description: description,
                 rowid: rowid,
               ),
-          withReferenceMapper: (p0) =>
-              p0.map((e) => (e.readTable(table), BaseReferences(db, table, e))).toList(),
+          withReferenceMapper: (p0) => p0
+              .map((e) => (e.readTable(table), BaseReferences(db, table, e)))
+              .toList(),
           prefetchHooksCallback: null,
         ),
       );
@@ -22001,7 +22626,11 @@ typedef $$GalleryImageTableTableProcessedTableManager =
       $$GalleryImageTableTableUpdateCompanionBuilder,
       (
         GalleryImage,
-        BaseReferences<_$DriftPowersyncDatabase, $GalleryImageTableTable, GalleryImage>,
+        BaseReferences<
+          _$DriftPowersyncDatabase,
+          $GalleryImageTableTable,
+          GalleryImage
+        >,
       ),
       GalleryImage,
       PrefetchHooks Function()
@@ -22033,7 +22662,8 @@ class $DriftPowersyncDatabaseManager {
       $$MuscleTableTableTableManager(_db, _db.muscleTable);
   $$ExerciseMuscleM2NTableTableManager get exerciseMuscleM2N =>
       $$ExerciseMuscleM2NTableTableManager(_db, _db.exerciseMuscleM2N);
-  $$ExerciseSecondaryMuscleM2NTableTableManager get exerciseSecondaryMuscleM2N =>
+  $$ExerciseSecondaryMuscleM2NTableTableManager
+  get exerciseSecondaryMuscleM2N =>
       $$ExerciseSecondaryMuscleM2NTableTableManager(
         _db,
         _db.exerciseSecondaryMuscleM2N,
@@ -22061,7 +22691,8 @@ class $DriftPowersyncDatabaseManager {
       $$WorkoutLogTableTableTableManager(_db, _db.workoutLogTable);
   $$WorkoutSessionTableTableTableManager get workoutSessionTable =>
       $$WorkoutSessionTableTableTableManager(_db, _db.workoutSessionTable);
-  $$RoutineRepetitionUnitTableTableTableManager get routineRepetitionUnitTable =>
+  $$RoutineRepetitionUnitTableTableTableManager
+  get routineRepetitionUnitTable =>
       $$RoutineRepetitionUnitTableTableTableManager(
         _db,
         _db.routineRepetitionUnitTable,
@@ -22082,7 +22713,8 @@ class $DriftPowersyncDatabaseManager {
         _db,
         _db.ingredientWeightUnitTable,
       );
-  $$MealTableTableTableManager get mealTable => $$MealTableTableTableManager(_db, _db.mealTable);
+  $$MealTableTableTableManager get mealTable =>
+      $$MealTableTableTableManager(_db, _db.mealTable);
   $$MealItemTableTableTableManager get mealItemTable =>
       $$MealItemTableTableTableManager(_db, _db.mealItemTable);
   $$LogItemTableTableTableManager get logItemTable =>

@@ -40,7 +40,8 @@ abstract class _$GalleryNotifier extends $StreamNotifier<List<GalleryImage>> {
   @$mustCallSuper
   @override
   WhenComplete runBuild() {
-    final ref = this.ref as $Ref<AsyncValue<List<GalleryImage>>, List<GalleryImage>>;
+    final ref =
+        this.ref as $Ref<AsyncValue<List<GalleryImage>>, List<GalleryImage>>;
     final element =
         ref.element
             as $ClassProviderElement<

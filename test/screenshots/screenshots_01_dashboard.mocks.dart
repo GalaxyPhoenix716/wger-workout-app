@@ -11,20 +11,26 @@ import 'package:mockito/src/dummies.dart' as _i32;
 import 'package:wger/core/network/base_provider.dart' as _i8;
 import 'package:wger/core/search_options.dart' as _i20;
 import 'package:wger/features/account/models/user_profile.dart' as _i27;
-import 'package:wger/features/account/providers/user_profile_repository.dart' as _i26;
+import 'package:wger/features/account/providers/user_profile_repository.dart'
+    as _i26;
 import 'package:wger/features/gallery/models/image.dart' as _i2;
 import 'package:wger/features/gallery/providers/gallery_repository.dart' as _i9;
-import 'package:wger/features/measurements/models/measurement_category.dart' as _i24;
-import 'package:wger/features/measurements/models/measurement_entry.dart' as _i25;
-import 'package:wger/features/measurements/providers/measurement_repository.dart' as _i23;
+import 'package:wger/features/measurements/models/measurement_category.dart'
+    as _i24;
+import 'package:wger/features/measurements/models/measurement_entry.dart'
+    as _i25;
+import 'package:wger/features/measurements/providers/measurement_repository.dart'
+    as _i23;
 import 'package:wger/features/nutrition/models/ingredient.dart' as _i18;
 import 'package:wger/features/nutrition/models/ingredient_filters.dart' as _i19;
 import 'package:wger/features/nutrition/models/log.dart' as _i16;
 import 'package:wger/features/nutrition/models/meal.dart' as _i14;
 import 'package:wger/features/nutrition/models/meal_item.dart' as _i15;
 import 'package:wger/features/nutrition/models/nutritional_plan.dart' as _i13;
-import 'package:wger/features/nutrition/providers/ingredient_repository.dart' as _i17;
-import 'package:wger/features/nutrition/providers/nutrition_repository.dart' as _i12;
+import 'package:wger/features/nutrition/providers/ingredient_repository.dart'
+    as _i17;
+import 'package:wger/features/nutrition/providers/nutrition_repository.dart'
+    as _i12;
 import 'package:wger/features/routines/models/base_config.dart' as _i7;
 import 'package:wger/features/routines/models/day.dart' as _i4;
 import 'package:wger/features/routines/models/repetition_unit.dart' as _i30;
@@ -32,13 +38,17 @@ import 'package:wger/features/routines/models/routine.dart' as _i3;
 import 'package:wger/features/routines/models/slot.dart' as _i5;
 import 'package:wger/features/routines/models/slot_entry.dart' as _i6;
 import 'package:wger/features/routines/models/weight_unit.dart' as _i29;
-import 'package:wger/features/routines/providers/routines_repository.dart' as _i28;
+import 'package:wger/features/routines/providers/routines_repository.dart'
+    as _i28;
 import 'package:wger/features/trophies/models/trophy.dart' as _i33;
 import 'package:wger/features/trophies/models/user_trophy.dart' as _i34;
-import 'package:wger/features/trophies/models/user_trophy_progression.dart' as _i35;
-import 'package:wger/features/trophies/providers/trophy_repository.dart' as _i31;
+import 'package:wger/features/trophies/models/user_trophy_progression.dart'
+    as _i35;
+import 'package:wger/features/trophies/providers/trophy_repository.dart'
+    as _i31;
 import 'package:wger/features/weight/models/weight_entry.dart' as _i22;
-import 'package:wger/features/weight/providers/body_weight_repository.dart' as _i21;
+import 'package:wger/features/weight/providers/body_weight_repository.dart'
+    as _i21;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -56,30 +66,37 @@ import 'package:wger/features/weight/providers/body_weight_repository.dart' as _
 // ignore_for_file: invalid_use_of_internal_member
 
 class _FakeGalleryImage_0 extends _i1.SmartFake implements _i2.GalleryImage {
-  _FakeGalleryImage_0(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeGalleryImage_0(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeRoutine_1 extends _i1.SmartFake implements _i3.Routine {
-  _FakeRoutine_1(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeRoutine_1(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeDay_2 extends _i1.SmartFake implements _i4.Day {
-  _FakeDay_2(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeDay_2(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeSlot_3 extends _i1.SmartFake implements _i5.Slot {
-  _FakeSlot_3(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeSlot_3(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeSlotEntry_4 extends _i1.SmartFake implements _i6.SlotEntry {
-  _FakeSlotEntry_4(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeSlotEntry_4(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeBaseConfig_5 extends _i1.SmartFake implements _i7.BaseConfig {
-  _FakeBaseConfig_5(Object parent, Invocation parentInvocation) : super(parent, parentInvocation);
+  _FakeBaseConfig_5(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
-class _FakeWgerBaseProvider_6 extends _i1.SmartFake implements _i8.WgerBaseProvider {
+class _FakeWgerBaseProvider_6 extends _i1.SmartFake
+    implements _i8.WgerBaseProvider {
   _FakeWgerBaseProvider_6(Object parent, Invocation parentInvocation)
     : super(parent, parentInvocation);
 }
@@ -149,7 +166,8 @@ class MockGalleryRepository extends _i1.Mock implements _i9.GalleryRepository {
 /// A class which mocks [NutritionRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockNutritionRepository extends _i1.Mock implements _i12.NutritionRepository {
+class MockNutritionRepository extends _i1.Mock
+    implements _i12.NutritionRepository {
   MockNutritionRepository() {
     _i1.throwOnMissingStub(this);
   }
@@ -281,7 +299,8 @@ class MockNutritionRepository extends _i1.Mock implements _i12.NutritionReposito
 /// A class which mocks [IngredientRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockIngredientRepository extends _i1.Mock implements _i17.IngredientRepository {
+class MockIngredientRepository extends _i1.Mock
+    implements _i17.IngredientRepository {
   MockIngredientRepository() {
     _i1.throwOnMissingStub(this);
   }
@@ -405,7 +424,8 @@ class MockIngredientRepository extends _i1.Mock implements _i17.IngredientReposi
 /// A class which mocks [BodyWeightRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockBodyWeightRepository extends _i1.Mock implements _i21.BodyWeightRepository {
+class MockBodyWeightRepository extends _i1.Mock
+    implements _i21.BodyWeightRepository {
   MockBodyWeightRepository() {
     _i1.throwOnMissingStub(this);
   }
@@ -449,7 +469,8 @@ class MockBodyWeightRepository extends _i1.Mock implements _i21.BodyWeightReposi
 /// A class which mocks [MeasurementRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockMeasurementRepository extends _i1.Mock implements _i23.MeasurementRepository {
+class MockMeasurementRepository extends _i1.Mock
+    implements _i23.MeasurementRepository {
   MockMeasurementRepository() {
     _i1.throwOnMissingStub(this);
   }
@@ -532,7 +553,8 @@ class MockMeasurementRepository extends _i1.Mock implements _i23.MeasurementRepo
 /// A class which mocks [UserProfileRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockUserProfileRepository extends _i1.Mock implements _i26.UserProfileRepository {
+class MockUserProfileRepository extends _i1.Mock
+    implements _i26.UserProfileRepository {
   MockUserProfileRepository() {
     _i1.throwOnMissingStub(this);
   }
@@ -558,7 +580,8 @@ class MockUserProfileRepository extends _i1.Mock implements _i26.UserProfileRepo
 /// A class which mocks [RoutinesRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockRoutinesRepository extends _i1.Mock implements _i28.RoutinesRepository {
+class MockRoutinesRepository extends _i1.Mock
+    implements _i28.RoutinesRepository {
   MockRoutinesRepository() {
     _i1.throwOnMissingStub(this);
   }

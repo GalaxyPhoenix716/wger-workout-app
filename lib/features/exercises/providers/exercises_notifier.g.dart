@@ -12,7 +12,8 @@ part of 'exercises_notifier.dart';
 @ProviderFor(Exercises)
 final exercisesProvider = ExercisesProvider._();
 
-final class ExercisesProvider extends $StreamNotifierProvider<Exercises, ExerciseState> {
+final class ExercisesProvider
+    extends $StreamNotifierProvider<Exercises, ExerciseState> {
   ExercisesProvider._()
     : super(
         from: null,
@@ -62,7 +63,9 @@ final class ExerciseCategoriesProvider
           List<ExerciseCategory>,
           Stream<List<ExerciseCategory>>
         >
-    with $FutureModifier<List<ExerciseCategory>>, $StreamProvider<List<ExerciseCategory>> {
+    with
+        $FutureModifier<List<ExerciseCategory>>,
+        $StreamProvider<List<ExerciseCategory>> {
   ExerciseCategoriesProvider._()
     : super(
         from: null,
@@ -89,14 +92,19 @@ final class ExerciseCategoriesProvider
   }
 }
 
-String _$exerciseCategoriesHash() => r'38e7b439ecc9682891373930813f2d3b7dc4f794';
+String _$exerciseCategoriesHash() =>
+    r'38e7b439ecc9682891373930813f2d3b7dc4f794';
 
 @ProviderFor(exerciseEquipment)
 final exerciseEquipmentProvider = ExerciseEquipmentProvider._();
 
 final class ExerciseEquipmentProvider
     extends
-        $FunctionalProvider<AsyncValue<List<Equipment>>, List<Equipment>, Stream<List<Equipment>>>
+        $FunctionalProvider<
+          AsyncValue<List<Equipment>>,
+          List<Equipment>,
+          Stream<List<Equipment>>
+        >
     with $FutureModifier<List<Equipment>>, $StreamProvider<List<Equipment>> {
   ExerciseEquipmentProvider._()
     : super(
@@ -130,7 +138,12 @@ String _$exerciseEquipmentHash() => r'cceb7e47e1292a1f33f1f6378f8efaf109fa7bb3';
 final exerciseMusclesProvider = ExerciseMusclesProvider._();
 
 final class ExerciseMusclesProvider
-    extends $FunctionalProvider<AsyncValue<List<Muscle>>, List<Muscle>, Stream<List<Muscle>>>
+    extends
+        $FunctionalProvider<
+          AsyncValue<List<Muscle>>,
+          List<Muscle>,
+          Stream<List<Muscle>>
+        >
     with $FutureModifier<List<Muscle>>, $StreamProvider<List<Muscle>> {
   ExerciseMusclesProvider._()
     : super(
@@ -164,7 +177,12 @@ String _$exerciseMusclesHash() => r'acb72b84288ff565183581fef1b718a516e7efd4';
 final languagesProvider = LanguagesProvider._();
 
 final class LanguagesProvider
-    extends $FunctionalProvider<AsyncValue<List<Language>>, List<Language>, Stream<List<Language>>>
+    extends
+        $FunctionalProvider<
+          AsyncValue<List<Language>>,
+          List<Language>,
+          Stream<List<Language>>
+        >
     with $FutureModifier<List<Language>>, $StreamProvider<List<Language>> {
   LanguagesProvider._()
     : super(
